@@ -1,2 +1,2 @@
-# cmru-c-project
+# cmru-project
 Project C/C++
