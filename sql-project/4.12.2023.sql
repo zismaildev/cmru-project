@@ -19,6 +19,22 @@
 CREATE DATABASE IF NOT EXISTS `nattapong51` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `nattapong51`;
 
+-- Dumping structure for table nattapong51.billorder420
+CREATE TABLE IF NOT EXISTS `billorder420` (
+  `idBillorder` char(5) NOT NULL,
+  `id_sup` char(5) DEFAULT NULL,
+  PRIMARY KEY (`idBillorder`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table nattapong51.billorder420: 4 rows
+/*!40000 ALTER TABLE `billorder420` DISABLE KEYS */;
+REPLACE INTO `billorder420` (`idBillorder`, `id_sup`) VALUES
+	('BC001', 'P001'),
+	('BC002', 'P001'),
+	('BC003', 'P002'),
+	('BC004', 'P003');
+/*!40000 ALTER TABLE `billorder420` ENABLE KEYS */;
+
 -- Dumping structure for table nattapong51.detailorder420
 CREATE TABLE IF NOT EXISTS `detailorder420` (
   `idBillorder` char(5) DEFAULT NULL,
@@ -39,6 +55,46 @@ REPLACE INTO `detailorder420` (`idBillorder`, `idProduct`, `aount`) VALUES
 	('BC003', 'B02', '100'),
 	('BC004', 'L01', '20');
 /*!40000 ALTER TABLE `detailorder420` ENABLE KEYS */;
+
+-- Dumping structure for table nattapong51.product420
+CREATE TABLE IF NOT EXISTS `product420` (
+  `idProduct` char(3) NOT NULL,
+  `NameProduct` varchar(20) DEFAULT NULL,
+  `Price` int(4) DEFAULT NULL,
+  PRIMARY KEY (`idProduct`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table nattapong51.product420: 7 rows
+/*!40000 ALTER TABLE `product420` DISABLE KEYS */;
+REPLACE INTO `product420` (`idProduct`, `NameProduct`, `Price`) VALUES
+	('P01', 'Paper A4 70 g.', 105),
+	('P02', 'Paper A4 80 g.', 120),
+	('P03', 'Paper F4 80 g.', 130),
+	('P04', 'Paper B2 80 g.', 150),
+	('B01', 'Blue Pen ', 25),
+	('B02', 'Red Pen', 15),
+	('L01', 'Toner printer', 5500);
+/*!40000 ALTER TABLE `product420` ENABLE KEYS */;
+
+-- Dumping structure for table nattapong51.supplier420
+CREATE TABLE IF NOT EXISTS `supplier420` (
+  `id_sup` char(5) NOT NULL,
+  `name_sup` varchar(30) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `tel` int(9) DEFAULT NULL,
+  PRIMARY KEY (`id_sup`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table nattapong51.supplier420: 6 rows
+/*!40000 ALTER TABLE `supplier420` DISABLE KEYS */;
+REPLACE INTO `supplier420` (`id_sup`, `name_sup`, `address`, `tel`) VALUES
+	('SP001', 'Somjai Company', '120 changphuak Chaiangmai', NULL),
+	('SP002', 'ABC Company', '50 Chotana Chaiangmai', NULL),
+	('SP003', 'Paper Service', '50 Intayonyot road Lamphun', NULL),
+	('SP004', 'ComTect', '33 Moo 3 T.Baanklan Lumphun', NULL),
+	('SP005', 'Parada Company', '102 T.Changphuak Chaiangmai', NULL),
+	('SP006', 'Parada Company', '102 T.Changphuak Chaiangmai', NULL);
+/*!40000 ALTER TABLE `supplier420` ENABLE KEYS */;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
