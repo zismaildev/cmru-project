@@ -1,0 +1,139 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(120deg, #ac45f0, #030303);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+.container a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.container a:hover {
+  background-color: #45a049;
+}
+
+.head-contents {
+  align-items: center;
+  text-align: center;
+}
+
+.content-body {
+  padding-left: 15%;
+}
+
+.resimg {
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+}
+
+.form-login {
+  margin: 10%;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 300px;
+}
+
+.login-container h2 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.login-container label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+.quiz-container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.quiz-question h3 {
+  margin-bottom: 10px;
+}
+
+.quiz-options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quiz-options li {
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
