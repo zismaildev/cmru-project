@@ -20,6 +20,7 @@
 | Computer Programming | C Language | ✅ เสร็จแล้ว | [ดูโปรเจกต์](./c-project) |
 | Python Programming | Python | ✅ เสร็จแล้ว | [ดูโปรเจกต์](./python-project) |
 | Object-Oriented Programming | Java | 🛠️ กำลังเรียน | [ดูโปรเจกต์](./java-project) |
+| Data Science | Python | 🛠️ กำลังเรียน | [ดูโปรเจกต์](./data-science) |
 
 ---
 
