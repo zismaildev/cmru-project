@@ -18,8 +18,8 @@
 | Database System | MySQL, ER-Diagram | ✅ เสร็จแล้ว | [ดูโปรเจกต์](./sql-project) |
 | Web Programming | HTML, CSS, PHP | ✅ เสร็จแล้ว | [ดูโปรเจกต์](./web-programing) |
 | Computer Programming | C Language | ✅ เสร็จแล้ว | [ดูโปรเจกต์](./c-project) |
+| Python Programming | Python | ✅ เสร็จแล้ว | [ดูโปรเจกต์](./python-project) |
 | Object-Oriented Programming | Java | 🛠️ กำลังเรียน | [ดูโปรเจกต์](./java-project) |
-| Python Programming | Python | ⏳ รอเพิ่มโค้ด | ยังไม่อัปโหลด |
 
 ---
 
