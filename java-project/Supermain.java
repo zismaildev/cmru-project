@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
-abstract class Project {
-    public abstract void showProject(); 
+interface Project {
+    void borrowProject(String projectName, String borrowDate);
+    void showProject();
 }
 
-class Student extends Project {
+class Student implements Project {
     private String id;
     private String name;
     private String section;
@@ -27,6 +28,7 @@ class Student extends Project {
     public String getSection() { return section; }
     public void setSection(String section) { this.section = section; }
 
+    @Override
     public void borrowProject(String projectName, String borrowDate){
         this.projectName = projectName;
         this.borrowDate = borrowDate;
@@ -49,7 +51,7 @@ class Student extends Project {
     }
 }
 
-public class Main {
+public class Supermain {
     public static void main(String[] agrs) {
         Scanner sc = new Scanner(System.in);
 
