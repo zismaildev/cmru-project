@@ -1,12 +1,27 @@
-# 💻 C Programming Repository
+# 🇨 C Programming Language
 
-รวมโค้ดและแบบฝึกหัดภาษา C
+แบบฝึกหัดการเขียนโปรแกรมภาษา C ขั้นพื้นฐาน เน้นการใช้ Logic, Math, และ Control Flow (Loop/Condition)
 
-## 📂 รายการโปรแกรม (Program Details)
+## 📂 รายการแบบฝึกหัด (Exercises)
 
-| Program | Topic (หัวข้อ) | Type | Tech Stack |
-| :--- | :--- | :---: | :--- |
-| **[`Change Values`](./Change%20Values/)** | **Unit Conversion** | Logic | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white) |
-| **[`Find Area`](./Find%20Area/)** | **Geometry Calculator** | Logic | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white) |
-| **[`Pyramid`](./Pyramid/)** | **Pattern Printing** | Loop | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white) |
-| **[`Pro Pyramid`](./Pro%20Pyramid/)** | **Advanced Pattern** | Loop | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white) |
+| หัวข้อ (Topic) | รายละเอียด (Description) | ไฟล์ (Code) |
+| :--- | :--- | :---: |
+| [**Change Values**](./Change%20Values/README.md) | โปรแกรมแปลงหน่วยความยาว | `change-valus.c` |
+| [**Find Area**](./Find%20Area/README.md) | โปรแกรมคำนวณพื้นที่รูปทรงเรขาคณิต | `find-arear.c` |
+| [**Pro Pyramid**](./Pro%20Pyramid/README.md) | การสร้างพีระมิดรูปแบบต่างๆ (3 แบบ) | `pro-peramids.c`|
+| [**Pyramid**](./Pyramid/README.md) | การสร้างพีระมิดแบบพื้นฐาน | `peramid.c` |
+
+## 🛠️ เครื่องมือที่ใช้ (Tools)
+- **Compiler**: GCC (GNU Compiler Collection) หรือ MinGW
+- **Editor**: VS Code
+
+## 🚀 วิธีการรัน (How to Run)
+1. เปิด Terminal ในโฟลเดอร์ที่ต้องการ
+2. Compile ไฟล์ .c ด้วย gcc:
+   ```bash
+   gcc filename.c -o outputname
+   ```
+3. รันไฟล์ที่ได้:
+   ```bash
+   ./outputname
+   ```

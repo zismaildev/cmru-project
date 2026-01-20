@@ -1,17 +1,40 @@
 # Project 6: University Management System
 
-## Overview
-ระบบจัดการฐานข้อมูลมหาวิทยาลัย (CRUD) ครอบคลุมข้อมูลนักศึกษา อาจารย์ และคณะ
-- **Entities**: Student, Teacher, Faculty
-- **Operations**: Create, Read, Update, Delete, Search, Report
+ระบบจัดการข้อมูลมหาวิทยาลัยแบบ CRUD (Create, Read, Update, Delete) ครอบคลุมการจัดการข้อมูลนักศึกษา อาจารย์ และคณะ
 
-## File Structure
-- **Connection**: `connectDB.php`
-- **Main Menu**: `mainmenu.php`
-- **Student**: `addpen_student.php`, `edit_student.php`, `del_student.php`, `search_student.php`
-- **Teacher**: `addpen_teacher.php`, `edit_teacher.php`, `del_teacher.php`, `search_teacher.php`
-- **Faculty**: `append_fac.php`, `edit_fac.php`, `del_fac.php`, `search_fac.php`
-- **Reports**: `report_student.php`, `report_teacher.php`, `report_fac.php`
+## 🛠️ Technology Stack
+-   **Backend**: PHP (MySQLi)
+-   **Database**: MySQL
+-   **Frontend**: HTML, CSS (Basic)
 
-## Usage
-เริ่มต้นใช้งานที่ไฟล์ `mainmenu.php` เพื่อเข้าถึงฟังก์ชันต่างๆ
+## 📋 Modules & Features
+
+### 1. Student Management (จัดการข้อมูลนักศึกษา)
+-   **เพิ่มข้อมูล**: `addpen_student.php`
+-   **แก้ไขข้อมูล**: `edit_student.php`
+-   **ลบข้อมูล**: `del_student.php`
+-   **ค้นหา**: `search_student.php`
+-   **รายงาน**: `report_student.php` (แสดงรายชื่อทั้งหมด)
+
+### 2. Teacher Management (จัดการข้อมูลอาจารย์)
+-   **Features**: เพิ่ม, ลบ, แก้ไข, ค้นหา และออกรายงานรายชื่ออาจารย์
+-   **Files**: `addpen_teacher.php`, `edit_teacher.php`, etc.
+
+### 3. Faculty Management (จัดการข้อมูลคณะ)
+-   **Features**: จัดการข้อมูลคณะวิชาต่าง ๆ
+-   **Files**: `append_fac.php`, `edit_fac.php`, etc.
+
+## ⚙️ Setup & Installation
+1.  สร้างฐานข้อมูลชื่อ `myproject` ใน phpMyAdmin
+2.  ตรวจสอบการเชื่อมต่อฐานข้อมูลในไฟล์ `connectDB.php`
+    ```php
+    $host = 'localhost';
+    $user = 'root'; // username
+    $pass = '';     // password
+    $db = 'myproject';
+    ```
+3.  เข้าใช้งานเริ่มที่เมนูหลัก: `http://localhost/Web/php/project6/mainmenu.php`
+
+## 📂 Key Files
+-   `mainmenu.php`: หน้าเมนูหลักสำหรับเลือกจัดการข้อมูลแต่ละส่วน
+-   `connectDB.php`: ไฟล์เชื่อมต่อฐานข้อมูล (MySQLi connection)

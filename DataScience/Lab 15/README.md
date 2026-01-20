@@ -1,39 +1,16 @@
-# Lab 15: Python for Data Science
+# 🧪 Lab 15: Python for Data Science
 
-## Overview
-บทนำสู่การใช้ Python ในงาน Data Science โดยแนะนำ Libraries สำคัญและการใช้งานเบื้องต้น
+บทนำสู่การใช้ Python ในงานวิทยาศาสตร์ข้อมูล และการเรียกใช้ Libraries สำคัญ
 
-## Deep Dive Code Analysis
+## 📚 เนื้อหา (Topics)
+- **Libraries Overview**: NumPy, Pandas, Matplotlib, Scikit-learn, Seaborn, SciPy
+- **Importing**: วิธีการ import (`import numpy as np`, `import pandas as pd`)
+- **Example Flow**:
+  1. Load Dataset (Iris)
+  2. Create DataFrame (Pandas)
+  3. Basic Stats (`.describe()`)
+  4. Visualization (`.plot()`)
+  5. Correlation (`np.corrcoef`)
 
-### 1. Essential Libraries
-- **NumPy**: สำหรับการคำนวณทางคณิตศาสตร์และ Array
-- **Pandas**: สำหรับจัดการข้อมูลแบบตาราง (DataFrames)
-- **Matplotlib**: สำหรับวาดกราฟ (Visualization)
-- **Scikit-learn**: สำหรับ Machine Learning
-
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-```
-
-### 2. Loading Data (Scikit-learn Datasets)
-ตัวอย่างการโหลดข้อมูลIris dataset มาเล่น
-```python
-from sklearn import datasets
-iris = datasets.load_iris()
-```
-
-### 3. Converting to DataFrame
-แปลงข้อมูลดิบให้เป็น DataFrame เพื่อความง่ายในการจัดการ
-```python
-df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df.head() # ดู 5 แถวแรก
-df.describe() # ดูสถิติเบื้องต้น (Mean, SD, Min, Max)
-```
-
-### 4. Simple Visualization
-พลอตกราฟ Scatter plot อย่างง่าย
-```python
-df.plot(kind="scatter", x="sepal length (cm)", y="sepal width (cm)")
-```
+## 📝 ไฟล์ประกอบ
+- **[lab_15_python_for_data_science.py](./lab_15_python_for_data_science.py)**: ตัวอย่างการวิเคราะห์ข้อมูลเบื้องต้น

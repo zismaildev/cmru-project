@@ -1,14 +1,27 @@
-# ☕ Java Programming Repository
+# ☕ Java Programming
 
-รวมโค้ดและแบบฝึกหัดภาษา Java เน้นการเขียนโปรแกรมเชิงวัตถุ (OOP)
+คลังโปรเจกต์ฝึกเขียนภาษา Java ตั้งแต่พื้นฐานไปจนถึง OOP (Object-Oriented Programming)
 
-## 📂 รายการโปรเจกต์ (Project Details)
+## 📂 รายการโปรเจกต์ (Projects)
 
-| Project | Topic | Tech Stack |
+### 🥇 พื้นฐาน & อัลกอริทึม
+| หัวข้อ (Topic) | รายละเอียด (Description) | โปรเจกต์ (Folder) |
 | :--- | :--- | :--- |
-| **[`OOP Shapes`](./OOP%20Shapes/)** | **Geometry & OOP** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
-| **[`Project Borrowing`](./Project%20Borrowing%20System/)** | **Student System (Interface)** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
-| **[`Grading System`](./Grading%20System/)** | **Grade Calculation** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
-| **[`Sorting Demo`](./Sorting%20Demo/)** | **Bubble Sort** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
-| **[`Basic Apps`](./Basic%20Apps/)** | **BMI & Calculator** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
-| **[`Logic and Math`](./Logic%20and%20Math/)** | **General Exercises** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
+| **Logic & Math** | แบบฝึกหัดตรรกะและคณิตศาสตร์ เช่น เลขหารลงตัว, สถิติตัวเลข | [📁 Logic and Math](./Logic%20and%20Math/README.md) |
+| **Basic Calculator** | โปรแกรมเครื่องคิดเลขอย่างง่าย (+ - * /) | [📁 Basic Apps](./Basic%20Apps/README.md) |
+| **Sorting Demo** | ตัวอย่างการเรียงลำดับข้อมูลด้วย Bubble Sort | [📁 Sorting Demo](./Sorting%20Demo/README.md) |
+
+### 🥈 ระบบประมวลผล (Processing Systems)
+| หัวข้อ (Topic) | รายละเอียด (Description) | โปรเจกต์ (Folder) |
+| :--- | :--- | :--- |
+| **Grading System** | ระบบคำนวณเกรด ตัดเกรด และสรุปผลทั้งห้องเรียน | [📁 Grading System](./Grading%20System/README.md) |
+
+### 🥉 OOP (Object-Oriented Programming)
+| หัวข้อ (Topic) | รายละเอียด (Description) | โปรเจกต์ (Folder) |
+| :--- | :--- | :--- |
+| **OOP Shapes** | การใช้ Class/Object คำนวณพื้นที่รูปทรงต่างๆ | [📁 OOP Shapes](./OOP%20Shapes/README.md) |
+| **Borrowing System** | ระบบยืมคืนโปรเจกต์ (Abstract Class & Encapsulation) | [📁 Project Borrowing System](./Project%20Borrowing%20System/README.md) |
+
+## 🛠️ เครื่องมือที่ใช้ (Tools)
+- **Framework**: Java SE (Standard Edition)
+- **Editor**: VS Code / IntelliJ IDEA / Eclipse

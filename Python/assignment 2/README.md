@@ -1,19 +1,14 @@
-# Assignment 2: String Formatting & Input
+# 📝 Assignment 2: Input & String Formatting
 
-**Topic:** Type Casting, Input Handing, String Format
+แบบฝึกหัดการรับค่าจากผู้ใช้ (User Input) และการจัดรูปแบบข้อความ
 
-## 📄 Code Snippet
-**File:** [`assignment_2.py`](./assignment_2.py)
+## ✏️ โจทย์ (Problems)
+1. **Flowchart Implementation**: เขียนโปรแกรมตามผังงาน (รวมเลข, แสดงผลเกรด)
+2. **String Manipulation**: การใช้ `\n` (ขึ้นบรรทัดใหม่), `\t` (ย่อหน้า), และ string concatenation
+3. **User Profile**: รับค่า Subject, Section, Grade และคำนวณพื้นที่
+4. **Code Debugging**: แก้ไขโค้ดที่ผิดพลาด (Syntax Errors)
 
-```python
-# String Formatting
-a = "ยินดีต้อนรับเข้าสู่"
-b = "\t\"โปรแกรมภาษาไพธอน\""
-print("สวัสดีครับ %s" % a)
-
-# Input & Calculation
-w = float(input("Enter Your W : "))
-i = float(input("Enter Your I : "))
-area = w * i
-print("พื้นที่ %.2f X %.2f = %.2f" % (w, i, area))
-```
+## 🚀 ผลลัพธ์ (Key Concepts)
+- `input()` function
+- String Formatting (`%s`, `%d`, `%.2f`)
+- Escape Characters

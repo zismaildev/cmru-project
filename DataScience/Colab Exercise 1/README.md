@@ -1,49 +1,27 @@
-# Colab Exercise 1: Python Basics & Logic
+# Colab Exercise 1
 
-## Overview
-รวมแบบฝึกหัดพื้นฐาน Python 5 ข้อ ครอบคลุมเรื่อง Conditionals, Loops, Strings, Lists และ Dictionaries
+แบบฝึกหัด Python เบื้องต้น ชุดที่ 1 ครอบคลุมการเขียนโปรแกรมแก้ไขปัญหาโจทย์พื้นฐาน 5 ข้อ
 
-## Deep Dive Code Analysis
+## รายละเอียดไฟล์
+- `colabexercise1.py`: ไฟล์ Python ที่รวบรวมโซลูชันของโจทย์ทั้ง 5 ข้อไว้
 
-### 1. Promotion Calculation
-โปรแกรมคำนวณส่วนลดร้านหนังสือ
-- เงื่อนไข: ซื้อ 2 เล่มขึ้นไป และยอดเกิน 300 บาท ลด 10%
-```python
-if num_books >= 2 and total_price > 300:
-    discount = total_price * 0.10
-    total_price -= discount
+## โจทย์ปัญหาในแบบฝึกหัด
+
+1.  **คำนวณส่วนลดร้านหนังสือ**
+    -   คำนวณราคาสุทธิที่ลูกค้าต้องจ่าย
+    -   เงื่อนไข: ซื้อ 2 เล่มขึ้นไป และยอดรวมเกิน 300 บาท ได้รับส่วนลด 10%
+2.  **แยกตัวเลขแต่ละหลัก**
+    -   รับค่าจำนวนเต็ม และพิมพ์เลขออกมาทีละหลัก (เริ่มจากหลักหน่วย)
+3.  **นับคำว่า "Python"**
+    -   นับจำนวนคำว่า "Python" ที่ปรากฏในข้อความบทความที่กำหนดให้
+4.  **นับจำนวน String ตามเงื่อนไข**
+    -   นับจำนวนสมาชิกใน List ที่มีความยาวตั้งแต่ 2 ตัวอักษรขึ้นไป และ ตัวอักษรแรกกับตัวสุดท้ายเหมือนกัน
+5.  **สร้าง Dictionary นับตัวอักษร**
+    -   สร้าง Dictionary จากข้อความ โดย Key คือตัวอักษร และ Value คือจำนวนครั้งที่ปรากฏ
+
+## การใช้งาน
+สามารถรันไฟล์นี้เพื่อดูผลลัพธ์ของแต่ละข้อได้:
+```bash
+python colabexercise1.py
 ```
-
-### 2. Digit Extraction
-การพิมพ์ตัวเลขทีละหลักจากหลังมาหน้า
-```python
-while number > 0:
-    digit = number % 10 # หาหลักหน่วย
-    print(digit)
-    number = number // 10 # ตัดหลักหน่วยออก
-```
-
-### 3. Word Counting
-การนับจำนวนคำว่า "Python" ในบทความ
-```python
-text = """Python is a ..."""
-count = text.count("Python")
-```
-
-### 4. String List Filter
-นับจำนวนคำใน List ที่มีความยาว >= 2 และตัวอักษรหน้าหลังเหมือนกัน
-```python
-for word in words:
-    # เช็คความยาวและตัวหน้าเทียบตัวหลัง
-    if len(word) >= 2 and word[0] == word[-1]:
-        count += 1
-```
-
-### 5. String to Dictionary
-นับจำนวนตัวอักษรในข้อความและเก็บลง Dictionary
-```python
-text = 'w3resource'
-for char in text:
-    # ใช้ .get(char, 0) เพื่อป้องกัน error กรณี key ยังไม่มีค่า
-    char_count[char] = char_count.get(char, 0) + 1
-```
+*หมายเหตุ: ในไฟล์อาจมีการรับค่า Input (เช่น ข้อ 1 และ 2) ผู้ใช้ต้องกรอกค่าตามที่โปรแกรมถาม*

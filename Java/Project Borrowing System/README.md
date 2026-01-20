@@ -1,29 +1,22 @@
-# Student Project Borrowing System
+# 📚 Project Borrowing System
 
-## Overview
-ระบบยืมคืนโครงงานนักศึกษา (Project Borrowing) สาธิตการใช้ Interface, Abstract Class, และ Inheritance
+ระบบบันทึกการยืมโครงงานของนักศึกษา สาธิตการใช้งาน **Abstract Class** และ **Inheritance**
 
-## Code Deep Dive
+## 🧠 คอนเซปต์ OOP ที่ใช้
+- **Abstract Class (`Project`)**: สร้างคลาสแม่ที่มี method `showProject()` เป็น abstract
+- **Inheritance (`Student extends Project`)**: คลาส Student สืบทอดคุณสมบัติมาจาก Project
+- **Encapsulation**: การใช้ `private` fields และเข้าถึงผ่าน Getter/Setter
 
-### 1. Interface vs Abstract Class
-เปรียบเทียบการใช้งานระหว่าง 2 แนวคิด:
-- **Project (Interface)**: ใช้ใน `Supermain.java`
-- **Project (Abstract Class)**: ใช้ใน `Main.java`
+## 💡 การทำงาน
+1. สร้าง Object `Student` พร้อมข้อมูลส่วนตัว
+2. เรียก method `borrowProject` เพื่อระบุชื่อโครงงานและวันที่ยืม
+3. เรียก `showProject` เพื่อแสดงข้อมูลสรุปทั้งหมด
 
-### 2. Polymorphism (Implementation)
-Class `Student` สืบทอดคุณสมบัติและนำมาขยายความ (Override)
-```java
-@Override
-public void borrowProject(String projectName, String borrowDate){
-    this.projectName = projectName;
-    this.borrowDate = borrowDate;
-}
-```
+## 📝 ไฟล์ประกอบ
+- **[Main.java](./Main.java)**: ไฟล์ source code หลัก
 
-### 3. Data Interaction
-การรับค่าจาก User ผ่าน `Scanner` และส่งเข้า Object
-```java
-Scanner sc = new Scanner(System.in);
-Student student = new Student(id, name, section);
-student.borrowProject(projectName, borrowDate);
+## 🚀 วิธีการรัน
+```bash
+javac Main.java
+java Main
 ```
