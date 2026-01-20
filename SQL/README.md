@@ -1,37 +1,20 @@
-# 🗃️ SQL & Database Repository
+# 🗃️ Database Management Systems (SQL)
 
-สคริปต์ SQL และ Database Dumps
+## Overview
+รวบรวมไฟล์ **SQL Dump (.sql)** ที่ได้จากการ Export ฐานข้อมูลในวิชาเรียนต่างๆ 
+เนื้อหาครอบคลุมโครงสร้างตาราง (Schema) และข้อมูลตัวอย่าง (Data)
 
-## 📂 รายละเอียดโครงสร้าง (Database Schema)
+## 📁 File List
 
-### 🔑 [`Main Database .sql`](./Main%20Database%20.sql)
-**Topic:** Table Creation (DDL)
-คำสั่งสร้างตาราง `supplier420` และกำหนด Primary Key
+| File Name | Description (รายละเอียด) | Size |
+| :--- | :--- | :---: |
+| **`Main Database.sql`** | ฐานข้อมูลหลักของโปรเจกต์ | 2 KB |
+| **`2024.2.5.sql`** | ฐานข้อมูลที่อัปเดตล่าสุด (5 ก.พ. 2024) | 8.8 KB |
+| **`2023.xxx.sql`** | ไฟล์ Backup ประจำปี 2023 | Varies |
+| **`zismaildev/`** | โปรเจกต์ย่อยสำหรับทดสอบระบบ | Folder |
 
-```sql
--- Create Table
-CREATE TABLE IF NOT EXISTS `supplier420` (
-  `id_sup` char(5) NOT NULL,
-  `name_sup` varchar(20) DEFAULT NULL,
-  `address` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_sup`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
-```
-
-**Topic:** Data Insertion (DML)
-ตัวอย่างข้อมูลในตาราง
-
-```sql
--- Insert Data
-INSERT INTO `supplier420` (`id_sup`, `name_sup`, `address`) VALUES
-('SP001', 'Somjai Company', '120 changphuak Chaiangmai'),
-('SP002', 'ABC Company', '50 Chotana Chaiangmai');
-```
-
----
-
-### 📂 รายการไฟล์ (File List)
-| File | Description (รายละเอียด) | Type | Tech Stack |
-| :--- | :--- | :---: | :--- |
-| **Main Database** | สคริปต์หลักสำหรับสร้างฐานข้อมูล | 🔑 Structure | ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white) |
-| **Backups** | ไฟล์สำรองข้อมูลตามวันที่ (2023-2024) | 💾 Backup | ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white) |
+## 🛠️ How to Import
+1. เปิดโปรแกรมจัดการฐานข้อมูล เช่น **phpMyAdmin**, **DBeaver**, หรือ **MySQL Workbench**
+2. สร้าง Database ใหม่ที่ต้องการ
+3. เลือกเมนู **Import** และเลือกไฟล์ `.sql` ที่ต้องการนำเข้า
+4. กด **Go/Run** เพื่อ Execute คำสั่ง SQL

@@ -46,8 +46,21 @@ echo "Connected successfully";
 ?>
 ```
 
-### 📁 Project List
+### 📁 Project List (Frontend)
 | Project | รายละเอียด (Description) | Folder | Tech Stack |
 | :--- | :--- | :---: | :--- |
-| **Website** | แบบฝึกหัดสร้างหน้าเว็บ (Frontend) | [📁](./website/) | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) |
-| **PHP Projects** | โปรเจกต์จัดการข้อมูล (CRUD) | [📁](./php/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white) |
+| **Website** | แบบฝึกหัดสร้างหน้าเว็บ (HTML/CSS) | [📁](./website/) | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) |
+
+### 🐘 Project List (Backend PHP)
+| Project | รายละเอียด (Description) | Folder | Tech Stack |
+| :--- | :--- | :---: | :--- |
+| **Basic DB Connect** | การเชื่อมต่อฐานข้อมูล MySQL | [📁](./php/Basic%20DB%20Connect/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Project 2** | ฟอร์มคำนวณและรับค่า (Calculator) | [📁](./php/project2/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Project 3** | Logic & Control Flow (Loops/Conditions) | [📁](./php/project3/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Project 4** | Form Handling & Game Logic | [📁](./php/project4/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Project 5** | File Upload & Calculation | [📁](./php/project5/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Quiz** | แบบทดสอบออนไลน์ (Simple Quiz) | [📁](./php/quiz/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **System** | ระบบ Login Basic (Session 1) | [📁](./php/system/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **System 2** | ระบบ Login Advanced (Session 2) | [📁](./php/system2/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Project 6** | ระบบจัดการมหาวิทยาลัย (CRUD Management) | [📁](./php/project6/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |
+| **Final Project** | ระบบ E-Commerce ครบวงจร (Cart/Admin) | [📁](./php/final/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) |

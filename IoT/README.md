@@ -29,6 +29,10 @@ void loop() {
 
 | Folder | Description (รายละเอียด) | Type | Tech Stack |
 | :--- | :--- | :---: | :--- |
-| **[`Lab3`](Lab3/)** - **[`Lab5`](Lab5/)** | บทปฏิบัติการพื้นฐาน (Sensors/Actuators) | 🧪 Lab | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
-| **[`workshop1`](workshop1/)** - **[`workshop3`](workshop3/)** | โครงงานประยุกต์ใช้จริง | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
-| **[`final`](final/)** | โครงงานจบวิชา (Final Project) | 🏆 Final | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
+| **[`Lab3`](Lab3/)** | **Weather Station (Offline)** | 🧪 Lab | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
+| **[`Lab4`](Lab4/)** | **Smart Farm WiFi** | 🧪 Lab | ![ESP8266](https://img.shields.io/badge/ESP8266-000000?style=flat&logo=espressif&logoColor=white) |
+| **[`Lab5`](Lab5/)** | **Smart Farm Blynk** | 🧪 Lab | ![Blynk](https://img.shields.io/badge/Blynk-29BB7D?style=flat&logo=blynk&logoColor=white) |
+| **[`workshop1`](workshop1/)** | **Basic Traffic Light** | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
+| **[`workshop2`](workshop2/)** | **Interactive Traffic Light** | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
+| **[`workshop3`](workshop3/)** | **Sensor Modules** | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
+| **[`final`](final/)** | **Smart Parking System** | 🏆 Final | ![ESP8266](https://img.shields.io/badge/ESP8266-000000?style=flat&logo=espressif&logoColor=white) |

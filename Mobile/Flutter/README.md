@@ -1,16 +1,22 @@
-# flutter_main
+# 📱 Flutter Projects
 
-A new Flutter project.
+พื้นที่รวบรวมโปรเจกต์และการเรียนรู้เกี่ยวกับ **Flutter** และ **Dart**
 
-## Getting Started
+## 📂 โครงสร้างโฟลเดอร์ (Folder Structure)
 
-This project is a starting point for a Flutter application.
+- **[`Learning/`](./Learning/)**: รวมบทเรียนและแบบฝึกหัดพื้นฐาน
+  - Dart Syntax
+  - Widget Basics
+  - Navigation
+  - Logic Assignments
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Getting Started
 
+โปรเจกต์นี้เริ่มต้นจาก Flutter Template มาตรฐาน สามารถศึกษาวิธีการใช้งานเบื้องต้นได้ที่:
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🔧 Prerequisites
+- Flutter SDK
+- VS Code / Android Studio
+- Setup Emulator or Real Device
