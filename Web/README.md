@@ -1,25 +1,53 @@
-# 🌐 Web Development Repository
+# 🌐 Web Development
 
-รวมโปรเจกต์พัฒนาเว็บไซต์ แบ่งเป็นส่วนของ Static Website และ Server-Side Programming (PHP)
+การพัฒนาเว็บไซต์ (Frontend & Backend)
 
-## 📂 หมวดหมู่ย่อย (Sub-directories)
+## 📂 สารบัญเนื้อหา (Contents)
 
-### 1. [Website](website/) (Frontend)
-โฟลเดอร์นี้เน้นการสร้างหน้าเว็บพื้นฐานด้วย **HTML** และ **CSS**:
-- **Pages**:
-  - `login.html`: หน้าเข้าสู่ระบบ
-  - `profile.html`: หน้าโปรไฟล์ผู้ใช้
-  - `quiz.html`: หน้าทำแบบทดสอบ
-  - `index.html`: หน้าหลัก
-- **Styling**: มีไฟล์ `style.css` สำหรับตกแต่งหน้าเว็บให้สวยงาม
+### 🎨 Frontend (HTML/CSS)
+**Topic:** Basic Web Page Structure
+โครงสร้างหน้าเว็บพื้นฐาน (`index.html`, `login.html`)
 
-### 2. [PHP](php/) (Backend)
-โฟลเดอร์สำหรับเขียนโปรแกรมฝั่ง Server และเชื่อมต่อฐานข้อมูล:
-- **Database Connection**: มีไฟล์ **`dbconnect.php`** เป็นหัวใจหลักในการเชื่อมต่อกับ MySQL Database
-- **Progressive Projects**:
-  - `project2` - `project6`: โปรเจกต์ที่ซับซ้อนขึ้นตามลำดับ (คาดว่าเป็นระบบ CRUD หรือระบบจัดการข้อมูล)
-  - `final`: โปรเจกต์จบ หรือโปรเจกต์ใหญ่สุดของวิชา
-  - `system`: ระบบจัดการหลังบ้าน
+```html
+<!-- index.html Example -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <a href="login.html">Login</a>
+</body>
+</html>
+```
 
----
-*แนะนำให้เริ่มศึกษาจาก Website เพื่อดูเรื่อง UI แล้วค่อยไปดู PHP เรื่องการจัดการข้อมูล*
+### ⚙️ Backend (PHP & Database)
+**Topic:** Database Connection
+ไฟล์สำคัญสำหรับเชื่อมต่อ MySQL Database (`dbconnect.php`)
+
+```php
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "nattapong51";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
+```
+
+### 📁 Project List
+| Project | รายละเอียด (Description) | Folder | Tech Stack |
+| :--- | :--- | :---: | :--- |
+| **Website** | แบบฝึกหัดสร้างหน้าเว็บ (Frontend) | [📁](./website/) | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) |
+| **PHP Projects** | โปรเจกต์จัดการข้อมูล (CRUD) | [📁](./php/) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white) |

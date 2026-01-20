@@ -1,26 +1,54 @@
 # 💻 C Programming Repository
 
-รวมโค้ดและแบบฝึกหัดภาษา C (C Programming Language) เน้นพื้นฐาน Logic และ Algorithm
+รวมโค้ดและแบบฝึกหัดภาษา C
 
-## 📂 รายละเอียดโปรเจกต์ (Project Details)
+## 📂 รายการโปรแกรม (Program Details)
 
-ในโฟลเดอร์นี้ประกอบด้วย Source code ภาษา C สำหรับแก้โจทย์ปัญหาต่างๆ ดังนี้:
+### 📏 [`change-valus.c`](./change-valus.c)
+**Topic:** Unit Conversion & Logic
+โปรแกรมแปลงหน่วยความยาว โดยใช้ตัวแปร `float` และ `if-else`
 
-### 🛠️ Basic Utilities
-- **[`change-valus.c`](change-valus.c)**:
-  - โปรแกรมแปลงหน่วยความยาว (Unit Converter)
-  - แปลงจาก **นิ้ว (Inches) ⭢ เมตร (Meters)** และในทางกลับกัน
-  - ใช้หลักการ `1 inch = 0.0254 meters`
-
-- **[`find-arear.c`](find-arear.c)**:
-  - โปรแกรมคำนวณพื้นที่รูปเรขาคณิต (Geometry Calculator)
-  - รองรับการคำนวณ: **วงกลม (Circle)**, **สามเหลี่ยม (Triangle)**, และ **สี่เหลี่ยมผืนผ้า (Rectangle)**
-  - ใช้ `switch-case` ในการเลือกเมนู
-
-### 📐 Pattern Printing
-- **[`peramid.c`](peramid.c)** & **[`pro-peramids.c`](pro-peramids.c)**:
-  - แบบฝึกหัดการวนลูป (Looping) เพื่อพิมพ์รูปทรงพีระมิด
-  - ฝึกฝนการใช้ Nested Loop
+```c
+// Conversion Logic
+if (list == 1) {
+    // Inches to Meters
+    meters = inches * 0.0254;
+    printf("%.4f inches = %.4f meters\n", inches, meters);
+} else if (list == 2) {
+    // Meters to Inches
+    inches = meters / 0.0254; 
+    printf("%.4f meters = %.4f inches\n", meters, inches);
+}
+```
 
 ---
-*Code by Nattapong Dev*
+
+### 📐 [`find-arear.c`](./find-arear.c)
+**Topic:** Switch-Case Menu
+โปรแกรมเมนูเลือกคำนวณพื้นที่รูปทรงต่างๆ
+
+```c
+// Menu Selection
+switch (list) {
+    case 1: { // Circle
+        area = M_PI * radius * radius;
+        break;
+    }
+    case 2: { // Triangle
+        area = 0.5 * base * height;
+        break;
+    }
+    case 3: { // Rectangle
+        area = width * length;
+        break;
+    }
+}
+```
+
+---
+
+### ⛰️ Pattern Printing
+| File | Description | Tech Stack |
+| :--- | :--- | :--- |
+| **[`peramid.c`](./peramid.c)** | Loop Practice (Pyramid) | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white) |
+| **[`pro-peramids.c`](./pro-peramids.c)** | Advanced Loop | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=white) |

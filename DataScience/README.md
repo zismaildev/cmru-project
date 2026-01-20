@@ -1,23 +1,45 @@
 # 📊 Data Science Repository
 
-คลังความรู้และปฏิบัติการด้านวิทยาศาสตร์ข้อมูล (Data Science) ด้วยภาษา Python ครอบคลุมตั้งแต่วิธีการใช้เครื่องมือจนถึงอัลกอริทึม Machine Learning
+คลังความรู้ Data Science (Labs & Workshops)
 
-## 📂 เส้นทางการเรียนรู้ (Learning Path)
+## 📂 ตัวอย่างบทเรียน (Lesson Highlights)
 
-ไฟล์ในโฟลเดอร์นี้ถูกจัดเรียงเป็น Lab (บทปฏิบัติการ) ตามลำดับหัวข้อ:
+### 🐍 Python for Data Science
+**Topic:** Pandas & NumPy (Basic Data Analysis)
+การใช้งาน Library พื้นฐานสำหรับจัดการข้อมูล
 
-### 🟢 Basics (Lab 1-9)
-- **Tools**: Introduction to Google Colab (`lab_1`)
-- **Python for DS**: Hello World, Calculation, Operators, Variables, Data Types (`lab_2`-`lab_6`)
-- **Programming Logic**: String, Methods, Control Flow (If-Else) (`lab_7`-`lab_9`)
+```python
+import pandas as pd
+import numpy as np
 
-### 🟡 Intermediate (Lab 10-14)
-- **Advanced Control Flow**: For Loop, While Loop (`lab_10`-`lab_11`)
-- **Data Structures**: List, Tuple, Dictionary (`lab_12`-`lab_14`)
+# Create DataFrame
+data = {'Name': ['Tom', 'Jerry'], 'Age': [20, 22]}
+df = pd.DataFrame(data)
 
-### 🔴 Advanced & Libraries (Lab 15-17+)
-- **DS Libraries**: Intro to **NumPy** (`lab_16`), **Pandas** (`lab_17`)
-- **Web Scraping**: การดึงข้อมูลจากเว็บไซต์ (`web_scraping_new.py`, `web_scraping(grup).py`)
+# Print info
+print(df.describe())
+```
+
+### 🌍 Web Scraping ([`web_scraping_new.py`](./web_scraping_new.py))
+**Topic:** Data Extraction
+การดึงข้อมูลจากหน้าเว็บโดยใช้ Python
+
+```python
+# Example Concept
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+print(soup.title.text)
+```
 
 ---
-*Note: ไฟล์ส่วนใหญ่เป็น Python Scripts (.py) ที่ Export มาจาก Jupyter Notebook/Colab*
+
+## 📂 Labs Index
+| Code | Topic (หัวข้อ) | Type | Tech Stack |
+| :---: | :--- | :---: | :--- |
+| **Lab 1-9** | **Basics** (Colab, Syntax, Logic) | Basic | ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white) |
+| **Lab 10-14** | **Intermediate** (Loops, Data Structures) | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
+| **Lab 15+** | **Advanced** (Libraries, Scraping) | App | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) |

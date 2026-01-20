@@ -1,21 +1,54 @@
 # ☕ Java Programming Repository
 
-รวมโค้ดและแบบฝึกหัดภาษา Java เน้นการเขียนโปรแกรมเชิงวัตถุ (OOP) และ Data Structures
+รวมโค้ดและแบบฝึกหัดภาษา Java เน้นการเขียนโปรแกรมเชิงวัตถุ (OOP)
 
-## 📂 โครงสร้างโปรเจกต์ (Project Structure)
-Source code ทั้งหมดถูกเก็บไว้ในโฟลเดอร์ [`src/`](src/)
+## 📂 รายการโปรเจกต์ (Project Details)
 
-### 🚀 Key Concepts & Projects
+### 📐 [`AreaShape.java`](./src/AreaShape.java)
+**Topic:** Object-Oriented Programming (Constructor & Polymorphism)
+การใช้งาน Class และ Constructor ในการสร้าง Object รูปทรงต่างๆ
 
-#### 1. Object-Oriented Programming (OOP)
-- **`AreaShape.java`**: การคำนวณพื้นที่รูปทรงต่างๆ โดยประยุกต์ใช้ Concept ของ Class และ Object อาจมีการใช้ Inheritance หรือ Polymorphism
-- **`StudentGradeReport.java` & `StudentGradeReportV2.java`**: ระบบตัดเกรดนักศึกษาและรายงานผลการเรียน แสดงให้เห็นการพัฒนา Code จากเวอร์ชันแรกไปสู่เวอร์ชันที่ซับซ้อนขึ้น (เช่น V2 หรือ 2D Array)
+```java
+// Constructor for Circle
+AreaShapeClass(double radius) {
+    area = Math.PI * radius * radius;
+    shapeDetail = "Circle with radius = " + radius;
+}
 
-#### 2. Algorithms & Logic
-- **`BubbleSortDemo.java`**: ตัวอย่างการทำงานของอัลกอริทึมเรียงลำดับข้อมูลแบบ Bubble Sort
-- **`Calculator.java`**: โปรแกรมเครื่องคิดเลขพื้นฐาน
-- **`DivisibleNumbers.java`**: โจทย์ตรรกะทางคณิตศาสตร์ (เช่น การหาตัวเลขที่หารลงตัว)
+// Constructor for Rectangle (Overloading)
+AreaShapeClass(double width, double height) {
+    area = width * height;
+    shapeDetail = "Rectangle with width = " + width + " and height = " + height;
+}
+```
 
-#### 3. General Utilities
-- **`HealthCalculator.java`**: โปรแกรมคำนวณด้านสุขภาพ (อาจจะเป็น BMI หรือ BMR)
-- **`NumberStats.java`**: การคำนวณทางสถิติของตัวเลข
+---
+
+### 🎓 [`StudentGradeReport.java`](./src/StudentGradeReport.java)
+**Topic:** Array & Logic System
+ระบบตัดเกรดนักศึกษาโดยใช้ Array และการคำนวณเกรด
+
+```java
+// Grade Calculation Logic
+public static String calculateGrade(double average) {
+    if (average >= 80) return "A";
+    else if (average >= 75) return "B+";
+    else if (average >= 70) return "B";
+    else if (average >= 65) return "C+";
+    // ...
+    else return "F";
+}
+
+// Display Report Format
+System.out.printf("%-12s %-25s %-10s %-10s %-12s %-10s %-10s %-8s%n",
+        "Student ID", "Full Name", "Test 1", "Test 2", "Final Exam", 
+        "Total", "Average", "Grade");
+```
+
+---
+
+### 🛠️ Other Utilities
+| File | Topic | Tech Stack |
+| :--- | :--- | :--- |
+| **[`BubbleSortDemo.java`](./src/BubbleSortDemo.java)** | Sorting Algorithm | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
+| **[`Calculator.java`](./src/Calculator.java)** | Basic Tool | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
