@@ -1,38 +1,29 @@
-# Web Scraping: SET Member List
+# Web Scraping Group Project
 
-## Overview
-โปรแกรมดึงข้อมูลรายชื่อบริษัทสมาชิกจากเว็บไซต์ตลาดหลักทรัพย์แห่งประเทศไทย (SET) โดยใช้ `requests` และ `BeautifulSoup` และส่งออกเป็น CSV
+โปรเจกต์กลุ่ม Web Scraping สำหรับดึงข้อมูลรายชื่อบริษัทและหุ้นจากเว็บไซต์ตลาดหลักทรัพย์แห่งประเทศไทย (SET)
 
-## Deep Dive Code Analysis
+## รายละเอียดไฟล์
+- `web_scraping(grup).py`: สกริปต์หลักในการดึงข้อมูล
 
-### 1. HTTP Request headers
-การกำหนด User-Agent เพื่อจำลอง Browser หลีกเลี่ยงการโดนบล็อก
-```python
-headers = {'User-Agent': 'Mozilla/5.0 ...'}
-r = requests.get(url, headers=headers)
+## การทำงานของโปรแกรม
+1.  เรียกข้อมูลจาก URL: `https://www.set.or.th/th/market/information/member-list/main`
+2.  ใช้ `requests` ในการส่ง HTTP GET Request
+3.  ใช้ `BeautifulSoup` แปลง (Parse) HTML ที่ได้
+4.  ดึงข้อมูลจาก `div` ที่มี class เฉพาะเจาะจง เพื่อเก็บข้อมูล:
+    -   ชื่อย่อหุ้น (Stock Name)
+    -   ชื่อบริษัท (Company Name)
+    -   ที่อยู่บริษัท (Company Address)
+    -   เบอร์โทรศัพท์ติดต่อ (Company Contact)
+5.  รวบรวมข้อมูลลงใน `pandas` DataFrame
+6.  ส่งออกข้อมูลเป็นไฟล์ CSV ชื่อ `stocks_info.csv`
+
+## ไลบรารีที่ใช้
+-   `requests`
+-   `bs4` (BeautifulSoup)
+-   `pandas`
+
+## การใช้งาน
+```bash
+python "web_scraping(grup).py"
 ```
-
-### 2. HTML Parsing (BeautifulSoup)
-การดึงข้อมูลจาก Tag `<div>` ที่มี Class ระบุเฉพาะ
-```python
-soup = BeautifulSoup(r.content, 'html.parser')
-company = soup.find_all('div', {'class': 'card p-3 market-related-info mt-3'})
-```
-
-### 3. Data Extraction Loop
-วนลูปเพื่อดึงข้อมูลย่อย (ชื่อบริษัท, ที่อยู่, เบอร์โทร)
-```python
-for div in company:
-    name_tag = div.find('div', {'class': 'title-font-family fw-bolder text-deep-gray'})
-    if name_tag:
-        stock_names.append(name_tag.get_text(strip=True))
-```
-
-### 4. Create DataFrame & Export
-นำ List ข้อมูลมาสร้าง Pandas DataFrame และบันทึกเป็น CSV encoding utf-8-sig (รองรับภาษาไทยใน Excel)
-```python
-stocksinfo = pd.DataFrame({
-    'Stock Name': stock_names, ...
-})
-stocksinfo.to_csv("stocks_info.csv", index=False, encoding='utf-8-sig')
-```
+*ผลลัพธ์ที่ได้จะเป็นไฟล์ `stocks_info.csv` ในโฟลเดอร์เดียวกัน*

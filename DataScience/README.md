@@ -1,32 +1,36 @@
-# 📊 Data Science Repository
+# DataScience Learning Path
 
-คลังความรู้ Data Science (Labs & Workshops)
+แหล่งรวบรวมโค้ดและแบบฝึกหัดสำหรับการเรียนรู้ Data Science ด้วย Python ตั้งแต่พื้นฐานไปจนถึงการทำ Web Scraping และการใช้ Pandas
 
-## 📂 บทเรียนและปฏิบัติการ (Labs Index)
+## 📚 Course Structure
 
-| Lab | Topic (หัวข้อ) | Type | Tech Stack |
-| :--- | :--- | :---: | :--- |
-| **[`Lab 1`](./Lab%201/)** | **Intro to Google Colab** | Basic | ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white) |
-| **[`Lab 2`](./Lab%202/)** | **Hello World** | Basic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 3`](./Lab%203/)** | **Basic Calculation** | Basic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 4`](./Lab%204/)** | **Operators** | Basic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 5`](./Lab%205/)** | **Variables** | Basic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 6`](./Lab%206/)** | **Data Types** | Basic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 7`](./Lab%207/)** | **String** | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 8`](./Lab%208/)** | **Function vs Method** | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 9`](./Lab%209/)** | **Control Flow (If-Else)** | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 10`](./Lab%2010/)** | **Control Flow (For Loop)** | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 11`](./Lab%2011/)** | **Control Flow (While Loop)** | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 12`](./Lab%2012/)** | **List** | Struct | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 13`](./Lab%2013/)** | **Tuple** | Struct | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 14`](./Lab%2014/)** | **Dictionary** | Struct | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 15`](./Lab%2015/)** | **Python for Data Science** | App | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Lab 16`](./Lab%2016/)** | **Intro to NumPy** | App | ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white) |
-| **[`Lab 17`](./Lab%2017/)** | **Intro to Pandas** | App | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) |
+### 基础 Fundamentals (Python Basics for Data Science)
+-   **[Lab 1: Intro to Google Colab](./Lab%201/README.md)** - การใช้งาน Google Colab เบื้องต้น
+-   **[Lab 2: Hello World](./Lab%202/README.md)** - การพิมพ์ข้อความและการใช้งาน `print()`
+-   **[Lab 3: Arithmetic Operators](./Lab%203/README.md)** - ตัวดำเนินการทางคณิตศาสตร์
+-   **[Lab 4: Operators](./Lab%204/README.md)** - ตัวดำเนินการเปรียบเทียบและตรรกะ
+-   **[Lab 5: Variables](./Lab%205/README.md)** - ตัวแปรและประเภทข้อมูล
+-   **[Lab 6: Data Types (Int, Float, Str, Bool)](./Lab%206/README.md)** - เจาะลึกประเภทข้อมูลพื้นฐาน
+-   **[Lab 7: String Manipulation](./Lab%207/README.md)** - การจัดการข้อความ (Slicing, Formatting)
+-   **[Lab 8: Functions vs Methods](./Lab%208/README.md)** - ความแตกต่างและการใช้งาน
+-   **[Lab 9: Control Flow (If-Else)](./Lab%209/README.md)** - การตรวจสอบเงื่อนไข
 
-### 🧩 Workshops & Exercises
-| Project | Topic | Type | Tech Stack |
-| :--- | :--- | :---: | :--- |
-| **[`Colab Exercise 1`](./Colab%20Exercise%201/)** | **Python Basics Review** | Logic | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| **[`Web Scraping Group`](./Web%20Scraping%20Group/)** | **SET Member List Scraping** | Scraping | ![BeautifulSoup](https://img.shields.io/badge/BS4-black?style=flat) |
-| **[`Web Scraping Tutorial`](./Web%20Scraping%20Tutorial/)** | **IMDb Scraping Tutorial** | Scraping | ![BeautifulSoup](https://img.shields.io/badge/BS4-black?style=flat) |
+### 🔄 Control Flow & Data Structures
+-   **[Lab 10: Control Flow (For Loop)](./Lab%2010/README.md)** - การวนซ้ำด้วย For Loop
+-   **[Lab 11: Control Flow (While Loop)](./Lab%2011/README.md)** - การวนซ้ำด้วย While Loop
+-   **[Lab 12: Lists](./Lab%2012/README.md)** - โครงสร้างข้อมูลแบบ List
+-   **[Lab 13: Tuples](./Lab%2013/README.md)** - โครงสร้างข้อมูลแบบ Tuple
+-   **[Lab 14: Dictionaries](./Lab%2014/README.md)** - โครงสร้างข้อมูลแบบ Dictionary
+
+### 📊 Data Science Libraries (NumPy & Pandas)
+-   **[Lab 15: Introduction to Libraries](./Lab%2015/README.md)** - รู้จักกับ NumPy, Pandas, Matplotlib
+-   **[Lab 16: Basic NumPy](./Lab%2016/README.md)** - การใช้งาน NumPy Array เบื้องต้น
+-   **[Lab 17: Basic Pandas](./Lab%2017/README.md)** - การใช้งาน Pandas DataFrame เบื้องต้น
+
+### 🛠️ Practice & Projects
+-   **[Colab Exercise 1](./Colab%20Exercise%201/README.md)** - รวมโจทย์ฝึกหัด Python 5 ข้อ
+-   **[Web Scraping Tutorial](./Web%20Scraping%20Tutorial/README.md)** - บทเรียนการดึงข้อมูลจาก IMDb + Pandas
+-   **[Web Scraping Group Project](./Web%20Scraping%20Group/README.md)** - โปรเจกต์ดึงข้อมูลหุ้นจากตลาดหลักทรัพย์ (SET)
+
+---
+*All codes are written in Python and compatible with Google Colab / Jupyter Notebook.*
