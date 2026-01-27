@@ -10,6 +10,7 @@
 - **[Basic](./basic/README.md)**: พื้นฐาน Widget และ Layout
 - **[Chapter 2](./chapter%202/README.md)**: การรับ Input และ Dialog
 - **[Navigator](./page_navigator/README.md)**: การเปลี่ยนหน้า (Navigation)
+- **[State Management](./state_management/README.md)**: การจัดการ State ด้วย Provider (Workshop: Fruit Shop)
 - **[Menu](./menu/README.md)**: Workshop สร้างหน้ารายการอาหาร
 - **[Quiz](./quiz/README.md)**: แบบทดสอบความรู้
 
