@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.0 on win32)" generated="2026-01-27T15:28:36.898957" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment" source="D:\Github\cmru-project\SoftwareTesting\Katalon Reorder\assignment\assignment.robot">
+<test id="s1-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:37.153708" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-27T15:28:37.153437" elapsed="4.319945"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-01-27T15:28:41.474127" elapsed="0.000896"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-01-27T15:28:37.152725" elapsed="4.322721"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:41.478700" level="INFO">Clicking element 'id=username'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:41.477692" elapsed="0.112944"/>
+</kw>
+<arg>id=username</arg>
+<status status="PASS" start="2026-01-27T15:28:41.476468" elapsed="0.114513"/>
+</kw>
+<kw name="type">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:41.593681" level="INFO">Typing text 'ณัฐพงษ์ ปันธิยะ' into text field 'id=username'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:41.592952" elapsed="0.123428"/>
+</kw>
+<arg>id=username</arg>
+<arg>ณัฐพงษ์ ปันธิยะ</arg>
+<status status="PASS" start="2026-01-27T15:28:41.591840" elapsed="0.124893"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:41.719905" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:41.719096" elapsed="0.080404"/>
+</kw>
+<arg>id=password</arg>
+<status status="PASS" start="2026-01-27T15:28:41.717723" elapsed="0.081994"/>
+</kw>
+<kw name="type">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:41.802696" level="INFO">Typing text '66143420' into text field 'id=password'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:41.802192" elapsed="0.140002"/>
+</kw>
+<arg>id=password</arg>
+<arg>66143420</arg>
+<status status="PASS" start="2026-01-27T15:28:41.800935" elapsed="0.141530"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:41.944521" level="INFO">Clicking element 'xpath=//form[@id='login']/button/i'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:41.943991" elapsed="0.792031"/>
+</kw>
+<arg>xpath=//form[@id='login']/button/i</arg>
+<status status="PASS" start="2026-01-27T15:28:41.943195" elapsed="0.793067"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:42.738283" level="INFO">Clicking element 'id=username'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:42.737689" elapsed="0.139383"/>
+</kw>
+<arg>id=username</arg>
+<status status="PASS" start="2026-01-27T15:28:42.736951" elapsed="0.140549"/>
+</kw>
+<kw name="type">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:42.879587" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:42.878843" elapsed="0.120393"/>
+</kw>
+<arg>id=username</arg>
+<arg>tomsmith</arg>
+<status status="PASS" start="2026-01-27T15:28:42.878151" elapsed="0.121606"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:43.001910" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:43.001235" elapsed="0.081102"/>
+</kw>
+<arg>id=password</arg>
+<status status="PASS" start="2026-01-27T15:28:43.000699" elapsed="0.082115"/>
+</kw>
+<kw name="type">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:43.085041" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:43.084643" elapsed="0.193080"/>
+</kw>
+<arg>id=password</arg>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2026-01-27T15:28:43.083975" elapsed="0.193910"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:43.279053" level="INFO">Clicking element 'xpath=//form[@id='login']/button/i'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:43.278786" elapsed="0.696945"/>
+</kw>
+<arg>xpath=//form[@id='login']/button/i</arg>
+<status status="PASS" start="2026-01-27T15:28:43.278343" elapsed="0.697643"/>
+</kw>
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:43.977585" level="INFO">Opening url 'https://the-internet.herokuapp.com/secure'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-27T15:28:43.977292" elapsed="0.313824"/>
+</kw>
+<arg>https://the-internet.herokuapp.com/secure</arg>
+<status status="PASS" start="2026-01-27T15:28:43.976697" elapsed="0.314593"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:44.292801" level="INFO">Clicking element 'xpath=//div[@id='content']/div/a/i'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:28:44.292455" elapsed="0.132053"/>
+</kw>
+<arg>xpath=//div[@id='content']/div/a/i</arg>
+<status status="PASS" start="2026-01-27T15:28:44.291870" elapsed="0.132881"/>
+</kw>
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:28:44.426374" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-27T15:28:44.426076" elapsed="0.336951"/>
+</kw>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<status status="PASS" start="2026-01-27T15:28:44.425429" elapsed="0.337926"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-27T15:28:44.764313" elapsed="2.267291"/>
+</kw>
+<status status="PASS" start="2026-01-27T15:28:37.151308" elapsed="9.881021"/>
+</test>
+<status status="PASS" start="2026-01-27T15:28:36.900269" elapsed="10.134196"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Assignment" id="s1" pass="1" fail="0" skip="0">Assignment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

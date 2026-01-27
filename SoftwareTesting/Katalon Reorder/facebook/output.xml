@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.0 on win32)" generated="2026-01-27T15:09:24.521731" rpa="false" schemaversion="5">
+<suite id="s1" name="Facebook" source="D:\Github\cmru-project\SoftwareTesting\Katalon Reorder\facebook.robot">
+<test id="s1-t1" name="Register Facebook" line="17">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:24.769546" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<arg>https://www.facebook.com/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-27T15:09:24.769327" elapsed="1.620721"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-01-27T15:09:26.390444" elapsed="0.000377"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>https://www.facebook.com/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-01-27T15:09:24.768795" elapsed="1.622116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@data-testid='open-registration-form-button']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-27T15:09:26.391260" elapsed="0.625137"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:27.019906" level="INFO">Clicking element 'xpath=//a[@data-testid='open-registration-form-button']'.</msg>
+<arg>xpath=//a[@data-testid='open-registration-form-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:09:27.018247" elapsed="1.565716"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-27T15:09:28.584869" elapsed="0.633944"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:29.220497" level="INFO">Typing text 'nattapong' into text field 'name=firstname'.</msg>
+<arg>name=firstname</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:09:29.219757" elapsed="1.056476"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:30.277438" level="INFO">Typing text 'panthiya' into text field 'name=lastname'.</msg>
+<arg>name=lastname</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:09:30.276941" elapsed="1.084051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:31.362352" level="INFO">Typing text '0825952349' into text field 'name=reg_email__'.</msg>
+<arg>name=reg_email__</arg>
+<arg>${MOBILE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:09:31.361740" elapsed="1.074760"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:32.472421" level="INFO">Typing text '123456789' into text field 'name=reg_passwd__'.</msg>
+<arg>name=reg_passwd__</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:09:32.471997" elapsed="1.171497"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:33.645408" level="INFO">Selecting options from selection list 'id=day' by value 13.</msg>
+<arg>id=day</arg>
+<arg>${BIRTH_DAY}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-27T15:09:33.644625" elapsed="2.608957"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:36.255236" level="INFO">Selecting options from selection list 'id=month' by value 2.</msg>
+<arg>id=month</arg>
+<arg>${BIRTH_MONTH}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-27T15:09:36.254743" elapsed="2.534849"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:38.790511" level="INFO">Selecting options from selection list 'id=year' by value 2004.</msg>
+<arg>id=year</arg>
+<arg>${BIRTH_YEAR}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-27T15:09:38.790222" elapsed="2.501966"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:41.292950" level="INFO">Clicking element 'xpath=//input[@name='sex' and @value='2']'.</msg>
+<arg>xpath=//input[@name='sex' and @value='2']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T15:09:41.292664" elapsed="0.713271"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-27T15:09:42.387729" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="facebook_result.png"&gt;&lt;img src="facebook_result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=facebook_result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-27T15:09:42.006318" elapsed="0.381621"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-27T15:09:42.388468" elapsed="2.632445"/>
+</kw>
+<status status="PASS" start="2026-01-27T15:09:24.767820" elapsed="20.253966"/>
+</test>
+<status status="PASS" start="2026-01-27T15:09:24.524396" elapsed="20.499551"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Facebook" id="s1" pass="1" fail="0" skip="0">Facebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
