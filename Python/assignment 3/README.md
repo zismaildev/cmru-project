@@ -1,20 +1,23 @@
 # 📝 Assignment 3: Conditions (If-Else)
 
-แบบฝึกหัดการใช้เงื่อนไขตรวจสอบ Logic ของโปรแกรม
+![Language](https://img.shields.io/badge/Language-Python-3776AB)
+![Topic](https://img.shields.io/badge/Topic-Control%20Flow-orange)
 
-## ✏️ โจทย์ (Problems)
-1. **Score Check**: ตรวจสอบคะแนน (Pass/Fail)
-2. **Division Check**: ป้องกันการหารด้วยศูนย์ (Division by Zero)
-3. **Number System**: ตรวจสอบจำนวนเต็มบวก/ลบ/ศูนย์
-4. **Tax Calculator**: โปรแกรมคำนวณภาษีแบบขั้นบันได (Step Tax)
-   - `<= 5,000`: 0%
-   - `5,001 - 20,000`: 7%
-   - `20,001 - 50,000`: 10%
-   - `> 50,000`: 15%
-5. **Grade Calculator**: ตัดเกรด A-F จากคะแนน
-6. **Simple Calculator**: เมนูบวก/ลบเลข
+## 🎯 Objective
+เรียนรู้การควบคุม Flow ของโปรแกรมโดยใช้เงื่อนไขตรวจสอบ (Decision Making) ทั้งแบบ Single, Binary และ Multi-way selection
 
-## 🚀 ผลลัพธ์ (Key Concepts)
-- `if`, `elif`, `else` structure
-- Logical Operators (`and`, `or`)
-- Mathematical logic for Tax
+## 📋 Problem Set
+1. **Grade Cutter**: ตัดเกรด (A-F) จากคะแนนที่รับเข้ามา
+2. **Tax Calculator**: คำนวณภาษีแบบขั้นบันได (Progressive Tax Rate)
+3. **Logic Check**: ตรวจสอบจำนวนเต็ม (Positive/Negative/Zero)
+4. **Validation**: ป้องกันการหารด้วยศูนย์ (Division by Zero)
+
+## 💻 Code Snippet
+```python
+if score >= 80:
+    print("Grade A")
+elif score >= 70:
+    print("Grade B")
+else:
+    print("Grade F")
+```

@@ -1,36 +1,55 @@
-# DataScience Learning Path
+# 📊 Data Science & Analytics
 
-แหล่งรวบรวมโค้ดและแบบฝึกหัดสำหรับการเรียนรู้ Data Science ด้วย Python ตั้งแต่พื้นฐานไปจนถึงการทำ Web Scraping และการใช้ Pandas
+<!-- prettier-ignore -->
+> [!IMPORTANT]
+> **"เปลี่ยนข้อมูลให้เป็นความรู้ (Turning Data into Insights)"**
+> <br>เส้นทางการเรียนรู้ Data Science ตั้งแต่ Python ขั้นพื้นฐาน ไปจนถึงการจัดการข้อมูลด้วย Pandas และ Web Scraping
 
-## 📚 Course Structure
+<div align="center">
 
-### 基础 Fundamentals (Python Basics for Data Science)
--   **[Lab 1: Intro to Google Colab](./Lab%201/README.md)** - การใช้งาน Google Colab เบื้องต้น
--   **[Lab 2: Hello World](./Lab%202/README.md)** - การพิมพ์ข้อความและการใช้งาน `print()`
--   **[Lab 3: Arithmetic Operators](./Lab%203/README.md)** - ตัวดำเนินการทางคณิตศาสตร์
--   **[Lab 4: Operators](./Lab%204/README.md)** - ตัวดำเนินการเปรียบเทียบและตรรกะ
--   **[Lab 5: Variables](./Lab%205/README.md)** - ตัวแปรและประเภทข้อมูล
--   **[Lab 6: Data Types (Int, Float, Str, Bool)](./Lab%206/README.md)** - เจาะลึกประเภทข้อมูลพื้นฐาน
--   **[Lab 7: String Manipulation](./Lab%207/README.md)** - การจัดการข้อความ (Slicing, Formatting)
--   **[Lab 8: Functions vs Methods](./Lab%208/README.md)** - ความแตกต่างและการใช้งาน
--   **[Lab 9: Control Flow (If-Else)](./Lab%209/README.md)** - การตรวจสอบเงื่อนไข
+![Python](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Library-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/Library-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
-### 🔄 Control Flow & Data Structures
--   **[Lab 10: Control Flow (For Loop)](./Lab%2010/README.md)** - การวนซ้ำด้วย For Loop
--   **[Lab 11: Control Flow (While Loop)](./Lab%2011/README.md)** - การวนซ้ำด้วย While Loop
--   **[Lab 12: Lists](./Lab%2012/README.md)** - โครงสร้างข้อมูลแบบ List
--   **[Lab 13: Tuples](./Lab%2013/README.md)** - โครงสร้างข้อมูลแบบ Tuple
--   **[Lab 14: Dictionaries](./Lab%2014/README.md)** - โครงสร้างข้อมูลแบบ Dictionary
-
-### 📊 Data Science Libraries (NumPy & Pandas)
--   **[Lab 15: Introduction to Libraries](./Lab%2015/README.md)** - รู้จักกับ NumPy, Pandas, Matplotlib
--   **[Lab 16: Basic NumPy](./Lab%2016/README.md)** - การใช้งาน NumPy Array เบื้องต้น
--   **[Lab 17: Basic Pandas](./Lab%2017/README.md)** - การใช้งาน Pandas DataFrame เบื้องต้น
-
-### 🛠️ Practice & Projects
--   **[Colab Exercise 1](./Colab%20Exercise%201/README.md)** - รวมโจทย์ฝึกหัด Python 5 ข้อ
--   **[Web Scraping Tutorial](./Web%20Scraping%20Tutorial/README.md)** - บทเรียนการดึงข้อมูลจาก IMDb + Pandas
--   **[Web Scraping Group Project](./Web%20Scraping%20Group/README.md)** - โปรเจกต์ดึงข้อมูลหุ้นจากตลาดหลักทรัพย์ (SET)
+</div>
 
 ---
-*All codes are written in Python and compatible with Google Colab / Jupyter Notebook.*
+
+## 📖 ภาพรวม (Overview)
+แหล่งรวบรวม Jupyter Notebooks (.ipynb) และ Python Scripts สำหรับรายวิชา Data Science โดยเน้นการลงมือปฏิบัติจริง (Hands-on Labs) ผ่าน Google Colab
+
+## 🛤️ เส้นทางการเรียนรู้ (Learning Path)
+
+### 🧱 Phase 1: Fundamentals
+ปูพื้นฐานภาษา Python สำหรับงานข้อมูล
+- **[Lab 1-4](./Lab%201/README.md)**: Introduction to Colab, Hello World, Operators
+- **[Lab 5-7](./Lab%205/README.md)**: Variables, Data Types, String Manipulation
+- **[Lab 8-9](./Lab%208/README.md)**: Methods & Control Flow (If-Else)
+
+### 🔄 Phase 2: Data Structures & Logic
+การจัดการข้อมูลที่ซับซ้อนขึ้น
+- **[Lab 10-11](./Lab%2010/README.md)**: Loops (For, While)
+- **[Lab 12-14](./Lab%2012/README.md)**: Lists, Tuples, Dictionaries
+
+### 🐼 Phase 3: Data Science Libraries
+เครื่องมือทรงพลังสำหรับนักวิทยาศาสตร์ข้อมูล
+- **[Lab 15](./Lab%2015/README.md)**: Introduction to Libraries
+- **[Lab 16: NumPy](./Lab%2016/README.md)**: Array Manipulation
+- **[Lab 17: Pandas](./Lab%2017/README.md)**: DataFrame Basics
+
+## 🏆 Projects & Web Scraping
+
+| Project | Description | Tech Highlight | Link |
+| :--- | :--- | :--- | :---: |
+| **Colab Exercise** | รวมโจทย์ Python 5 ข้อ (Loop, Function, List) | *Python Logic* | [View](./Colab%20Exercise%201/README.md) |
+| **Scraping Tutorial** | สอนดึงข้อมูลรายชื่อหนังจาก IMDb | *Pandas, BeautifulSoup* | [View](./Web%20Scraping%20Tutorial/README.md) |
+| **SET Scraper (Group)** | **Final Project** ดึงข้อมูลหุ้นจากตลาดหลักทรัพย์ | *Advanced Scraping* | [View](./Web%20Scraping%20Group/README.md) |
+
+## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
+- **Environment**: Google Colab / Jupyter Notebook
+- **Libraries**: NumPy, Pandas, Matplotlib, Requests, BeautifulSoup4
+
+---
+<div align="center">
+  Made for Data Science Class @CMRU
+</div>

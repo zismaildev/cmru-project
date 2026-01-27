@@ -1,24 +1,24 @@
-# Lab 5: Smart Farm with Blynk IoT
+# Lab 5: Smart Farm with Blynk
 
-## Overview
-ระบบ Smart Farm ที่เชื่อมต่อกับ **Blynk Cloud** ทำให้สามารถดูค่าและสั่งงานผ่านมือถือได้แบบ Real-time
+![Platform](https://img.shields.io/badge/Platform-ESP8266-000000)
+![App](https://img.shields.io/badge/Cloud-Blynk%20IoT-29BB7D)
 
-## Code Deep Dive
+## 🎯 Objective
+เชื่อมต่ออุปกรณ์ IoT เข้ากับ **Blynk Cloud Platform** เพื่อดูค่าสถานะและควบคุมอุปกรณ์ผ่าน Mobile App แบบ Real-time
 
-### 1. Blynk Constants
-การกำหนดค่า Template ID และ Auth Token (สำคัญมาก)
+## ✨ Features
+- **Dashboard**: แสดงกราฟอุณหภูมิ ความชื้น
+- **Control**: สวิตช์เปิด-ปิดปั๊มน้ำ (Relay) ผ่านแอพ
+- **Notification**: แจ้งเตือนเมื่อค่าเกินกำหนด
+
+## 💻 Code Snippet
 ```cpp
-#define BLYNK_TEMPLATE_ID "TMPL6Li0..."
-#define BLYNK_AUTH_TOKEN "GbYP..."
-```
+// Send Data to Widget V1
+Blynk.virtualWrite(V1, temperature);
 
-### 2. Virtual Pins
-การส่งข้อมูลเข้า Virtual Pin ของ Blynk App
-- `V0`: Temperature
-- `V1`: Humidity
-- `V5`: Relay Control (Button Widget)
-
-```cpp
-Blynk.virtualWrite(VPIN_TEMP, t);
-Blynk.virtualWrite(VPIN_RELAY, digitalRead(RELAY_PIN));
+// Receive Button Status from V5
+BLYNK_WRITE(V5) {
+    int pinValue = param.asInt();
+    digitalWrite(RELAY_PIN, pinValue);
+}
 ```

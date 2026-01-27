@@ -1,27 +1,21 @@
 # Lab 4: Smart Farm WiFi Logger
 
-## Overview
-ระบบ Smart Farm ที่เชื่อมต่อ WiFi และส่งข้อมูลขึ้น Server ผ่าน HTTP GET Request
-- **Features**: อ่านค่าเซ็นเซอร์ทั้งหมด (DHT, Rain, LDR) และส่งเข้า Database
-- **Networking**: ESP8266WiFi & HTTPClient
+![Platform](https://img.shields.io/badge/Platform-ESP8266-000000)
+![Connectivity](https://img.shields.io/badge/Conn-WiFi%20HTTP-blue)
 
-## Code Deep Dive
+## 🎯 Objective
+อัปเกรดระบบ Smart Farm ให้รองรับ **WiFi Connection** เพื่อส่งข้อมูลเซ็นเซอร์ขึ้นสู่ Server ผ่าน HTTP GET Protocol
 
-### 1. WiFi Connection
-ฟังก์ชันเชื่อมต่อ WiFi และรอจนกว่าจะสำเร็จ
+## 🛠️ Tech Stack
+- **Module**: NodeMCU ESP8266
+- **Library**: `ESP8266WiFi`, `ESP8266HTTPClient`
+- **Backend**: PHP Get Request (Receiver)
+
+## 💻 Code Snippet
 ```cpp
 WiFi.begin(ssid, password);
-while (WiFi.status() != WL_CONNECTED) {
-  delay(250);
-}
-```
-
-### 2. HTTP GET Request
-การส่งข้อมูลแบบ Query String ไปยัง PHP Server
-```cpp
-HTTPClient http;
-String url = String(ServerURL) + "?temp=" + t + "&hum=" + h ...;
+// Send Data to Server
+String url = "http://myserver.com/add.php?temp=" + String(t);
 http.begin(client, url);
-int code = http.GET();
-http.end();
+int httpCode = http.GET();
 ```

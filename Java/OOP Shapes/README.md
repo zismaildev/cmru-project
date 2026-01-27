@@ -1,19 +1,22 @@
-# 📐 OOP Shapes (Area Calculator)
+# 📐 OOP Shapes
 
-ตัวอย่างการใช้แนวคิด **Object-Oriented Programming (OOP)** ในการคำนวณพื้นที่รูปทรง
+![Language](https://img.shields.io/badge/Language-Java-ED8B00)
+![Concept](https://img.shields.io/badge/Concept-Polymorphism-red)
 
-## 🧠 คอนเซปต์ OOP ที่ใช้
-- **Class & Object**: สร้างคลาส `AreaShapeClass` เพื่อเป็นแม่พิมพ์ของรูปทรง
-- **Constructor Overloading**: การสร้าง Constructor หลายแบบเพื่อรองรับ Input ที่ต่างกัน
-  - 1 Parameter → วงกลม (รับรัศมี)
-  - 2 Parameters → สี่เหลี่ยม (รับกว้าง, ยาว)
-  - 3 Parameters → สามเหลี่ยม (รับฐาน, สูง, และตัวแปรแยกประเภท)
+## 🎯 Objective
+ตัวอย่างการประยุกต์ใช้ **Object-Oriented Programming (OOP)** และ **Constructor Overloading** ในการคำนวณพื้นที่รูปทรงต่างๆ
 
-## 📝 ไฟล์ประกอบ
-- **[AreaShape.java](./AreaShape.java)**: ไฟล์หลักที่มีทั้ง Class และ method main
+## 🧠 OOP Concepts
+1. **Class & Object**: แม่แบบสำหรับสร้างรูปทรง
+2. **Overloading**: ใช้ชื่อ Constructor เดียวกันแต่รับ Parameter ต่างกัน
+   - `Area(radius)` -> Circle
+   - `Area(width, height)` -> Rectangle
+   - `Area(base, height, type)` -> Triangle
 
-## 🚀 วิธีการรัน
-```bash
-javac AreaShape.java
-java AreaShape
+## 💻 Code Snippet
+```java
+// Constructor for Circle
+public AreaShape(double r) {
+    this.area = 3.14 * r * r;
+}
 ```

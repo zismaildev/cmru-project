@@ -1,15 +1,17 @@
 # Basic Database Connection
 
-## Overview
-ตัวอย่างโค้ดการเชื่อมต่อฐานข้อมูล MySQL เบื้องต้นและการดึงข้อมูลมาแสดงผล (Select Query)
+![Tech](https://img.shields.io/badge/Backend-PHP-777BB4)
+![DB](https://img.shields.io/badge/Database-MySQL-4479A1)
 
-## Code Example
-การเชื่อมต่อโดยใช้ `mysqli` แบบ Procedural style
+## 🎯 Objective
+ตัวอย่างการเชื่อมต่อฐานข้อมูล **MySQL** ด้วย **PHP** (mysqli extension) พร้อมการตั้งค่าภาษาไทย (UTF-8)
+
+## 💻 Code Snippet
 ```php
-$con = mysqli_connect("localhost", "root", "", "database_name");
-mysqli_set_charset($con, 'utf8'); // รองรับภาษาไทย
-```
+$con = mysqli_connect("localhost", "root", "", "my_db");
+mysqli_set_charset($con, 'utf8');
 
-## How to Run
-1. ตรวจสอบชื่อ Database, Username, Password ในโค้ดให้ตรงกับเครื่องของท่าน (XAMPP/MAMP)
-2. รันผ่าน Localhost (Apache Server)
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+```

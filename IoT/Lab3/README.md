@@ -1,31 +1,19 @@
 # Lab 3: Weather Station (Offline)
 
-## Overview
-สถานีตรวจวัดสภาพอากาศเบื้องต้นแบบ Offline อ่านค่าจากเซ็นเซอร์และควบคุมอุปกรณ์ผ่าน Relay
-- **Temperature & Humidity**: DHT11
-- **Rain**: Rain Sensor (Analog)
-- **Light**: LDR Sensor
-- **Output**: Relay (Lighting Control)
+![Platform](https://img.shields.io/badge/Platform-Arduino-00979D)
+![Type](https://img.shields.io/badge/Type-System-blue)
 
-## Code Deep Dive
+## 🎯 Objective
+สร้างสถานีวัดสภาพอากาศแบบ Offline โดยรวมเซ็นเซอร์หลายชนิดเข้าด้วยกัน และควบคุมอุปกรณ์ไฟฟ้า (Relay) ตามสภาพแวดล้อม
 
-### 1. Sensor Integration
-การเตรียมและอ่านค่าจากเซ็นเซอร์ต่างๆ
+## 💡 System Logic
+1. อ่านค่าอุณหภูมิ/ความชื้น (DHT)
+2. ตรวจสอบว่าฝนตกหรือไม่ (Rain Sensor)
+3. ตรวจสอบความสว่าง (LDR) -> ถ้ามืดให้เปิดไฟ (Relay ON)
+
+## 💻 Code Snippet
 ```cpp
-DHT dht(DHTPIN, DHTTYPE);
-void loop() {
-  float h = dht.readHumidity();
-  float t = dht.readTemperature();
-  int rainValue = analogRead(RAIN_SENSOR_PIN);
-  int ldrState = digitalRead(LDR_PIN);
-}
-```
-
-### 2. Logic Control
-ตัวอย่างการนำค่าที่ได้มาควบคุม Relay (จำลองระบบไฟอัตโนมัติ)
-```cpp
-bool isNight = (ldrState == LOW);
-if (isNight) {
-  digitalWrite(RELAY_PIN, LOW); // Turn Light OFF/ON (depends on wiring)
+if (ldr_value < THRESHOLD) {
+    digitalWrite(RELAY_PIN, HIGH); // Turn on light
 }
 ```

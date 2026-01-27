@@ -1,35 +1,55 @@
-# Web Development Projects
+# 🌐 Web Development Projects
 
-รวมโปรเจกต์พัฒนาเว็บไซต์ ทั้งฝั่ง Frontend (Static Website) และ Backend (PHP Web Applications)
+<!-- prettier-ignore -->
+> [!IMPORTANT]
+> **"Full Stack Developer Journey"**
+> <br>รวมผลงานการพัฒนาเว็บไซต์ครบวงจร ทั้ง Frontend (HTML/CSS) แสนสวยงาม และ Backend (PHP/MySQL) ที่ทรงพลัง
 
-## 📂 Project Structure
+<div align="center">
 
-### 🎨 Frontend (HTML/CSS)
--   **[Website Prototype](./website/README.md)** (`Web/website`): ตัวอย่างเว็บไซต์พื้นฐาน ประกอบด้วยหน้า Home, Profile, Login และ Quiz ที่ตกแต่งด้วย CSS
+![PHP](https://img.shields.io/badge/Backend-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![HTML5](https://img.shields.io/badge/Frontend-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-### ⚙️ Backend (PHP & MySQL)
-โฟลเดอร์ `Web/php` ประกอบด้วยแบบฝึกหัดและมินิโปรเจกต์ ดังนี้:
-
-#### 🏆 Major Projects
--   **[Final Project: Computer Shop](./php/final/README.md)** - ระบบ E-Commerce ขายอุปกรณ์คอมพิวเตอร์ (Shopping Cart, Admin Panel)
--   **[Project 6: University Management](./php/project6/README.md)** - ระบบ CRUD จัดการข้อมูลนักศึกษา อาจารย์ และคณะ
--   **[System: Auth & Session](./php/system/README.md)** - ตัวอย่างระบบ Login และการจัดการ Session/Cookies
-
-#### 🛠️ Exercises & Small Projects
--   **[Basic DB Connect](./php/Basic%20DB%20Connect/README.md)** - การเชื่อมต่อฐานข้อมูลเบื้องต้น
--   **[Quiz App](./php/quiz/README.md)** - แอปพลิเคชันแบบทดสอบอย่างง่าย
--   **[Project 2: Forms & Calc](./php/project2/README.md)** - ฟอร์มรับข้อมูลและคำนวณเกรด
--   **Project 3-5**: แบบฝึกหัดการคำนวณ, วนลูป, และการจัดการไฟล์
-    -   [Project 3](./php/project3/README.md) (Conditions & Loops)
-    -   [Project 4](./php/project4/README.md) (Date & Profile)
-    -   [Project 5](./php/project5/README.md) (File Upload & Area Calc)
--   **[System 2](./php/system2/README.md)** - ระบบ Login เพิ่มเติม
-
-## 🚀 How to Run (PHP Projects)
-1.  ติดตั้ง **XAMPP** หรือจำลอง Server ที่รองรับ PHP และ MySQL
-2.  นำโฟลเดอร์ `Web` ไปไว้ใน `htdocs`
-3.  Start **Apache** และ **MySQL** ใน XAMPP Control Panel
-4.  เข้าใช้งานผ่าน Browser: `http://localhost/Web/`
+</div>
 
 ---
-*Developed as part of CMRU Project Learning Path.*
+
+## 📖 ภาพรวม (Overview)
+รวมโปรเจกต์พัฒนาเว็บไซต์ที่ครอบคลุมตั้งแต่ Static Website หน้าตาสวยงาม ไปจนถึง Web Application ที่มีการจัดการฐานข้อมูล ระบบสมาชิก และระบบร้านค้าออนไลน์
+
+## 📂 โครงสร้างโปรเจกต์ (Project Structure)
+
+### 🎨 Frontend (Static)
+- **[Website Prototype](./website/README.md)**: เว็บไซต์ต้นแบบที่เน้นดีไซน์ (Home, Profile, Login, Quiz)
+
+### ⚙️ Backend (PHP & MySQL)
+รวมอยู่ในโฟลเดอร์ `Web/php` โดยแบ่งเป็น:
+
+#### 🏆 Major Projects (โปรเจกต์ใหญ่)
+| Project | Description | Highlight | Link |
+| :--- | :--- | :--- | :---: |
+| **Final Project** | **Computer Shop**<br>ระบบ E-Commerce ขายอุปกรณ์คอมพิวเตอร์ | Shopping Cart, Admin Panel | [View](./php/final/README.md) |
+| **Project 6** | **University System**<br>ระบบจัดการข้อมูลมหาวิทยาลัย | CRUD Operations | [View](./php/project6/README.md) |
+| **Auth System** | **Login & Session**<br>ระบบยืนยันตัวตนและการจัดการ Session | Security Basics | [View](./php/system/README.md) |
+
+#### 🛠️ Exercises (แบบฝึกหัด)
+- **Basic DB Connect**: การเชื่อมต่อฐานข้อมูล
+- **Quiz App**: แอพทำแบบทดสอบ
+- **Project 2-5**: ฟอร์มรับข้อมูล, การคำนวณเกรด, การอัพโหลดไฟล์
+
+## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
+- **Server**: Apache (via XAMPP)
+- **Database**: MySQL / MariaDB
+- **Language**: PHP 7/8, HTML5, CSS3, JavaScript
+
+## 🚀 การติดตั้งและใช้งาน (Installation)
+1. ติดตั้ง **XAMPP**
+2. คัดลอกโฟลเดอร์ `Web` ไปที่ `C:\xampp\htdocs\`
+3. Start **Apache** และ **MySQL**
+4. เข้าใช้งานผ่าน Browser: `http://localhost/Web/`
+
+---
+<div align="center">
+  <p>CMRU Web Development Course</p>
+</div>

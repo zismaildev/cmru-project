@@ -1,24 +1,20 @@
-# 📝 Assignment 1: Basic Calculation
+# 📝 Assignment 1: Basic Math & Logic
 
-แบบฝึกหัดพื้นฐานการเขียน Dart เพื่อแก้โจทย์ปัญหาคณิตศาสตร์และฟิสิกส์
+![Language](https://img.shields.io/badge/Language-Dart-0175C2)
+![Type](https://img.shields.io/badge/Type-Algorithm-green)
 
-## 📂 โจทย์ (Problems)
+## 🎯 Objective
+แบบฝึกหัดพื้นฐานภาษา **Dart** เน้นการประกาศตัวแปรและการคำนวณทางคณิตศาสตร์/ฟิสิกส์
 
-### 1. [average.dart](./average.dart)
-โปรแกรมคำนวณหาค่าเฉลี่ยของตัวเลข
+## 📋 Problems
+1. **Average**: หาค่าเฉลี่ยของตัวเลข
+2. **Total Distance**: คำนวณระยะทางจากความเร็วและเวลา
+3. **Cylinder Volume**: คำนวณปริมาตรทรงกระบอก (`V = πr²h`)
 
-### 2. [totaldistancetraveled.dart](./totaldistancetraveled.dart)
-โปรแกรมคำนวณระยะทางรวม (Total Distance Traveled) จากความเร็วและเวลา
-
-### 3. [volumeofcylinder.dart](./volumeofcylinder.dart)
-โปรแกรมคำนวณปริมาตรทรงกระบอก (Volume of Cylinder)
-- สูตร: `V = π * r² * h`
-
-## 🚀 วิธีการรัน (How to Run)
-รันไฟล์เหล่านี้ผ่าน Dart Terminal:
-
-```bash
-dart lib/learning/assignment\ 1/average.dart
-dart lib/learning/assignment\ 1/totaldistancetraveled.dart
-dart lib/learning/assignment\ 1/volumeofcylinder.dart
+## 💻 Code Snippet
+```dart
+double radius = 5.0;
+double height = 10.0;
+double volume = 3.14159 * radius * radius * height;
+print('Volume: $volume');
 ```

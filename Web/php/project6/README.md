@@ -1,40 +1,18 @@
-# Project 6: University Management System
+# Project 6: University Management
 
-ระบบจัดการข้อมูลมหาวิทยาลัยแบบ CRUD (Create, Read, Update, Delete) ครอบคลุมการจัดการข้อมูลนักศึกษา อาจารย์ และคณะ
+![Tech](https://img.shields.io/badge/Stack-PHP_MySQL-blue)
+![Role](https://img.shields.io/badge/Type-CRUD-green)
 
-## 🛠️ Technology Stack
--   **Backend**: PHP (MySQLi)
--   **Database**: MySQL
--   **Frontend**: HTML, CSS (Basic)
+## 🎯 Objective
+ระบบจัดการฐานข้อมูลมหาวิทยาลัย (University DB) แบบ **CRUD** (Create, Read, Update, Delete)
 
-## 📋 Modules & Features
+## 📋 Features
+1.  **Student Management**: เพิ่ม/ลบ/แก้ไข/ค้นหา นักศึกษา
+2.  **Teacher Management**: จัดการข้อมูลอาจารย์
+3.  **Faculty Management**: จัดการข้อมูลคณะวิชา
+4.  **Reporting**: หน้ารายงานสรุปข้อมูล
 
-### 1. Student Management (จัดการข้อมูลนักศึกษา)
--   **เพิ่มข้อมูล**: `addpen_student.php`
--   **แก้ไขข้อมูล**: `edit_student.php`
--   **ลบข้อมูล**: `del_student.php`
--   **ค้นหา**: `search_student.php`
--   **รายงาน**: `report_student.php` (แสดงรายชื่อทั้งหมด)
-
-### 2. Teacher Management (จัดการข้อมูลอาจารย์)
--   **Features**: เพิ่ม, ลบ, แก้ไข, ค้นหา และออกรายงานรายชื่ออาจารย์
--   **Files**: `addpen_teacher.php`, `edit_teacher.php`, etc.
-
-### 3. Faculty Management (จัดการข้อมูลคณะ)
--   **Features**: จัดการข้อมูลคณะวิชาต่าง ๆ
--   **Files**: `append_fac.php`, `edit_fac.php`, etc.
-
-## ⚙️ Setup & Installation
-1.  สร้างฐานข้อมูลชื่อ `myproject` ใน phpMyAdmin
-2.  ตรวจสอบการเชื่อมต่อฐานข้อมูลในไฟล์ `connectDB.php`
-    ```php
-    $host = 'localhost';
-    $user = 'root'; // username
-    $pass = '';     // password
-    $db = 'myproject';
-    ```
-3.  เข้าใช้งานเริ่มที่เมนูหลัก: `http://localhost/Web/php/project6/mainmenu.php`
-
-## 📂 Key Files
--   `mainmenu.php`: หน้าเมนูหลักสำหรับเลือกจัดการข้อมูลแต่ละส่วน
--   `connectDB.php`: ไฟล์เชื่อมต่อฐานข้อมูล (MySQLi connection)
+## ⚙️ How to Start
+1. Setup DB `myproject`
+2. Run `mainmenu.php` as entry point
+3. Ensure `connectDB.php` is configured correctly

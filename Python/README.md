@@ -1,32 +1,53 @@
 # 🐍 Python Programming
 
-คลังแบบฝึกหัดและการบ้านภาษา Python พื้นฐาน (Assignments & Practical Tests)
+<!-- prettier-ignore -->
+> [!TIP]
+> **"เขียนน้อย ได้มาก (Do More with Less)"**
+> <br>คลังแบบฝึกหัด Python ตั้งแต่ Syntax พื้นฐานไปจนถึง Data Manipulation
 
-## 📚 การบ้าน (Assignments)
+<div align="center">
 
-| ลำดับ | หัวข้อ (Topic) | ไฟล์ (Code) |
+![Python](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active%20Learning-blue?style=for-the-badge)
+
+</div>
+
+---
+
+## 📖 ภาพรวม (Overview)
+รวมงานที่ได้รับมอบหมาย (Assignments) และแบบทดสอบปฏิบัติ (Practical Tests) ในรายวิชา Python Programming ครอบคลุมเรื่อง Variable, Function, Loop, List, และ Dictionary
+
+## 🌟 จุดเด่น (Key Highlights)
+- **Problem Solving**: โจทย์ฝึกแก้ปัญหา 8 รูปแบบ
+- **Real-world Scenarios**: การนำไปใช้จริง เช่น การคำนวณภาษี, เกรด, หรือเกมง่ายๆ
+- **Comprehensive Tests**: เฉลยข้อสอบปฏิบัติที่ครอบคลุมเนื้อหาทั้งเทอม
+
+## 📂 สารบัญงาน (Assignments & Tests)
+
+### 📝 แบบฝึกหัด (Assignments)
+| ลำดับ | หัวข้อ (Topic) | ลิงก์ (Link) |
 | :---: | :--- | :---: |
-| 1 | [Assignment 1](./assignment%201/README.md) | `assignment_1.py` |
-| 2 | [Assignment 2](./assignment%202/README.md) | `assignment_2.py` |
-| 3 | [Assignment 3](./assignment%203/README.md) | `assignment_3.py` |
-| 4 | [Assignment 4](./assignment%204/README.md) | `assignment_4.py` |
-| 5 | [Assignment 5](./assignment%205/README.md) | `assignment_5.py` |
-| 6 | [Assignment 6](./assignment%206/README.md) | `assignment_6.py` |
-| 7 | [Assignment 7](./assignment%207/README.md) | `assignment_7.py` |
-| 8 | [Assignment 8](./assignment%208/README.md) | `assignment_8.py` |
+| 1 | **Intro & Print**: การแสดงผลเบื้องต้น | [View](./assignment%201/README.md) |
+| 2 | **Variables**: การใช้งานตัวแปร | [View](./assignment%202/README.md) |
+| 3 | **Math Ops**: การคำนวณทางคณิตศาสตร์ | [View](./assignment%203/README.md) |
+| 4 | **Logic**: ตรรกะและการเปรียบเทียบ | [View](./assignment%204/README.md) |
+| 5-8 | **Control Flow & Functions**: Loop และฟังก์ชัน | [View](./assignment%205/README.md) |
 
-## 🧪 แบบทดสอบปฏิบัติ (Practical Tests)
+### 🧪 แบบทดสอบ (Practical Tests)
+- **[Practical Test 1](./Practical%20Test%201/README.md)**: ทดสอบพื้นฐานและการประมวลผลข้อความ
+- **[Practical Test 2](./Practical%20Test%202/README.md)**: ทดสอบโครงสร้างข้อมูลขั้นสูงและอัลกอริทึม
 
-- [**Practical Test 1**](./Practical%20Test%201/README.md): แบบทดสอบครั้งที่ 1 (`practicaltest1.py`)
-- [**Practical Test 2**](./Practical%20Test%202/README.md): แบบทดสอบครั้งที่ 2 (`practicaltest2.py`)
+## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
+- **Language**: Python 3.x
+- **IDE**: VS Code / PyCharm / Google Colab
 
-## 🛠️ เครื่องมือที่ใช้ (Tools)
-- **Interpreter**: Python 3.x
-- **Editor**: VS Code / PyCharm
+## 🚀 การรันโปรแกรม (How to Run)
+```bash
+# รันไฟล์ Python ปกติ
+python assignment_1.py
+```
 
-## 🚀 วิธีการรัน (How to Run)
-1. เปิด Terminal
-2. ใช้คำสั่ง python ตามด้วยชื่อไฟล์:
-   ```bash
-   python assignment_1.py
-   ```
+---
+<div align="center">
+  Made with ❤️ by Nattapong
+</div>

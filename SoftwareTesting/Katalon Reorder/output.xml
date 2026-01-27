@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.0 on win32)" generated="2026-01-27T14:54:57.529562" rpa="false" schemaversion="5">
+<suite id="s1" name="Facebook" source="D:\Github\cmru-project\SoftwareTesting\Katalon Reorder\facebook.robot">
+<test id="s1-t1" name="Register Facebook" line="9">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:54:58.167982" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<arg>https://www.facebook.com/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-27T14:54:58.167526" elapsed="1.772592"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-01-27T14:54:59.940455" elapsed="0.000791"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>https://www.facebook.com/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-01-27T14:54:58.166443" elapsed="1.775033"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@data-testid='open-registration-form-button']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-27T14:54:59.942145" elapsed="1.843491"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:01.786731" level="INFO">Clicking element 'xpath=//a[@data-testid='open-registration-form-button']'.</msg>
+<arg>xpath=//a[@data-testid='open-registration-form-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T14:55:01.786208" elapsed="2.446520"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-27T14:55:04.233440" elapsed="1.700343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:05.935936" level="INFO">Typing text 'nattapong' into text field 'name=firstname'.</msg>
+<arg>name=firstname</arg>
+<arg>nattapong</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T14:55:05.934838" elapsed="2.668094"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:08.604809" level="INFO">Typing text 'panthiya' into text field 'name=lastname'.</msg>
+<arg>name=lastname</arg>
+<arg>panthiya</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T14:55:08.604119" elapsed="2.612967"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:11.218940" level="INFO">Typing text '0825952349' into text field 'name=reg_email__'.</msg>
+<arg>name=reg_email__</arg>
+<arg>0825952349</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T14:55:11.217873" elapsed="2.593619"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:13.813056" level="INFO">Typing text '123456789' into text field 'name=reg_passwd__'.</msg>
+<arg>name=reg_passwd__</arg>
+<arg>123456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T14:55:13.812439" elapsed="2.654396"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:16.468568" level="INFO">Selecting options from selection list 'id=day' by value 13.</msg>
+<arg>id=day</arg>
+<arg>13</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-27T14:55:16.467950" elapsed="6.590915"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:23.060071" level="INFO">Selecting options from selection list 'id=month' by value 2.</msg>
+<arg>id=month</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-27T14:55:23.059778" elapsed="6.567911"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:29.629069" level="INFO">Selecting options from selection list 'id=year' by value 2004.</msg>
+<arg>id=year</arg>
+<arg>2004</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-27T14:55:29.628647" elapsed="6.523353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-27T14:55:36.154640" level="INFO">Clicking element 'xpath=//input[@name='sex' and @value='2']'.</msg>
+<arg>xpath=//input[@name='sex' and @value='2']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-27T14:55:36.153425" elapsed="1.773729"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-27T14:55:37.928239" elapsed="3.007093"/>
+</kw>
+<status status="PASS" start="2026-01-27T14:54:58.164892" elapsed="42.771380"/>
+</test>
+<status status="PASS" start="2026-01-27T14:54:57.531601" elapsed="43.406852"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Facebook" id="s1" pass="1" fail="0" skip="0">Facebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

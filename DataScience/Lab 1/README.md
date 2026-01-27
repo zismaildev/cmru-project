@@ -1,8 +1,18 @@
 # Lab 1: Intro to Google Colab
 
-Introduction to Google Colab environment and basic Python setup.
+![Topic](https://img.shields.io/badge/Topic-Environment-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-## 📄 Code
-**File:** [`lab_1_intro_to_google_colab.py`](./lab_1_intro_to_google_colab.py)
+## 🎯 Objective
+แนะนำเครื่องมือ **Google Colab** ซึ่งเป็น Interactive Environment สำหรับเขียน Python บน Cloud ที่นัก Data Science นิยมใช้
 
-*(Note: This file contains setup instructions and basic environment checks)*
+## 📝 Content
+- การสร้าง Notebook ใหม่
+- การรัน Cell แบบ Code และ Markdown
+- การตรวจสอบ Environment (Python Version, GPU Check)
+
+## 💻 Code Snippet
+```python
+# Check Python version
+!python --version
+```

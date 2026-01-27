@@ -1,38 +1,62 @@
-# 📡 Internet of Things (IoT) Repository
+# 📡 Internet of Things (IoT)
 
-บทปฏิบัติการและ Workshop วิชา IoT
+<!-- prettier-ignore -->
+> [!NOTE]
+> **"เชื่อมต่อโลกดิจิทัลเข้ากับโลกความเป็นจริง"**
+> <br>เรียนรู้การเขียนโปรแกรมควบคุม Microcontroller (Arduino, ESP8266) และการเชื่อมต่อ Sensors ผ่านเครือข่าย
 
-## 📂 ตัวอย่างการเขียนโค้ด (Coding Patterns)
+<div align="center">
 
-### 🔌 Arduino Sketch Structure
-โครงสร้างพื้นฐานของโปรแกรมบนไมโครคอนโทรลเลอร์ (C++)
+![Arduino](https://img.shields.io/badge/Hardware-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![ESP8266](https://img.shields.io/badge/Hardware-ESP8266-000000?style=for-the-badge&logo=espressif&logoColor=white)
+![Blynk](https://img.shields.io/badge/Platform-Blynk-29BB7D?style=for-the-badge&logo=blynk&logoColor=white)
 
-```cpp
-// Setup Function: ทำงานครั้งเดียวเมื่อเริ่มระบบ
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
-}
-
-// Loop Function: ทำงานวนซ้ำตลอดเวลา
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
-  delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off
-  delay(1000);                       // wait for a second
-}
-```
+</div>
 
 ---
 
-## 📂 สารบัญกิจกรรม (Activities Index)
+## 📖 ภาพรวม (Overview)
+บทปฏิบัติการ (Labs) และเวิร์คช็อป (Workshops) สำหรับวิชา Internet of Things ครอบคลุมตั้งแต่วงจรไฟพื้นฐาน (LED Traffic Light) ไปจนถึงระบบอัจฉริยะที่เชื่อมต่อผ่าน WiFi และ Cloud Platform
 
-| Folder | Description (รายละเอียด) | Type | Tech Stack |
-| :--- | :--- | :---: | :--- |
-| **[`Lab3`](Lab3/)** | **Weather Station (Offline)** | 🧪 Lab | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
-| **[`Lab4`](Lab4/)** | **Smart Farm WiFi** | 🧪 Lab | ![ESP8266](https://img.shields.io/badge/ESP8266-000000?style=flat&logo=espressif&logoColor=white) |
-| **[`Lab5`](Lab5/)** | **Smart Farm Blynk** | 🧪 Lab | ![Blynk](https://img.shields.io/badge/Blynk-29BB7D?style=flat&logo=blynk&logoColor=white) |
-| **[`workshop1`](workshop1/)** | **Basic Traffic Light** | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
-| **[`workshop2`](workshop2/)** | **Interactive Traffic Light** | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
-| **[`workshop3`](workshop3/)** | **Sensor Modules** | 🛠️ Workshop | ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white) |
-| **[`final`](final/)** | **Smart Parking System** | 🏆 Final | ![ESP8266](https://img.shields.io/badge/ESP8266-000000?style=flat&logo=espressif&logoColor=white) |
+## 🌟 จุดเด่น (Key Highlights)
+- **Hands-on Hardware**: ต่อวงจรจริง ใช้เซนเซอร์จริง
+- **Connectivity**: การใช้งาน WiFi Module และการส่งค่าขึ้น Cloud (Blynk)
+- **Smart System**: โปรเจกต์จบที่นำความรู้มาสร้างระบบใช้งานได้จริง
+
+## 📂 สารบัญกิจกรรม (Activity Index)
+
+### 🧪 Labs & Workshops
+| กิจกรรม (Activity) | รายละเอียด (Description) | Stack |
+| :--- | :--- | :---: |
+| **[Workshop 1-3 (Traffic & Sensors)](./workshop1/README.md)** | ไฟจราจรจำลองและการอ่านค่าเซนเซอร์ | Arduino |
+| **[Lab 3 (Weather Station)](./Lab3/README.md)** | สถานีวัดสภาพอากาศแบบ Offline (LCD Display) | Arduino |
+| **[Lab 4 (Smart Farm WiFi)](./Lab4/README.md)** | ระบบฟาร์มอัจฉริยะเชื่อมต่อ WiFi | ESP8266 |
+| **[Lab 5 (Blynk Control)](./Lab5/README.md)** | การสั่งงานและดูค่าผ่านแอพ Blynk | Blynk |
+
+### 🏆 Final Project
+- **[Smart Parking System](./final/README.md)**: ระบบลานจอดรถอัจฉริยะ ตรวจจับช่องว่างและนับจำนวนรถเข้า-ออกอัตโนมัติ
+
+## 💻 ตัวอย่างโค้ด (Code Pattern)
+โครงสร้างพื้นฐานของ Arduino Sketch:
+```cpp
+void setup() {
+  // ทำงานครั้งเดียวเมื่อเริ่มระบบ (Init)
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  // ทำงานวนซ้ำตลอดเวลา (Main Logic)
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+}
+```
+
+## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
+- **Hardware**: Arduino UNO, NodeMCU (ESP8266)
+- **Software**: Arduino IDE
+- **Platform**: Blynk IoT Cloud
+
+---
+<div align="center">
+  <p>CMRU IoT Laboratory</p>
+</div>

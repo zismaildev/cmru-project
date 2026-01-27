@@ -47,6 +47,13 @@ Repository นี้ถูกจัดโครงสร้างตามทั
 | :--- | :--- | :--- | :---: |
 | **IoT** | **Internet of Things**<br>Microcontrollers & Sensors | • **Smart Parking System (Final)**<br>• Smart Farm (Blynk/WiFi)<br>• Arduino & ESP8266 Labs | [Explore 🚀](./IoT/) |
 
+### 5. 🧪 Software Testing & QA (การทดสอบซอฟต์แวร์)
+การประกันคุณภาพและการทดสอบระบบแบบอัตโนมัติ
+
+| Module | Description | Key Highlights | Link |
+| :--- | :--- | :--- | :---: |
+| **Software Testing** | **Automated Testing**<br>การเขียนสคริปต์ทดสอบอัตโนมัติ | • **Robot Framework**<br>• Selenium Webdriver<br>• Facebook Login Test | [Explore 🚀](./SoftwareTesting/) |
+
 ---
 
 ## 🛠️ เครื่องมือและเทคโนโลยี (Tech Stack)
@@ -59,6 +66,7 @@ Repository นี้ถูกจัดโครงสร้างตามทั
 | **Frameworks** | ![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat) |
 | **Data** | ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat) ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat) ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat) |
 | **Hardware** | ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat) ![ESP8266](https://img.shields.io/badge/-ESP8266-000000?style=flat) |
+| **Testing** | ![Robot Framework](https://img.shields.io/badge/-Robot%20Framework-000000?style=flat) |
 
 </div>
 

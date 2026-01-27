@@ -1,14 +1,26 @@
-# 📝 Assignment 2: Input & String Formatting
+# 📝 Assignment 2: String Formatting
 
-แบบฝึกหัดการรับค่าจากผู้ใช้ (User Input) และการจัดรูปแบบข้อความ
+![Language](https://img.shields.io/badge/Language-Python-3776AB)
+![Topic](https://img.shields.io/badge/Topic-Strings-green)
 
-## ✏️ โจทย์ (Problems)
-1. **Flowchart Implementation**: เขียนโปรแกรมตามผังงาน (รวมเลข, แสดงผลเกรด)
-2. **String Manipulation**: การใช้ `\n` (ขึ้นบรรทัดใหม่), `\t` (ย่อหน้า), และ string concatenation
-3. **User Profile**: รับค่า Subject, Section, Grade และคำนวณพื้นที่
-4. **Code Debugging**: แก้ไขโค้ดที่ผิดพลาด (Syntax Errors)
+## 🎯 Objective
+ฝึกการรับค่าจากผู้ใช้ (`input`) และการจัดรูปแบบการแสดงผลข้อความ (String Formatting) ให้สวยงามและอ่านง่าย
 
-## 🚀 ผลลัพธ์ (Key Concepts)
-- `input()` function
-- String Formatting (`%s`, `%d`, `%.2f`)
-- Escape Characters
+## 📋 Problem Set
+1. **Interactive Program**: โปรแกรมรับค่าชื่อ/เกรด แล้วแสดงผล
+2. **Formatting**: การใช้ `%s`, `%d`, `%.2f` เพื่อจัดระเบียบข้อมูล
+3. **Debug**: แก้ไข Syntax Error ในโค้ดตัวอย่าง
+
+## 💻 Code Snippet
+```python
+name = input("Enter name: ")
+score = float(input("Enter score: "))
+print("Student %s got score %.2f" % (name, score))
+```
+
+## 🚀 Output Example
+```text
+Enter name: Alice
+Enter score: 85.5
+Student Alice got score 85.50
+```

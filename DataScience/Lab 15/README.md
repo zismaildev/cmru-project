@@ -1,16 +1,19 @@
-# 🧪 Lab 15: Python for Data Science
+# Lab 15: Intro to Libraries
 
-บทนำสู่การใช้ Python ในงานวิทยาศาสตร์ข้อมูล และการเรียกใช้ Libraries สำคัญ
+![Topic](https://img.shields.io/badge/Topic-Modules-red)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-## 📚 เนื้อหา (Topics)
-- **Libraries Overview**: NumPy, Pandas, Matplotlib, Scikit-learn, Seaborn, SciPy
-- **Importing**: วิธีการ import (`import numpy as np`, `import pandas as pd`)
-- **Example Flow**:
-  1. Load Dataset (Iris)
-  2. Create DataFrame (Pandas)
-  3. Basic Stats (`.describe()`)
-  4. Visualization (`.plot()`)
-  5. Correlation (`np.corrcoef`)
+## 🎯 Objective
+รู้จักพลังของ Python Libraries และวิธีการนำเข้า (`import`) เพื่อใช้งานฟังก์ชันพิเศษ
 
-## 📝 ไฟล์ประกอบ
-- **[lab_15_python_for_data_science.py](./lab_15_python_for_data_science.py)**: ตัวอย่างการวิเคราะห์ข้อมูลเบื้องต้น
+## 📝 Content
+- Standard Libraries (`math`, `random`, `datetime`)
+- External Libraries (`numpy`, `pandas`)
+- การติดตั้งผ่าน `pip` (ใน Local) หรือใช้งานใน Colab
+
+## 💻 Code Snippet
+```python
+import math
+print(math.pi)
+print(math.sqrt(16))
+```
