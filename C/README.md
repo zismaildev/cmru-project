@@ -1,52 +1,43 @@
-# 🇨 C Programming Language
-
-<!-- prettier-ignore -->
-> [!NOTE]
-> **"รากฐานสำคัญของนักพัฒนาซอฟต์แวร์ เริ่มต้นที่นี่"**
-> <br>แบบฝึกหัดและการเขียนโปรแกรมภาษา C ขั้นพื้นฐาน เน้นการปูพื้นฐาน Logic, Math, และ Memory Management
+# 💻 C System Programming
 
 <div align="center">
 
-![C](https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Type](https://img.shields.io/badge/Foundation-Computer_Science-grey?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge)
+
+**"Where It All Begins: Understanding Memory & Pointers"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-โฟลเดอร์นี้รวบรวม Source Code ภาษา C ที่ใช้ในการเรียนการสอนวิชา Programming Fundamentals โดยเน้นที่การทำความเข้าใจโครงสร้างภาษา การทำงานของ Loop และการคำนวณทางคณิตศาสตร์ ซึ่งเป็นพื้นฐานสำคัญก่อนต่อยอดไปยังภาษาอื่นๆ
+## 🎯 Problem Statement
+การเข้าใจการทำงานของคอมพิวเตอร์ในระดับล่าง (Low-level) เป็นรากฐานสำคัญ การเขียนโปรแกรม C ช่วยให้เข้าใจเรื่อง **Memory Allocation**, **Pointers**, และ **Data Types** อย่างแท้จริง
 
-## 🌟 จุดเด่น (Key Highlights)
-- **Algorithm Practice**: ฝึกฝนการคิดแบบเป็นลำดับขั้นตอน
-- **Pattern Printing**: การใช้ Nested Loop สร้างรูปทรงต่าง ๆ (Pyramid, Diamond)
-- **Mathematical Logic**: การแปลงสูตรคณิตศาสตร์เป็นโค้ด (Geometry, Unit Conversion)
+## 📂 Project Showcase
 
-## 📂 โครงสร้างบทเรียน (Course Structure)
+### 1. 🏗️ Pyramid Pattern Printing
+*การฝึก Logic Loop ขั้นสูง*
+- **Challenge:** การใช้ Nested Loop เพื่อพิมพ์รูปทรงพีระมิดต่างๆ
+- **Concept:** `for` loop logic visualization
 
-| โปรเจกต์ (Project/Folder) | รายละเอียด (Description) | ไฟล์หลัก (Main File) |
-| :--- | :--- | :---: |
-| **[Change Values](./Change%20Values/README.md)** | **Unit Converter**<br>โปรแกรมแปลงหน่วยความยาว (นิ้ว/ฟุต/หลา) | `change-valus.c` |
-| **[Find Area](./Find%20Area/README.md)** | **Geometry Calculator**<br>คำนวณพื้นที่รูปทรงเรขาคณิต (วงกลม, สี่เหลี่ยม, สามเหลี่ยม) | `find-arear.c` |
-| **[Pyramid](./Pyramid/README.md)** | **Basic Patterns**<br>การสร้างพีระมิดแบบพื้นฐานด้วย Loop | `peramid.c` |
-| **[Pro Pyramid](./Pro%20Pyramid/README.md)** | **Advanced Patterns**<br>โจทย์พีระมิดซับซ้อน 3 รูปแบบ (ท้าทาย!) | `pro-peramids.c` |
+### 2. 💾 Memory Management Labs
+*การจัดการหน่วยความจำ*
+- **Concept:** Array, Struct, และการใช้งาน Pointers เบื้องต้น
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **Language**: C Standard (C99/C11)
-- **Compiler**: GCC (GNU Compiler Collection)
-- **IDE**: VS Code (with C/C++ Extension)
-
-## 🚀 การเริ่มต้นใช้งาน (Getting Started)
-1. **Compile Code**
-   ```bash
-   gcc filename.c -o output
-   ```
-2. **Run Program**
-   ```bash
-   ./output
-   ```
+## 💡 Key Learnings
+- **Manual Memory:** การที่ไม่มี Garbage Collector สอนให้เรารัดกุมเรื่อง Resource
+- **Compilation Process:** เข้าใจ Preprocessing -> Compilation -> Assembly -> Linking
 
 ---
-<div align="center">
-  <p>Developed for CMRU Computer Science Learning Path</p>
-</div>
+
+## 🚀 How to Run
+1. **Compiler:** GCC (MinGW for Windows)
+2. **Compile:**
+   ```bash
+   gcc main.c -o program
+   ```
+3. **Run:**
+   ```bash
+   ./program.exe
+   ```

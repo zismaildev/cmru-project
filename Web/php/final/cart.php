@@ -5,11 +5,31 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+/**
+ * Shopping Cart Controller
+ * Handles display and management of user's shopping cart.
+ * 
+ * Flow:
+ * 1. Check Authentication
+ * 2. Fetch Cart Items (Joined with Products)
+ * 3. Handle Updates/Deletes via POST
+ */
+
 require 'db.php';
 
-// ดึงข้อมูลสินค้าจากตะกร้าโดยใช้ user_id จาก session
+/** 
+ * Fetch Cart Data
+ * Retrieves all items in the user's cart including product details.
+ * 
+ * @var int $user_id From Session
+ */
 $user_id = $_SESSION['user_id'];
-$stmt = $pdo->prepare("SELECT cart.*, products.name, products.price FROM cart JOIN products ON cart.product_id = products.id WHERE cart.user_id = ?");
+$stmt = $pdo->prepare("
+    SELECT cart.*, products.name, products.price 
+    FROM cart 
+    JOIN products ON cart.product_id = products.id 
+    WHERE cart.user_id = ?
+");
 $stmt->execute([$user_id]);
 $cart_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

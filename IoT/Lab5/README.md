@@ -1,24 +1,48 @@
-# Lab 5: Smart Farm with Blynk
+# 🔌 IoT Lab 5: Relay & High Power Control
 
-![Platform](https://img.shields.io/badge/Platform-ESP8266-000000)
-![App](https://img.shields.io/badge/Cloud-Blynk%20IoT-29BB7D)
+<div align="center">
+
+![Hardware](https://img.shields.io/badge/Component-Relay_Module-red?style=for-the-badge)
+![Safety](https://img.shields.io/badge/Safety-High_Voltage-yellow?style=for-the-badge)
+
+**"Controlling AC/DC Appliances safely"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-เชื่อมต่ออุปกรณ์ IoT เข้ากับ **Blynk Cloud Platform** เพื่อดูค่าสถานะและควบคุมอุปกรณ์ผ่าน Mobile App แบบ Real-time
+เรียนรู้วิธีการควบคุมอุปกรณ์ไฟฟ้ากระแสสลับ (AC 220V) หรืออุปกรณ์ที่ใช้กระแสสูง ผ่าน **Relay Module** โดยสั่งงานจาก Microcontroller (3.3V Logic)
 
-## ✨ Features
-- **Dashboard**: แสดงกราฟอุณหภูมิ ความชื้น
-- **Control**: สวิตช์เปิด-ปิดปั๊มน้ำ (Relay) ผ่านแอพ
-- **Notification**: แจ้งเตือนเมื่อค่าเกินกำหนด
+## 🔌 Circuit Diagram
 
-## 💻 Code Snippet
+```mermaid
+graph LR
+    MCU[NodeMCU D1] -->|Signal 3.3V| Relay[Relay Module IN]
+    Relay -->|NO/COM| Bulb[Light Bulb 220V]
+    Power[AC Power] --> Bulb
+```
+
+## 💻 Logic Control
+Relay ทำงานแบบ **Active Low** หรือ **Active High** ขึ้นอยู่กับ Module
+
 ```cpp
-// Send Data to Widget V1
-Blynk.virtualWrite(V1, temperature);
+// Example: Active Low Relay
+#define RELAY_PIN D1
 
-// Receive Button Status from V5
-BLYNK_WRITE(V5) {
-    int pinValue = param.asInt();
-    digitalWrite(RELAY_PIN, pinValue);
+void setup() {
+  pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, HIGH); // OFF state
+}
+
+void loop() {
+  digitalWrite(RELAY_PIN, LOW); // ON (Pull Down)
+  delay(1000);
+  digitalWrite(RELAY_PIN, HIGH); // OFF
+  delay(1000);
 }
 ```
+
+## ⚠️ Safety First
+- **Isolation**: Relay ช่วยแยกวงจรไฟฟ้าแรงสูงออกจาก MCU อย่างสมบูรณ์ (Galvanic Isolation)
+- **Warning**: ระมัดระวังไฟดูดเมื่อทำงานกับไฟบ้าน 220V

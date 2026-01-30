@@ -1,43 +1,70 @@
-# 🛒 State Management (Provider)
+# 🛒 Advanced State Management (Provider)
 
-![Stack](https://img.shields.io/badge/Flutter-Provider-00E676)
-![Concept](https://img.shields.io/badge/Concept-State_Management-blue)
+<div align="center">
 
-## 🎯 Objective
-เรียนรู้การจัดการ State ที่ซับซ้อนขึ้นด้วย **Provider Package** ซึ่งเป็นวิธีที่ Google แนะนำสำหรับการจัดการข้อมูลที่ต้องแชร์ร่วมกันหลายหน้าจอ
+![Tech](https://img.shields.io/badge/Package-Provider_v6-00E676?style=for-the-badge&logo=flutter)
+![Architecture](https://img.shields.io/badge/Pattern-Observer-blue?style=for-the-badge)
 
-## 🛠️ Workshop: Fruit Shop Favorites
-แอปร้านขายผลไม้ที่ผู้ใช้สามารถกดถูกใจสินค้า (❤️) และรายการที่ถูกเลือกจะไปแสดงในหน้า "รายการโปรด" โดยอัตโนมัติ
+**"Scalable State Management for Complex Apps"**
 
-## 🧩 Key Concepts
-1. **ChangeNotifier**: คลาสที่เก็บข้อมูลและแจ้งเตือนเมื่อมีการเปลี่ยนแปลง (`notifyListeners()`)
-2. **ChangeNotifierProvider**: Widget ที่จ่าย (Inject) ข้อมูลให้ลูกหลานใน Widget Tree
-3. **Consumer**: Widget สำหรับดึงข้อมูลมาแสดงผลและ Re-build เมื่อข้อมูลเปลี่ยน
+</div>
 
-## 💻 Code Snippet
-```dart
-// 1. Model & Logic
-class ProductProvider with ChangeNotifier {
-  final Set<String> _favoriteIds = {};
-  
-  void toggleFavorite(String id) {
-    if (_favoriteIds.contains(id)) {
-      _favoriteIds.remove(id);
-    } else {
-      _favoriteIds.add(id);
+---
+
+## 🎯 Problem Statement
+เมื่อแอปซับซ้อนขึ้น การส่งผ่านข้อมูลด้วย Constructor (Prop Drilling) จะยุ่งยากและดูแลยาก **Provider** ช่วยแก้ปัญหานี้โดยการสร้าง "ท่อส่งข้อมูล" ที่ Widget ไหนก็เจาะเข้าไปดึงข้อมูลได้ทันที
+
+## 🏗️ State Architecture
+
+โครงสร้างการแชร์สถานะ "รายการโปรด" (Favorites)
+
+```mermaid
+classDiagram
+    class ChangeNotifier {
+        <<Interface>>
+        +notifyListeners()
     }
-    notifyListeners(); // Update UI
+    class ProductProvider {
+        -List _items
+        -List _favoriteIds
+        +toggleFavorite(id)
+        +get favorites()
+    }
+    class ProductItem {
+        +build()
+        -onTap() -> Provider.toggleFavorite()
+    }
+    class UserProfile {
+        +build()
+        -Provider.favorites.length
+    }
+
+    ChangeNotifier <|-- ProductProvider : extends
+    ProductProvider <-- ProductItem : Modifies
+    ProductProvider <-- UserProfile : Listens
+```
+
+## 💻 Implementation Highlights
+
+### 1. Provider Class (Logic)
+```dart
+class ProductProvider with ChangeNotifier {
+  void toggleFavorite(String id) {
+    // ... logic ...
+    notifyListeners(); // แจ้งเตือน UI ให้รีเฟรช
   }
 }
-
-// 2. Wrap App with Provider
-ChangeNotifierProvider(
-  create: (context) => ProductProvider(),
-  child: const MyApp(),
-);
-
-// 3. Consume Data
-Consumer<ProductProvider>(
-  builder: (context, provider, child) => Text("Fav Count: ${provider.favorites.length}"),
-);
 ```
+
+### 2. Consumer (UI)
+```dart
+Consumer<ProductProvider>(
+  builder: (ctx, product, _) => Icon(
+    product.isFavorite ? Icons.favorite : Icons.favorite_border,
+  ),
+),
+```
+
+## 💡 Key Learnings
+- **Singleton Pattern**: Provider ทำหน้าที่คล้าย Singleton ที่เข้าถึงได้จากทุกที่ภายใต้ Context
+- **Performance**: `notifyListeners()` จะ Re-build เฉพาะ Widget ที่ `listen: true` หรือใช้ `Consumer` เท่านั้น

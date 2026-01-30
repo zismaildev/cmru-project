@@ -1,20 +1,51 @@
-# 📝 Assignment 1: Basic Math & Logic
+# 🧮 Dart Algorithmic Foundations (Assignment 1)
 
-![Language](https://img.shields.io/badge/Language-Dart-0175C2)
-![Type](https://img.shields.io/badge/Type-Algorithm-green)
+<div align="center">
 
-## 🎯 Objective
-แบบฝึกหัดพื้นฐานภาษา **Dart** เน้นการประกาศตัวแปรและการคำนวณทางคณิตศาสตร์/ฟิสิกส์
+![Language](https://img.shields.io/badge/Language-Dart_2.x-0175C2?style=for-the-badge&logo=dart)
+![Concept](https://img.shields.io/badge/Concept-Mathematical_Modeling-purple?style=for-the-badge)
 
-## 📋 Problems
-1. **Average**: หาค่าเฉลี่ยของตัวเลข
-2. **Total Distance**: คำนวณระยะทางจากความเร็วและเวลา
-3. **Cylinder Volume**: คำนวณปริมาตรทรงกระบอก (`V = πr²h`)
+**"Implementing Physics & Math Formulas in Dart"**
 
-## 💻 Code Snippet
-```dart
-double radius = 5.0;
-double height = 10.0;
-double volume = 3.14159 * radius * radius * height;
-print('Volume: $volume');
+</div>
+
+---
+
+## 🎯 Problem Statement
+การเริ่มต้นเขียนโปรแกรมด้วยภาษาใหม่ต้องเริ่มจากการจัดการ **Variables** และ **Data Types** อย่างถูกต้อง โจทย์ชุดนี้เน้นการแปลงสูตรคณิตศาสตร์และฟิสิกส์ให้เป็น Logic ทางคอมพิวเตอร์
+
+## 🏗️ Logic Flowchart
+
+การคำนวณปริมาตรทรงกระบอก (Cylinder Volume)
+
+```mermaid
+graph LR
+    Start([Start]) --> Input[Input: Radius, Height]
+    Input --> Process[V = π * r^2 * h]
+    Process --> Output[/Print Volume/]
+    Output --> End([End])
 ```
+
+## 📋 Challenge Set
+1.  **Statistical Average**: คำนวณค่าเฉลี่ยของชุดตัวเลข (Mean)
+2.  **Kinematics (Physics)**: คำนวณระยะทางจากสมการ $s = vt$
+3.  **Geometry 3D**: คำนวณปริมาตรทรงกระบอกและพื้นที่ผิว
+
+## 💻 Implementation Highlights
+
+```dart
+// Type Safety in Dart
+const double PI = 3.14159;
+
+double calculateCylinderVolume(double r, double h) {
+  return PI * (r * r) * h;
+}
+
+void main() {
+  print("Volume: ${calculateCylinderVolume(5.0, 10.0)}");
+}
+```
+
+## 💡 Key Learnings
+- **Static Typing**: ความสำคัญของการระบุชนิดตัวแปร `double` vs `int` เพื่อความแม่นยำ
+- **Constants**: การใช้ `const` สำหรับค่าคงที่ทางคณิตศาสตร์

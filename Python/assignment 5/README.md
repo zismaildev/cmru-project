@@ -1,25 +1,20 @@
-# 📝 Assignment 5: Lists & Tuples
+# 📑 Python Assignment 5: Lists & Arrays
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Topic](https://img.shields.io/badge/Topic-Data%20Structures-purple)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Data_Structure-blue?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-List_Manipulation-orange?style=for-the-badge)
+
+</div>
+
+---
 
 ## 🎯 Objective
-เรียนรู้วิธีการจัดการกลุ่มข้อมูลด้วย **List** (แก้ไขได้) และ **Tuple** (แก้ไขไม่ได้) รวมถึงการใช้ List Comprehension และ Built-in Functions
+การจัดการข้อมูลกลุ่ม (Collection) ด้วย List การเพิ่ม/ลบ ข้อมูล และการวนลูปเพื่อเข้าถึงสมาชิกใน List
 
-## 📋 Problem Set
-1. **List Operations**: สร้าง, เพิ่ม (`append`), ลบ (`remove`), และเรียงลำดับ (`sort`)
-2. **Vowels Finder**: ลูปค้นหาสระ (a, e, i, o, u) จาก List ที่กำหนด
-3. **List Comprehension**: สร้าง List ใหม่โดยคูณค่าเดิมด้วย 2
-4. **Tuple Basics**: แปลง Type ระหว่าง Tuple <-> List เพื่อแก้ไขข้อมูล
-
-## 💻 Code Snippet
+## 💻 Code Logic
 ```python
-numbers = [1, 5, 2, 8, 3]
-numbers.sort(reverse=True)
-print("Max:", max(numbers))
-print("Sum:", sum(numbers))
+scores = [80, 75, 90, 60]
+scores.append(85)
+print(f"Max Score: {max(scores)}")
 ```
-
-## 🚀 Concept
-- **Mutable**: List สามารถเปลี่ยนแปลงสมาชิกภายในได้
-- **Immutable**: Tuple เมื่อสร้างแล้วจะเปลี่ยนแปลงไม่ได้ (ต้องแปลงเป็น List ก่อนแก้)

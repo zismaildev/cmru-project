@@ -1,19 +1,40 @@
-# Lab 3: Weather Station (Offline)
+# 📟 IoT Lab 3: Sensor Integration
 
-![Platform](https://img.shields.io/badge/Platform-Arduino-00979D)
-![Type](https://img.shields.io/badge/Type-System-blue)
+<div align="center">
+
+![Hardware](https://img.shields.io/badge/Board-NodeMCU_ESP8266-000000?style=for-the-badge)
+![Sensor](https://img.shields.io/badge/In/Out-DHT11_/_LED-red?style=for-the-badge)
+
+**"Reading Environmental Data & Digital Output"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-สร้างสถานีวัดสภาพอากาศแบบ Offline โดยรวมเซ็นเซอร์หลายชนิดเข้าด้วยกัน และควบคุมอุปกรณ์ไฟฟ้า (Relay) ตามสภาพแวดล้อม
+เรียนรู้การเชื่อมต่อ Sensor พื้นฐาน (DHT11) เพื่อวัดอุณหภูมิ/ความชื้น และแสดงสถานะผ่านหลอดไฟ LED
 
-## 💡 System Logic
-1. อ่านค่าอุณหภูมิ/ความชื้น (DHT)
-2. ตรวจสอบว่าฝนตกหรือไม่ (Rain Sensor)
-3. ตรวจสอบความสว่าง (LDR) -> ถ้ามืดให้เปิดไฟ (Relay ON)
+## 🔌 Circuit Connection
 
-## 💻 Code Snippet
+```mermaid
+graph TD
+    MCU[NodeMCU V3] -->|D1| LED[Resistor + LED]
+    MCU -->|D2| DHT[DHT11 Data Pin]
+    DHT -->|3.3V| VCC
+    DHT -->|GND| GND
+```
+
+## 💻 Code Logic
 ```cpp
-if (ldr_value < THRESHOLD) {
-    digitalWrite(RELAY_PIN, HIGH); // Turn on light
+// อ่านค่า DHT11 และสั่งงาน LED
+float t = dht.readTemperature();
+if (t > 30.0) {
+  digitalWrite(LED_PIN, HIGH); // ร้อนเกินไป เปิดไฟเตือน
+} else {
+  digitalWrite(LED_PIN, LOW);
 }
 ```
+
+## 💡 Key Learnings
+- **Digital I/O**: การใช้ `digitalRead` และ `digitalWrite`
+- **Library Manager**: การติดตั้ง Library เสริม (DHT sensor library by Adafruit)

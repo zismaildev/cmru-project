@@ -15,10 +15,17 @@
 #define LED2_RED   D4
 
 // ---------- Config WiFi ----------
-const char* ssid = "@CMRU-SCI";      // <-- ชื่อ WiFi
-const char* password = "";           // <-- รหัส WiFi (เว้นว่างถ้าไม่มี)
+// ---------- Config WiFi ----------
+// SECURITY WARNING: Never commit real passwords to Git!
+// Use a separate header file (secrets.h) or environment vars in production.
+const char* ssid = "YOUR_WIFI_SSID";      
+const char* password = "YOUR_WIFI_PASSWORD";           
 
 // ---------- Config Server ----------
+/**
+ * Backend Endpoint
+ * @note Ensure the server IP is static or reachable from the IoT device network.
+ */
 String serverName = "http://10.80.217.27/Final/update.php"; 
 
 void setup() {

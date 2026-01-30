@@ -1,20 +1,30 @@
-# Workshop 2: Interactive Traffic Light
+# ☁️ IoT Workshop 2: Send Data to NETPIE/Platform
 
-![Platform](https://img.shields.io/badge/Platform-Arduino-00979D)
-![Component](https://img.shields.io/badge/Component-Button-gray)
+<div align="center">
+
+![Platform](https://img.shields.io/badge/Cloud-NETPIE_2020-blue?style=for-the-badge)
+![Protocol](https://img.shields.io/badge/Protocol-MQTT-green?style=for-the-badge)
+
+**"Visualize Sensor Data on Cloud Dashboard"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-เรียนการรับค่า **Digital Input** จากปุ่มกด (Push Button) และการใช้ **State Machine** เพื่อควบคุมสถานะไฟจราจร
+การส่งข้อมูลขึ้น Cloud Platform (ในที่นี้อาจใช้ NETPIE, Blynk, หรือ Custom Server) เพื่อแสดงผลบน Dashboard แบบ Real-time
 
-## 💡 Key Features
-- **Button Debounce**: การแก้ปัญหาสัญญาณรบกวนจากการกดปุ่ม
-- **State Change**: กดปุ่มเพื่อเปลี่ยนสถานะ (แดง -> เหลือง -> เขียว)
-- **Non-blocking Delay**: การใช้ `millis()` แทน `delay()`
+## 🏗️ Architecture
 
-## 💻 Code Snippet
+```mermaid
+graph LR
+    Device[ESP8266] -->|MQTT Publish| Broker[Cloud Broker]
+    Broker -->|Subscribe| Dashboard[Web/Mobile App]
+```
+
+## 💻 Key Config
 ```cpp
-if (digitalRead(BTN_PIN) == LOW) {
-    state++; 
-    if (state > 2) state = 0;
-}
+#define MQTT_HOST "broker.netpie.io"
+#define MQTT_CLIENT_ID "YOUR_CLIENT_ID"
+#define MQTT_TOKEN "YOUR_TOKEN"
 ```

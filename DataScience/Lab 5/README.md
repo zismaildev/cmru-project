@@ -1,19 +1,35 @@
-# Lab 5: Variables
+# 📦 Lab 5: Variables & Types
 
-![Topic](https://img.shields.io/badge/Topic-Memory-green)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Data_Types-blue?style=for-the-badge)
+![Storage](https://img.shields.io/badge/Concept-Memory_Allocation-green?style=for-the-badge)
+
+**"Storing and Manipulating Data"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-เรียนรู้การประกาศ **ตัวแปร (Variables)** เพื่อเก็บค่าข้อมูลลงในหน่วยความจำและนำกลับมาใช้ซ้ำ
+ทำความเข้าใจเกี่ยวกับการประกาศตัวแปร (Declaration) และชนิดข้อมูล (Data Types) ที่สำคัญใน Python เช่น `int`, `float`, `str`, และ `bool`
 
-## 📝 Content
-- กฎการตั้งชื่อตัวแปร (Naming Convention)
-- การกำหนดค่า (Assignment)
-- การอัปเดตค่าในตัวแปร
+## 🏗️ Variable Mapping
 
-## 💻 Code Snippet
+```mermaid
+graph TD
+    Var[Variable Name 'score'] -->|Points to| Memory[Memory Address]
+    Memory -->|Stores| Value[Value: 95.5]
+    Value -->|Type| Type[Float]
+```
+
+## 💻 Tech Spec
+- **Dynamic Typing**: Python ไม่ต้องประกาศประเภทตัวแปร ล่วงหน้า
+- **Naming Convention**: ควรใช้ `snake_case` สำหรับชื่อตัวแปร
+
 ```python
-score = 100
-name = "Student"
-print(f"{name} has {score} points")
+name = "Alice"   # String
+age = 20         # Integer
+height = 1.65    # Float
+is_student = True # Boolean
 ```

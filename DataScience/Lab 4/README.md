@@ -1,21 +1,31 @@
-# Lab 4: Operators
+# 🔗 Lab 4: Python Operators
 
-![Topic](https://img.shields.io/badge/Topic-Math-blue)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Logic_Gates-purple?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Comparison-red?style=for-the-badge)
+
+**"Comparison and Logical Operations"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-ทำความเข้าใจตัวดำเนินการทางคณิตศาสตร์ (Arithmetic Operators) เพื่อใช้ในการคำนวณ
+เรียนรู้ตัวดำเนินการเปรียบเทียบ (Comparison Operators) และตัวดำเนินการทางตรรกะ (Logical Operators) ซึ่งเป็นหัวใจของการตรวจสอบเงื่อนไข
 
-## 📝 Content
-- บวก (+), ลบ (-), คูณ (*)
-- หาร (/), หารปัดเศษ (//)
-- เศษจากการหาร (Modulo - %)
-- ยกกำลัง (**)
+## 🏗️ Logic Table
 
-## 💻 Code Snippet
+| Operator | Name | Example (x=5) | Result |
+| :---: | :--- | :--- | :---: |
+| `==` | Equal | `x == 5` | True |
+| `!=` | Not Equal | `x != 3` | True |
+| `and` | Logical AND | `x > 3 and x < 10` | True |
+
+## 💻 Code Highlights
 ```python
-x = 10
-y = 3
-print(x % y) # Output: 1 (Remainder)
-print(x ** 2) # Output: 100 (Power)
+x = 5
+y = 10
+is_valid = (x > 0) and (y < 20)
+print(f"Is Valid: {is_valid}")
 ```

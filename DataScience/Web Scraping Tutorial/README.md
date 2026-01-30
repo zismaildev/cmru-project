@@ -1,20 +1,38 @@
-# 🕸️ Web Scraping Tutorial
+# 🕸️ Web Scraping Tutorial (Advanced)
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Library](https://img.shields.io/badge/Library-BeautifulSoup-green)
+<div align="center">
+
+![Tech](https://img.shields.io/badge/Tech-Selenium_%26_BeautifulSoup-success?style=for-the-badge)
+![Level](https://img.shields.io/badge/Level-Advanced-red?style=for-the-badge)
+
+**"Handling Dynamic Content and Pagination"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-บทเรียนการดึงข้อมูลจากเว็บไซต์ (Web Scraping) โดยใช้ Python ดึงข้อมูลรายชื่อภาพยนตร์ยอดนิยมจาก IMDb
+บทเรียนขั้นสูงสำหรับการดึงข้อมูลจากเว็บไซต์ที่มีความซับซ้อน (Dynamic Web Pages) ที่ใช้ JavaScript หรือมีการแบ่งหน้า (Pagination)
 
-## 📝 Learning Modules
-1. **Understanding HTTP**: การทำงานของ Request/Response และ User-Agent
-2. **Fetching Data**: การใช้ `requests` ดึง HTML
-3. **Parsing Data**: การใช้ `BeautifulSoup` ค้นหา Tag (`find`, `find_all`)
-4. **Processing**: การนำข้อมูลลง `pandas` DataFrame และ Save เป็น CSV
+## 🏗️ Scraping Strategy
 
-## 💻 Code Snippet
+```mermaid
+graph TD
+    Start[Start URL] --> Req[Requests/Selenium]
+    Req --> Parse[Parse HTML]
+    Parse --> Data[Extract Data]
+    Data --> Save[Save to List]
+    Parse --> Check{Has Next Page?}
+    Check -- Yes --> Next[Get Next URL]
+    Next --> Req
+    Check -- No --> Export[Export to CSV]
+```
+
+## 💻 Code Logic
 ```python
-response = requests.get(url, headers=headers)
-soup = BeautifulSoup(response.content, 'html.parser')
-movie_names = soup.find_all('h3', class_='lister-item-header')
+# Pagination handling
+while next_button:
+    scrape_current_page()
+    click_next_page()
+    time.sleep(2) # Respect server rate limit
 ```

@@ -1,19 +1,33 @@
-# Lab 13: Tuples
+# 🔒 Lab 13: Tuples (Immutable Lists)
 
-![Topic](https://img.shields.io/badge/Topic-Data%20Structure-purple)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Immutability-red?style=for-the-badge)
+![Usage](https://img.shields.io/badge/Usage-Constants_%26_Coords-blue?style=for-the-badge)
+
+**"Read-Only Data Structures"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-เรียนรู้ **Tuple** โครงสร้างข้อมูลที่คล้าย List แต่มีความเร็วสูงกว่าและ **แก้ไขไม่ได้ (Immutable)**
+ทำความเข้าใจ **Tuple** ซึ่งเหมือน List แต่ "ห้ามแก้ไข" (Immutable) เหมาะสำหรับเก็บข้อมูลค่าคงที่ เช่น พิกัด GPS หรือ Config
 
-## 📝 Content
-- การสร้าง Tuple `()`
-- การ Pack และ Unpack Tuple
-- ข้อแตกต่างระหว่าง List กับ Tuple
+## 🏗️ Memory Concept
+Tuple เร็วกว่า List และใช้ Memory น้อยกว่าเพราะขนาดคงที่
+
+```mermaid
+graph TD
+    Tuple((10, 20)) -->|Fixed Size| Memory
+    List[10, 20] -->|Dynamic Size| Memory
+    List -.->|Resize| NewMemory
+```
 
 ## 💻 Code Snippet
 ```python
-coordinates = (10, 20)
-x, y = coordinates
+# Unpacking Tuple
+point = (10, 20)
+x, y = point
 print(f"X: {x}, Y: {y}")
 ```

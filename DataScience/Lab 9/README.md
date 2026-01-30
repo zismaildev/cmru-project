@@ -1,21 +1,35 @@
-# Lab 9: If-Else Statements
+# 🚦 Lab 9: Control Flow (Conditions)
 
-![Topic](https://img.shields.io/badge/Topic-Logic-orange)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Decision_Making-orange?style=for-the-badge)
+![Keyword](https://img.shields.io/badge/Keyword-if_elif_else-blue?style=for-the-badge)
+
+**"Logic and Decision Making in Python"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-การกำหนดเงื่อนไขเพื่อควบคุมทิศทางการทำงานของโปรแกรม (Control Flow)
+การเขียนโปรแกรมให้ "คิด" ได้ ต้องใช้เงื่อนไข `if-elif-else` เพื่อควบคุมทิศทางการทำงานของโปรแกรมตามข้อมูลที่ได้รับ
 
-## 📝 Content
-- Comparison Operators (==, !=, >, <)
-- `if`, `elif`, `else`
-- Indentation (การย่อหน้า) ใน Python
+## 🏗️ Logic Flowchart
+
+```mermaid
+graph TD
+    Start --> Check{Score >= 50?}
+    Check -- Yes --> Pass[Print 'Pass']
+    Check -- No --> Fail[Print 'Fail']
+```
 
 ## 💻 Code Snippet
 ```python
 score = 75
-if score >= 50:
-    print("Pass")
+if score >= 80:
+    grade = "A"
+elif score >= 70:
+    grade = "B"
 else:
-    print("Fail")
+    grade = "F"
 ```

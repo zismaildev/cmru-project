@@ -1,8 +1,14 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'myproject';
+/**
+ * University Database Connector
+ * Implements Singleton-like connection for the entire app.
+ * 
+ * Best Practice: Environment Variables for Security
+ */
+$host = getenv('DB_HOST') ?: 'localhost';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASS') ?: '';
+$db   = getenv('DB_NAME') ?: 'myproject';
 
 $connect = mysqli_connect($host, $user, $pass, $db);
 

@@ -1,21 +1,24 @@
-# 📝 Assignment 8: Modules & Libraries
+# 📂 Python Assignment 8: File Handling
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Topic](https://img.shields.io/badge/Topic-Standard%20Lib-red)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-IO_Integration-brown?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Read/Write-grey?style=for-the-badge)
+
+</div>
+
+---
 
 ## 🎯 Objective
-ฝึกการเรียกใช้งานไลบรารีมาตรฐานของ Python (**Standard Libraries**) เพื่อเพิ่มความสามารถให้โปรแกรมโดยไม่ต้องเขียนโค้ดเองทั้งหมด
+การอ่านและเขียนไฟล์ (.txt, .csv) เพื่อบันทึกข้อมูลถาวร (Persistence)
 
-## 📋 Problem Set
-1. **Datetime**: แสดงวันเวลาปัจจุบันและคำนวณอายุ
-2. **Math**: คำนวณค่าทางคณิตศาสตร์ขั้นสูง (Trigonometry: `sin`, `cos`)
-3. **Random (Game)**: สร้างเกมเป่ายิ้งฉุบ (Rock-Paper-Scissors) แข่งกับคอมพิวเตอร์
-
-## 💻 Code Snippet
+## 💻 Code Logic
 ```python
-import random
+# Write to file
+with open("data.txt", "w") as f:
+    f.write("Hello File!")
 
-choices = ["Rock", "Paper", "Scissors"]
-computer_pick = random.choice(choices)
-print(f"Computer chose: {computer_pick}")
+# Read from file
+with open("data.txt", "r") as f:
+    content = f.read()
 ```

@@ -1,21 +1,44 @@
-# System: Login & Session
+# 🔐 Authentication System Fundamentals
 
-![Tech](https://img.shields.io/badge/Topic-Security-red)
-![Mechanic](https://img.shields.io/badge/Topic-Session_Cookie-orange)
+<div align="center">
 
-## 🎯 Objective
-ระบบยืนยันตัวตน (Authentication) พื้นฐาน เพื่อเรียนรู้กลไกของ **Session** และ **Cookie** ในการรักษาแสถานะการล็อกอิน
+![Language](https://img.shields.io/badge/Language-PHP-777BB4?style=for-the-badge)
+![Security](https://img.shields.io/badge/Concept-Session_Management-red?style=for-the-badge)
 
-## 📝 Features
-- **Login**: ตรวจสอบ Username/Password
-- **Session**: การเริ่ม `session_start()` และเก็บค่า User
-- **Logout**: การทำลาย Session `session_destroy()`
-- **Cookies**: การจดจำผู้ใช้ด้วย Cookie
+**"Stateful User Experience on Stateless HTTP"**
 
-## 💻 Code Snippet
-```php
-session_start();
-$_SESSION['username'] = "admin";
-// Logout
-unset($_SESSION['username']);
+</div>
+
+---
+
+## 🎯 Problem Statement
+การสร้างระบบสมาชิกต้องอาศัยกลไกการจดจำผู้ใช้งาน (State Persistence) ข้ามหน้าเว็บ โจทย์คือกาสร้างระบบ Login/Logout ที่ปลอดภัยและตรวจสอบสิทธิ์ได้ถูกต้อง
+
+## 🏗️ Authentication Lifecycle
+
+```mermaid
+stateDiagram-v2
+    [*] --> Guest
+    Guest --> Login : Submit Credentials
+    Login --> Auth{Verify?}
+    Auth -- Yes --> User : Start Session
+    Auth -- No --> Guest : Show Error
+    User --> ProtectedPage : Access Allowed
+    User --> Logout : Click Logout
+    Logout --> Guest : Destroy Session
 ```
+
+## 💻 Code Implementation
+- **Login Check**: ตรวจสอบ Username/Password จาก Input
+- **Session Control**:
+  ```php
+  session_start();
+  // Set Session Variable
+  $_SESSION['user_id'] = $user_data['id'];
+  // Check Session
+  if (!isset($_SESSION['user_id'])) header("Location: login.php");
+  ```
+
+## 💡 Key Learnings
+- **Session ID**: PHP สร้าง ID ไม่ซ้ำกันแปะไปกับ Cookie `PHPSESSID`
+- **Security Best Practice**: ไม่ควรเก็บ Password จริงใน Session

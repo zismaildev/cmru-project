@@ -1,62 +1,61 @@
-# 📡 Internet of Things (IoT)
-
-<!-- prettier-ignore -->
-> [!NOTE]
-> **"เชื่อมต่อโลกดิจิทัลเข้ากับโลกความเป็นจริง"**
-> <br>เรียนรู้การเขียนโปรแกรมควบคุม Microcontroller (Arduino, ESP8266) และการเชื่อมต่อ Sensors ผ่านเครือข่าย
+# 📡 IoT & Embedded Systems
 
 <div align="center">
 
-![Arduino](https://img.shields.io/badge/Hardware-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-![ESP8266](https://img.shields.io/badge/Hardware-ESP8266-000000?style=for-the-badge&logo=espressif&logoColor=white)
-![Blynk](https://img.shields.io/badge/Platform-Blynk-29BB7D?style=for-the-badge&logo=blynk&logoColor=white)
+![Type](https://img.shields.io/badge/Type-Hardware_Software_Integration-orange?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Stack-C++_%7C_Arduino-00979D?style=for-the-badge)
+
+**"Bridging the Gap Between Physical World and Digital Data"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-บทปฏิบัติการ (Labs) และเวิร์คช็อป (Workshops) สำหรับวิชา Internet of Things ครอบคลุมตั้งแต่วงจรไฟพื้นฐาน (LED Traffic Light) ไปจนถึงระบบอัจฉริยะที่เชื่อมต่อผ่าน WiFi และ Cloud Platform
+## 🎯 Problem Statement
+ในยุค Smart City การนำข้อมูลจากโลกจริง (เช่น จำนวนรถในลานจอด) ขึ้นสู่ระบบออนไลน์แบบ Real-time เป็นสิ่งสำคัญ ความท้าทายคือ **Latency** ของเครือข่าย และ **Resource Constraint** ของ Microcontroller ที่มีหน่วยความจำจำกัด
 
-## 🌟 จุดเด่น (Key Highlights)
-- **Hands-on Hardware**: ต่อวงจรจริง ใช้เซนเซอร์จริง
-- **Connectivity**: การใช้งาน WiFi Module และการส่งค่าขึ้น Cloud (Blynk)
-- **Smart System**: โปรเจกต์จบที่นำความรู้มาสร้างระบบใช้งานได้จริง
+## 🏗️ System Architecture (Smart Parking)
 
-## 📂 สารบัญกิจกรรม (Activity Index)
+การเชื่อมต่อเซ็นเซอร์ Ultrasonic เข้ากับ ESP8266 เพื่อส่งข้อมูลผ่าน WiFi ไปยัง Web Server
 
-### 🧪 Labs & Workshops
-| กิจกรรม (Activity) | รายละเอียด (Description) | Stack |
-| :--- | :--- | :---: |
-| **[Workshop 1-3 (Traffic & Sensors)](./workshop1/README.md)** | ไฟจราจรจำลองและการอ่านค่าเซนเซอร์ | Arduino |
-| **[Lab 3 (Weather Station)](./Lab3/README.md)** | สถานีวัดสภาพอากาศแบบ Offline (LCD Display) | Arduino |
-| **[Lab 4 (Smart Farm WiFi)](./Lab4/README.md)** | ระบบฟาร์มอัจฉริยะเชื่อมต่อ WiFi | ESP8266 |
-| **[Lab 5 (Blynk Control)](./Lab5/README.md)** | การสั่งงานและดูค่าผ่านแอพ Blynk | Blynk |
+```mermaid
+sequenceDiagram
+    participant Car
+    participant Sensor as Ultrasonic Sensor
+    participant MCU as NodeMCU (ESP8266)
+    participant Server as Web Server (PHP)
 
-### 🏆 Final Project
-- **[Smart Parking System](./final/README.md)**: ระบบลานจอดรถอัจฉริยะ ตรวจจับช่องว่างและนับจำนวนรถเข้า-ออกอัตโนมัติ
-
-## 💻 ตัวอย่างโค้ด (Code Pattern)
-โครงสร้างพื้นฐานของ Arduino Sketch:
-```cpp
-void setup() {
-  // ทำงานครั้งเดียวเมื่อเริ่มระบบ (Init)
-  pinMode(LED_BUILTIN, OUTPUT);
-}
-
-void loop() {
-  // ทำงานวนซ้ำตลอดเวลา (Main Logic)
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-}
+    Note over Car, Sensor: Car enters parking slot
+    Sensor->>MCU: Distance < 50cm detected
+    MCU->>MCU: Process Logic (Occupied)
+    MCU->>Server: HTTP POST /update_slot.php?status=busy
+    activate Server
+    Server-->>MCU: 200 OK
+    deactivate Server
+    Server->>Server: Update Database
 ```
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **Hardware**: Arduino UNO, NodeMCU (ESP8266)
-- **Software**: Arduino IDE
-- **Platform**: Blynk IoT Cloud
+## 📂 Project Showcase
+
+### 1. 🅿️ Smart Parking System (`/IoT/final`)
+*ระบบลานจอดรถอัจฉริยะ*
+- **Components:** NodeMCU V3, Ultrasonic SR04, LCD I2C
+- **Flow:** วัดระยะทาง -> คำนวณว่าง/ไม่ว่าง -> ส่งขึ้น Server -> แสดงผลบนเว็บ
+
+### 2. 🏠 Smart Home Prototype
+*ระบบเปิด-ปิดไฟผ่าน WiFi*
+- **Components:** Relay Module, ESP8266
+- **Flow:** ควบคุมเครื่องใช้ไฟฟ้าผ่าน Mobile Web App
+
+## 💡 Key Learnings
+- **Hardware Interrupts:** การใช้ Interrupt แทน Polling เพื่อการตอบสนองที่รวดเร็ว
+- **Communication Protocols:** ความแตกต่างระหว่าง UART, I2C, และ SPI
+- **Power Management:** การเขียนโค้ดให้ประหยัดพลังงานสำหรับอุปกรณ์ IoT
 
 ---
-<div align="center">
-  <p>CMRU IoT Laboratory</p>
-</div>
+
+## 🚀 How to Run
+1. **Hardware:** ต่อวงจรตาม Schematic (ดูในโฟลเดอร์)
+2. **Firmware:** เปิดไฟล์ `.ino` ด้วย **Arduino IDE**
+3. **Libraries:** ติดตั้ง Library ที่จำเป็น (เช่น `ESP8266WiFi`, `LiquidCrystal_I2C`)
+4. **Upload:** เลือก Board และ Port ให้ถูกต้อง แล้วกด Upload

@@ -1,19 +1,28 @@
-# Lab 15: Intro to Libraries
+# 📦 Lab 15: Introduction to Libraries
 
-![Topic](https://img.shields.io/badge/Topic-Modules-red)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Modules-blue?style=for-the-badge)
+![Ecosystem](https://img.shields.io/badge/Ecosystem-PyPI-orange?style=for-the-badge)
+
+**"Leveraging the Power of Python Ecosystem"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-รู้จักพลังของ Python Libraries และวิธีการนำเข้า (`import`) เพื่อใช้งานฟังก์ชันพิเศษ
+เรียนรู้วิธีการ `import` และใช้งาน Libraries ภายนอก ซึ่งเป็นจุดแข็งของ Python (Batteries Included)
 
-## 📝 Content
-- Standard Libraries (`math`, `random`, `datetime`)
-- External Libraries (`numpy`, `pandas`)
-- การติดตั้งผ่าน `pip` (ใน Local) หรือใช้งานใน Colab
-
-## 💻 Code Snippet
+## 💻 Code Example (Math & Random)
 ```python
 import math
+import random
+
 print(math.pi)
-print(math.sqrt(16))
+print(random.randint(1, 10))
 ```
+
+## 💡 Key Learnings
+- **Standard Library**: โมดูลที่มาพร้อม Python (`os`, `sys`, `math`, `datetime`)
+- **pip**: เครื่องมือสำหรับติดตั้ง Package เสริม

@@ -1,20 +1,34 @@
-# Lab 17: Pandas Basics
+# 🐼 Lab 17: Pandas DataFrame
 
-![Topic](https://img.shields.io/badge/Topic-Data%20Science-blue)
-![Library](https://img.shields.io/badge/Library-Pandas-150458)
+<div align="center">
+
+![Library](https://img.shields.io/badge/Library-Pandas-150458?style=for-the-badge&logo=pandas)
+![Concept](https://img.shields.io/badge/Concept-Tabular_Data-green?style=for-the-badge)
+
+**"Data Manipulation and Analysis Tool"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-ใช้งาน **Pandas** ไลบรารีที่สำคัญที่สุดสำหรับ Data Science ในการจัดการข้อมูลแบบตาราง (**DataFrame**)
+ทำความรู้จัก **Pandas**, เครื่องมือที่ทรงพลังที่สุดสำหรับ Data Analysis ใน Python เรียนรู้โครงสร้าง `Series` และ `DataFrame` (ตารางข้อมูล)
 
-## 📝 Content
-- สร้าง Series และ DataFrame
-- การอ่านไฟล์ CSV
-- การเลือกข้อมูลเบื้องต้น (`head()`, `describe()`)
+## 🏗️ DataFrame Structure
 
-## 💻 Code Snippet
+```mermaid
+graph TD
+    DF[DataFrame] --> Col1[Column: Name]
+    DF --> Col2[Column: Age]
+    DF --> Index[Index: 0, 1, 2...]
+```
+
+## 💻 Tech Spec
+- **read_csv()**: อ่านไฟล์ข้อมูลเข้าสู่ DataFrame
+- **head()**, **describe()**: คำสั่งสำรวจข้อมูลเบื้องต้น
+
 ```python
 import pandas as pd
-data = {'Name': ['Tom', 'Jerry'], 'Age': [20, 22]}
-df = pd.DataFrame(data)
-print(df)
+df = pd.read_csv('data.csv')
+print(df.head())
 ```

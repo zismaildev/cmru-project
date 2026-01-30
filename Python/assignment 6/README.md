@@ -1,29 +1,21 @@
-# 📝 Assignment 6: Sets & Dictionaries
+# 🛠️ Python Assignment 6: Functions
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Topic](https://img.shields.io/badge/Topic-Data%20Structures-purple)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Modular_Code-purple?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Reusability-red?style=for-the-badge)
+
+</div>
+
+---
 
 ## 🎯 Objective
-ทำความเข้าใจโครงสร้างข้อมูลแบบ Key-Value Pair (**Dictionary**) และการจัดการข้อมูลที่ไม่ซ้ำกัน (**Set**)
+การสร้าง Function เพื่อแยกส่วนการทำงานของโปรแกรม (Modularization) การรับค่า Parameter และการ Return ค่า
 
-## 📋 Problem Set
-1. **Set Operations**: การหา Union, Intersection และ Difference ของข้อมูล 2 ชุด
-2. **Dictionary CRUD**: สร้าง, อ่าน, อัปเดต, และลบข้อมูลใน Dictionary
-3. **Student DB**: โปรแกรมจัดการฐานข้อมูลนักเรียนอย่างง่ายด้วย Dictionary
-
-## 💻 Code Snippet
+## 💻 Code Logic
 ```python
-student = {
-    "id": "6401",
-    "name": "Nattapong",
-    "gpa": 3.50
-}
-# การเข้าถึงข้อมูล
-print(f"Name: {student['name']}")
-# การเพิ่มข้อมูล
-student["major"] = "Com Sci"
-```
+def calculate_vat(price):
+    return price * 0.07
 
-## 🚀 Concept
-- **Dictionary**: เหมาะสำหรับการเก็บข้อมูลที่มีโครงสร้างชัดเจน (JSON-like)
-- **Set**: เหมาะสำหรับการขจัดข้อมูลซ้ำซ้อนและการดำเนินงานทางคณิตศาสตร์
+net_price = 100 + calculate_vat(100)
+```

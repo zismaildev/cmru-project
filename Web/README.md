@@ -1,55 +1,71 @@
-# 🌐 Web Development Projects
-
-<!-- prettier-ignore -->
-> [!IMPORTANT]
-> **"Full Stack Developer Journey"**
-> <br>รวมผลงานการพัฒนาเว็บไซต์ครบวงจร ทั้ง Frontend (HTML/CSS) แสนสวยงาม และ Backend (PHP/MySQL) ที่ทรงพลัง
+# 🌐 Web Engineering & Architecture
 
 <div align="center">
 
-![PHP](https://img.shields.io/badge/Backend-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![HTML5](https://img.shields.io/badge/Frontend-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Type](https://img.shields.io/badge/Type-Full_Stack-blue?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Stack-PHP_MySQL-777BB4?style=for-the-badge)
+
+**"From Static Designs to Dynamic Data-Driven Applications"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-รวมโปรเจกต์พัฒนาเว็บไซต์ที่ครอบคลุมตั้งแต่ Static Website หน้าตาสวยงาม ไปจนถึง Web Application ที่มีการจัดการฐานข้อมูล ระบบสมาชิก และระบบร้านค้าออนไลน์
+## 🎯 Problem Statement
+การพัฒนาเว็บแอปพลิเคชันที่มีความซับซ้อน (เช่น ระบบ E-Commerce) ต้องการโครงสร้างที่ชัดเจนในการจัดการข้อมูล (Data Integrity), ความปลอดภัย (Security), และประสบการณ์ผู้ใช้ (UX) สิ่งที่ท้าทายคือการจัดการ **Session State** (เช่น ตะกร้าสินค้า) และการออกแบบฐานข้อมูลให้รองรับการขยายตัว
 
-## 📂 โครงสร้างโปรเจกต์ (Project Structure)
+## 🏗️ Solution Architecture (Web/php/final)
 
-### 🎨 Frontend (Static)
-- **[Website Prototype](./website/README.md)**: เว็บไซต์ต้นแบบที่เน้นดีไซน์ (Home, Profile, Login, Quiz)
+โปรเจกต์นี้ใช้สถาปัตยกรรมแบบ **Model-View-Controller (MVC)** อย่างง่าย โดยแยก Business Logic (PHP) ออกจาก Presentation (HTML) และ Data Access (SQL)
 
-### ⚙️ Backend (PHP & MySQL)
-รวมอยู่ในโฟลเดอร์ `Web/php` โดยแบ่งเป็น:
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server as PHP Server (Logic)
+    participant DB as MySQL Database
 
-#### 🏆 Major Projects (โปรเจกต์ใหญ่)
-| Project | Description | Highlight | Link |
-| :--- | :--- | :--- | :---: |
-| **Final Project** | **Computer Shop**<br>ระบบ E-Commerce ขายอุปกรณ์คอมพิวเตอร์ | Shopping Cart, Admin Panel | [View](./php/final/README.md) |
-| **Project 6** | **University System**<br>ระบบจัดการข้อมูลมหาวิทยาลัย | CRUD Operations | [View](./php/project6/README.md) |
-| **Auth System** | **Login & Session**<br>ระบบยืนยันตัวตนและการจัดการ Session | Security Basics | [View](./php/system/README.md) |
+    User->>Browser: Click "Add to Cart"
+    Browser->>Server: POST /add_to_cart.php (Product ID)
+    activate Server
+    Server->>Server: Check Session (Login?)
+    Server->>DB: Query Product Details
+    activate DB
+    DB-->>Server: Product Data (Cost, Stock)
+    deactivate DB
+    Server->>Server: Update $_SESSION['cart']
+    Server-->>Browser: Redirect to Cart Page
+    deactivate Server
+    Browser-->>User: Show Updated Cart
+```
 
-#### 🛠️ Exercises (แบบฝึกหัด)
-- **Basic DB Connect**: การเชื่อมต่อฐานข้อมูล
-- **Quiz App**: แอพทำแบบทดสอบ
-- **Project 2-5**: ฟอร์มรับข้อมูล, การคำนวณเกรด, การอัพโหลดไฟล์
+## 📂 Project Showcase
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **Server**: Apache (via XAMPP)
-- **Database**: MySQL / MariaDB
-- **Language**: PHP 7/8, HTML5, CSS3, JavaScript
+### 1. 🛍️ E-Commerce System (`/Web/php/final`)
+*ร้านขายอุปกรณ์คอมพิวเตอร์ครบวงจร*
+- **Key Features:**
+  - **Session Management:** ระบบตะกร้าสินค้าที่จดจำสินค้าข้ามหน้า
+  - **Role-Based Access:** แผงควบคุมสำหรับ Admin (จัดการสินค้า/User) และ User (ซื้อของ)
+  - **CRUD Operations:** เพิ่ม-ลบ-แก้ไข สินค้าและหมวดหมู่
 
-## 🚀 การติดตั้งและใช้งาน (Installation)
-1. ติดตั้ง **XAMPP**
-2. คัดลอกโฟลเดอร์ `Web` ไปที่ `C:\xampp\htdocs\`
-3. Start **Apache** และ **MySQL**
-4. เข้าใช้งานผ่าน Browser: `http://localhost/Web/`
+### 2. 🏫 University Management (`/Web/php/project6`)
+*ระบบจัดการข้อมูลมหาวิทยาลัย*
+- **Key Features:**
+  - การเชื่อมต่อฐานข้อมูลหลายตาราง (JOINs)
+  - การจัดการข้อมูลนักศึกษา และรายวิชา
+
+## 💡 Key Learnings
+- **Stateless vs Stateful:** HTTP เป็น Stateless protocol จึงต้องใช้ Session/Cookies มาช่วยในการจำ user state
+- **Security First:** การป้องกัน SQL Injection โดยใช้ Prepared Statements และการ Hashing รหัสผ่าน
+- **Database Normalization:** การออกแบบ 3NF เพื่อลดความซ้ำซ้อนของข้อมูล
 
 ---
-<div align="center">
-  <p>CMRU Web Development Course</p>
-</div>
+
+## 🚀 How to Run
+1. **Requirements:** web Server (Apache/Nginx), PHP 7.4+, MySQL
+2. **Setup Database:** Import ไฟล์ `.sql` จากโฟลเดอร์ `SQL/` (ถ้ามี) หรือใช้คำสั่งใน `db.php`
+3. **Config:** แก้ไขค่าเชื่อมต่อ Database ใน `db.php`
+   ```php
+   $conn = mysqli_connect("localhost", "root", "", "shop_db");
+   ```
+4. **Deploy:** วางไฟล์ใน `htdocs` แล้วเปิด Browser ไปที่ `http://localhost/Web/php/final/`

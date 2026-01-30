@@ -1,29 +1,22 @@
-# 📝 Assignment 4: Loops (Iteration)
+# 🔄 Python Assignment 4: Loops & Iteration
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Topic](https://img.shields.io/badge/Topic-Control%20Flow-orange)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Looping-green?style=for-the-badge)
+![Logic](https://img.shields.io/badge/Logic-Repetition-blue?style=for-the-badge)
+
+</div>
+
+---
 
 ## 🎯 Objective
-ฝึกฝนการเขียน Loop เพื่อทำงานซ้ำ (Repetition) ทั้งแบบรู้จำนวนรอบ (`for`) และแบบเช็คเงื่อนไข (`while`)
+ฝึกการใช้งาน Loop (`for`, `while`) เพื่อทำงานซ้ำๆ เช่น การนับจำนวน, การคำนวณผลรวม, หรือการสร้าง Pattern
 
-## 📋 Problem Set
-1. **Simple Loop**: แสดงตัวเลข 1-10 และผลรวม 1-50
-2. **Multiplication Table**: โปรแกรมสูตรคูณตามแม่ที่กำหนด
-3. **Patterns**: สร้างรูปสามเหลี่ยมด้วย Nested Loop
-4. **Step Loop**: แสดงเลข 1-10 ทีละ 2 (Step=2)
-
-## 💻 Code Snippet
+## 💻 Code Logic
 ```python
-# สูตรคูณแม่ 2
-num = 2
-for i in range(1, 13):
-    print(f"{num} x {i} = {num*i}")
-```
-
-## 🚀 Output Example
-```text
-Enter number: 2
-2 x 1 = 2
-...
-2 x 12 = 24
+# Summation 1 to 10
+total = 0
+for i in range(1, 11):
+    total += i
+print(f"Total: {total}")
 ```

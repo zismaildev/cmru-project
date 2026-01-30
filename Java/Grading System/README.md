@@ -1,22 +1,52 @@
 # 📊 Student Grading System
 
-![Language](https://img.shields.io/badge/Language-Java-ED8B00)
-![Topic](https://img.shields.io/badge/Topic-Array%20Processing-blue)
+<div align="center">
+
+![Language](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=java)
+![Algorithm](https://img.shields.io/badge/Algorithm-Grading_Logic-blue?style=for-the-badge)
+
+**"Automated Score Calculation & Reporting"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-ระบบจัดการคะแนนนักเรียน รองรับการทำข้อมูลจำนวนมากด้วย **Array** สามารถคำนวณเกรด ตัดเกรด และแสดงรายงานสรุปผลได้
+ระบบคำนวณเกรดนักศึกษาอัตโนมัติ รองรับการประมวลผลข้อมูลจำนวนมาก (Batch Processing) และแสดงผลรายงานสรุปทางสถิติของห้องเรียน
 
-## ✨ Features
-- **Batch Processing**: รับข้อมูลนักเรียนทั้งห้องเรียน
-- **Auto Grading**: คำนวณเกรด (A-F) อัตโนมัติจากคะแนนรวม
-- **Statistics**: หาค่าเฉลี่ย (Average) ของทั้งห้องเรียน
+## 🏗️ Logic Flowchart
 
-## 🚀 Output Example
-```text
-ID      Name        Score   Grade
-----------------------------------
-101     Alice       85.5    A
-102     Bob         68.0    C
-----------------------------------
-Class Average: 76.75
+```mermaid
+graph TD
+    Start([Start]) --> Input[Input Student Scores]
+    Input --> Loop{For Each Student}
+    Loop --> CheckScore{Score >= 80?}
+    CheckScore -- Yes --> GradeA[Grade = A]
+    CheckScore -- No --> CheckB{Score >= 70?}
+    CheckB -- Yes --> GradeB[Grade = B]
+    CheckB -- No --> GradeF[Calculate Other Grades...]
+    GradeA --> Store[Store in Array]
+    GradeB --> Store
+    GradeF --> Store
+    Store --> Loop
+    Loop -- Done --> Report[Print Class Report]
+    Report --> End([End])
 ```
+
+## � Tech Implementation
+การใช้ **Array** เพื่อเก็บข้อมูลและ Loop เพื่อประมวลผล
+
+```java
+// Grade Calculation Logic
+public char calculateGrade(int score) {
+    if (score >= 80) return 'A';
+    else if (score >= 70) return 'B';
+    else if (score >= 60) return 'C';
+    else if (score >= 50) return 'D';
+    else return 'F';
+}
+```
+
+## 💡 Key Learnings
+- **Control Flow**: การใช้ if-else ladder ในการตัดสินใจช่วงคะแนน
+- **Data Aggregation**: การคำนวณค่าเฉลี่ย (Average) และหาค่า Max/Min ของข้อมูลใน Array

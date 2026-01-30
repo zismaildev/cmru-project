@@ -17,9 +17,15 @@ class Product {
   });
 }
 
-// --- Provider ---
+/// **Product Provider**
+/// Manages global application state for Products and Favorites using the Provider pattern.
+///
+/// Functions:
+/// - Stores master list of [Product]
+/// - Manages set of favorite product IDs
+/// - Notifies listeners on state changes
 class ProductProvider with ChangeNotifier {
-  // Mock Data with Real Image URLs
+  /// Mock Data Repository with High-Quality Images
   final List<Product> _products = [
     Product(
       id: '1',

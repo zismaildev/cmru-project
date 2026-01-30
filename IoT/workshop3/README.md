@@ -1,22 +1,31 @@
-# Workshop 3: Sensor Modules
+# 🧩 IoT Workshop 3: Modular Sensors
 
-![Platform](https://img.shields.io/badge/Platform-Arduino-00979D)
-![Sensors](https://img.shields.io/badge/Topic-Sensors-orange)
+<div align="center">
+
+![Hardware](https://img.shields.io/badge/Sensors-DHT_LDR_Ultrasonic-red?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Module_Integration-orange?style=for-the-badge)
+
+**"Working with Various Input Devices"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-รวมตัวอย่างการใช้งานเซ็นเซอร์พื้นฐาน 4 ชนิด สำหรับงาน IoT
+เรียนรู้การเขียนโค้ดเพื่ออ่านค่าจากเซ็นเซอร์ชนิดต่างๆ แยกเป็นโมดูล เพื่อความเข้าใจใน Hardware Interface (Digital vs Analog pin)
 
-## 🛠️ Modules List
-- **DHT11**: วัดอุณหภูมิและความชื้น (Library: `DHT.h`)
-- **LDR**: วัดความเข้มแสง (Analog Input)
-- **Rain Sensor**: วัดปริมาณน้ำฝน (Digital/Analog)
-- **Ultrasonic (HC-SR04)**: วัดระยะทางด้วยคลื่นเสียง
+## 📂 Modules
+- **DHT**: วัดอุณหภูมิและความชื้น (Digital Pin)
+- **LDR**: วัดความเข้มแสง (Analog Pin `A0`)
+- **Ultrasonic**: วัดระยะทาง (Trigger/Echo Pins)
 
-## 💻 Code Snippet
+## 💻 Example Logic (Ultrasonic)
 ```cpp
-// LDR Sensor Reading
-int lux = analogRead(LDR_PIN);
-if (lux < 500) {
-    Serial.println("Night Mode");
-}
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trigPin, LOW);
+duration = pulseIn(echoPin, HIGH);
+distance = duration * 0.034 / 2;
 ```

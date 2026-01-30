@@ -1,21 +1,33 @@
-# Lab 3: Comments
+# 🧮 Lab 3: Basic Calculation
 
-![Topic](https://img.shields.io/badge/Topic-Syntax-blue)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Arithmetic-orange?style=for-the-badge)
+![Math](https://img.shields.io/badge/Math-Basic_Operations-blue?style=for-the-badge)
+
+**"Python as a Calculator"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-เรียนรู้วิธีการเขียน **Comment** เพื่ออธิบายโค้ดโดยที่โปรแกรมจะไม่นำไปประมวลผล
+ฝึกการใช้ Python คำนวณทางคณิตศาสตร์พื้นฐาน (+, -, *, /) และลำดับความสำคัญของเครื่องหมาย (PEMDAS)
 
-## 📝 Content
-- **Single-line comment**: ใช้เครื่องหมาย `#`
-- **Multi-line comment**: ใช้เครื่องหมาย `'''` หรือ `"""`
+## 🏗️ Operations Flow
+
+```mermaid
+graph LR
+    Input[Expression: 2 + 3 * 5] --> Process[Multiply First: 3*5=15]
+    Process --> Process2[Add Next: 2+15=17]
+    Process2 --> Output[Result: 17]
+```
 
 ## 💻 Code Snippet
 ```python
-# This is a comment
-print("This code works")
-'''
-This is a
-multi-line comment
-'''
+a = 10
+b = 3
+print(a + b)  # Addition
+print(a ** b) # Power (10^3)
+print(a % b)  # Modulo (Remainder)
 ```

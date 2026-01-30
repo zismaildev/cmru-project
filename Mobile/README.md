@@ -1,54 +1,71 @@
-# 📱 Mobile Application Development
-
-<!-- prettier-ignore -->
-> [!TIP]
-> **"Build One Code, Run Everywhere"**
-> <br>พัฒนาแอปพลิเคชันข้ามแพลตฟอร์ม (Android & iOS) ด้วยประสิทธิภาพสูงโดยใช้ Flutter Framework
+# 📱 Mobile Engineering (Flutter)
 
 <div align="center">
 
-![Flutter](https://img.shields.io/badge/Framework-Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Language-Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Type](https://img.shields.io/badge/Platform-Cross_Platform-blue?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Stack-Flutter_%7C_Dart-02569B?style=for-the-badge)
+
+**"High-Performance Native Interfaces with a Single Codebase"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-รวมโปรเจกต์และแบบฝึกหัดการสร้าง Mobile App ตั้งแต่พื้นฐานภาษา Dart, การออกแบบ UI Widget, การจัดการ State, ไปจนถึงการทำแอปพลิเคชันที่สมบูรณ์
+## 🎯 Problem Statement
+การพัฒนาแอปพลิเคชันมือถือแบบ Native (iOS/Android) มักต้องใช้ทีมพัฒนาถึง 2 ทีมและดูแล Codebase 2 ชุด ความท้าทายคือการสร้าง **UI ที่ลื่นไหล** (60fps) และ **Business Logic** ที่ใช้ร่วมกันได้ โดยไม่ลดทอนประสิทธิภาพ
 
-## 🌟 จุดเด่น (Key Highlights)
-- **UI/UX Design**: การใช้ Widget พื้นฐานและ Custom Widget
-- **Navigation**: การเปลี่ยนหน้าและการส่งข้อมูลระหว่าง Screen
-- **Logic Implementation**: แอปคำนวณเกรด (GPAX) และระบบ Login
+## 🏗️ Architecture & State Management
 
-## 📂 โครงสร้างโปรเจกต์ (Directory Structure)
+ใช้สถาปัตยกรรมแบบ **Reactive Programming** ร่วมกับ **Provider Pattern** เพื่อจัดการ State ของแอพพลิเคชัน
 
-| โปรเจกต์ (Project) | รายละเอียด (Description) | ลิงก์ (Link) |
-| :--- | :--- | :---: |
-| **Flutter Main** | **Core Lessons**<br>โปรเจกต์หลักที่รวมตัวอย่างการใช้งาน Widget ต่างๆ ไว้ด้วยกัน | [View Code](./Flutter/) |
-| **Assignments** | **Learning Playground**<br>แบบฝึกหัดย่อยแยกตามหัวข้อ (Assignment/Quiz) | [View Code](./Flutter/lib/learning/) |
+```mermaid
+graph TD
+    subgraph Presentation Layer
+    App(Root App) --> Nav(Navigator)
+    Nav --> Home(Product List Screen)
+    Nav --> Cart(Cart Screen)
+    Home -- User Click --> Action[Add to Favorite]
+    end
 
-> [!NOTE]
-> โค้ดส่วนใหญ่จะอยู่ในโฟลเดอร์ `lib/` ภายในโปรเจกต์ Flutter
+    subgraph Logic Layer
+    Action --> Provider(ChangeNotifier)
+    Provider -- notifyListeners() --> Home
+    Provider -- notifyListeners() --> Cart
+    end
+```
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **SDK**: Flutter SDK
-- **Language**: Dart
-- **IDE**: VS Code (Recommended) / Android Studio
-- **Emulator**: Android Emulator / iOS Simulator
+## 📂 Project Showcase
 
-## 🚀 การรันโปรเจกต์ (How to Run)
-1. ตรวจสอบ dependencies:
+### 1. 🛒 Fruit Shop Store (State Management Workshop)
+*หน้าร้านค้าออนไลน์บนมือถือ*
+- **Concept:** การจัดการ Global State (รายการสินค้าที่ชอบ) ข้ามหน้าจอ
+- **Tech Highlights:** `Provider`, `Consumer`, `ListView.builder`
+
+### 2. 🧮 GPA Calculator
+*แอพคำนวณเกรดเฉลี่ย*
+- **Concept:** การรับ Input และคำนวณ Logic ที่ซับซ้อนแบบ Real-time
+- **Tech Highlights:** Form Validation, Dynamic List Logic
+
+### 3. 🔐 Authentication System
+*ระบบ Login/Register*
+- **Concept:** การจัดการ TextField และการตรวจสอบความถูกต้องของข้อมูล
+- **Tech Highlights:** `TextEditingController`, Secure Storage basics
+
+## 💡 Key Learnings (Flutter)
+- **Declarative UI:** การสร้าง UI โดยการประกาศสถานะ (State) แทนคำสั่ง (Imperative) ทำให้โค้ดอ่านง่ายและคาดเดาได้
+- **Widget Tree:** ความเข้าใจเรื่อง `BuildContext` และการส่งข้อมูลลงสู่ Widget ลูก (InheritedWidget)
+- **Asynchronous Dart:** การใช้ `Future` และ `Stream` ในการจัดการข้อมูลที่ไม่พร้อมใช้งานทันที
+
+---
+
+## 🚀 How to Run
+1. **Prerequisites:** Flutter SDK ติดตั้งเรียบร้อย
+2. **Get Packages:**
    ```bash
    flutter pub get
    ```
-2. รันแอพพลิเคชั่น:
+3. **Debug:**
    ```bash
    flutter run
    ```
-
----
-<div align="center">
-  Made with Flutter 💙
-</div>
+   *Note: ตรวจสอบว่าเปิด Emulator หรือเสียบอุปกรณ์จริงแล้ว*

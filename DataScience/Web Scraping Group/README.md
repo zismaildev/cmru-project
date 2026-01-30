@@ -1,18 +1,45 @@
-# 📉 SET Stock Scraper (Group Project)
+# 🕷️ Web Scraping Group Project
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Target](https://img.shields.io/badge/Target-SET.or.th-orange)
+<div align="center">
 
-## 🎯 Objective
-โปรเจกต์กลุ่มเพื่อดึงข้อมูลรายชื่อบริษัทจดทะเบียนในตลาดหลักทรัพย์แห่งประเทศไทย (SET) พร้อมข้อมูลการติดต่อ
+![Tech](https://img.shields.io/badge/Tech-BeautifulSoup_%7C_Selenium-success?style=for-the-badge)
+![Domain](https://img.shields.io/badge/Domain-Data_Engineering-blue?style=for-the-badge)
 
-## 🛠️ Features
-- **Target URL**: `set.or.th` (Member List)
-- **Data Extracted**: ชื่อย่อหุ้น, ชื่อบริษัท, ที่อยู่, เบอร์โทรศัพท์
-- **Output**: บันทึกผลลัพธ์ลงไฟล์ `stocks_info.csv`
+**"Extracting Real-world Data from Websites"**
 
-## 🚀 How to Run
-```bash
-python web_scraping(grup).py
-# Check stocks_info.csv for results
+</div>
+
+---
+
+## 🎯 Problem Statement
+ข้อมูลที่มีค่าส่วนใหญ่ไม่ได้อยู่ในรูปแบบ API แต่อยู่บนหน้าเว็บไซต์ โจทย์คือการสร้าง **Scraper** เพื่อดึงข้อมูลสินค้า/ราคา มาวิเคราะห์ต่อ
+
+## 🏗️ Scraping Pipeline
+
+```mermaid
+sequenceDiagram
+    participant Scraper
+    participant Target as Target Website
+    participant Parser
+    participant CSV
+
+    Scraper->>Target: HTTP Request (GET)
+    Target-->>Scraper: HTML Response
+    Scraper->>Parser: Parse HTML (BeautifulSoup)
+    Parser->>Parser: Find Elements (div.product)
+    Parser-->>CSV: Write Data (Name, Price)
 ```
+
+## 💻 Tech Stack
+- **Requests**: สำหรับยิง HTTP GET
+- **BeautifulSoup4**: สำหรับแปลง HTML เป็น Object ที่ค้นหาได้
+- **Pandas**: สำหรับจัดรูปแบบข้อมูลก่อน Save เป็น CSV
+
+```python
+soup = BeautifulSoup(response.content, 'html.parser')
+prices = soup.find_all('span', class_='price')
+```
+
+## 💡 Key Learnings
+- **HTML DOM**: โครงสร้าง Tree ของหน้าเว็บ
+- **Ethics**: มารยาทในการ Scraping (ตรวจสอบ `robots.txt` และไม่ยิง Request ถี่เกินไป)

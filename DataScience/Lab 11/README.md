@@ -1,20 +1,33 @@
-# Lab 11: While Loops
+# 🔄 Lab 11: Control Flow (While Loop)
 
-![Topic](https://img.shields.io/badge/Topic-Control%20Flow-orange)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Iteration-green?style=for-the-badge)
+![Logic](https://img.shields.io/badge/Logic-Conditional_Loop-orange?style=for-the-badge)
+
+**"Looping Based on Conditions"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-การใช้ `while` loop เพื่อวนซ้ำตราบเท่าที่เงื่อนไขยังเป็นจริง (True) เหมาะสำหรับกรณีที่ไม่ทราบจำนวนรอบที่แน่นอน
+ทดลองใช้ `while` loop ซึ่งจะทำงานซ้ำไปเรื่อยๆ ตราบเท่าที่เงื่อนไขยังเป็นจริง (True) เหมาะสำหรับสถานการณ์ที่ไม่รู้จำนวนรอบที่แน่นอน
 
-## 📝 Content
-- โครงสร้าง While Loop
-- Infinite Loop (ลูปไม่รู้จบ)
-- การรับค่าจากผู้ใช้จนกว่าจะพิมพ์คำสั่งออก
+## 🏗️ State Diagram
 
-## 💻 Code Snippet
+```mermaid
+stateDiagram-v2
+    [*] --> Check
+    Check --> Action : Condition is True
+    Action --> Check
+    Check --> [*] : Condition is False
+```
+
+## 💻 Code Example
 ```python
 count = 0
 while count < 5:
-    print(count)
+    print(f"Count is {count}")
     count += 1
 ```

@@ -1,55 +1,59 @@
 # 📊 Data Science & Analytics
 
-<!-- prettier-ignore -->
-> [!IMPORTANT]
-> **"เปลี่ยนข้อมูลให้เป็นความรู้ (Turning Data into Insights)"**
-> <br>เส้นทางการเรียนรู้ Data Science ตั้งแต่ Python ขั้นพื้นฐาน ไปจนถึงการจัดการข้อมูลด้วย Pandas และ Web Scraping
-
 <div align="center">
 
-![Python](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Library-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/Library-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Type](https://img.shields.io/badge/Domain-Data_Engineering_&_Analytics-blue?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Stack-Python_%7C_Pandas_%7C_Scraping-3776AB?style=for-the-badge)
+
+**"Transforming Raw Data into Actionable Insights"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-แหล่งรวบรวม Jupyter Notebooks (.ipynb) และ Python Scripts สำหรับรายวิชา Data Science โดยเน้นการลงมือปฏิบัติจริง (Hands-on Labs) ผ่าน Google Colab
+## 🎯 Problem Statement
+ในยุค Big Data การมีข้อมูลจำนวนมหาศาล (เช่น ราคาสินค้า, ข้อมูลตลาดหลักทรัพย์) ไร้ความหมายหากปราศจากการวิเคราะห์ ความท้าทายคือการ **ETL (Extract, Transform, Load)** ข้อมูลจากแหล่งต่างๆ ที่ไม่มีโครงสร้าง (Unstructured Data) ให้พร้อมใช้งาน
 
-## 🛤️ เส้นทางการเรียนรู้ (Learning Path)
+## 🏗️ Data Pipeline Architecture
 
-### 🧱 Phase 1: Fundamentals
-ปูพื้นฐานภาษา Python สำหรับงานข้อมูล
-- **[Lab 1-4](./Lab%201/README.md)**: Introduction to Colab, Hello World, Operators
-- **[Lab 5-7](./Lab%205/README.md)**: Variables, Data Types, String Manipulation
-- **[Lab 8-9](./Lab%208/README.md)**: Methods & Control Flow (If-Else)
+กระบวนการดึงข้อมูลจากเว็บไซต์ (Web Scraping) สู่การวิเคราะห์
 
-### 🔄 Phase 2: Data Structures & Logic
-การจัดการข้อมูลที่ซับซ้อนขึ้น
-- **[Lab 10-11](./Lab%2010/README.md)**: Loops (For, While)
-- **[Lab 12-14](./Lab%2012/README.md)**: Lists, Tuples, Dictionaries
+```mermaid
+graph LR
+    Source[Web Source (IMDb/SET)] -->|Requests/BS4| Raw(Raw HTML)
+    Raw -->|Cleaning/Regex| Structured(Structured Data)
+    Structured -->|Pandas DataFrame| Analysis(Data Analysis)
+    Analysis -->|Matplotlib| Viz(Visualization)
+    Analysis -->|Export| CSV[CSV/Excel Report]
+```
 
-### 🐼 Phase 3: Data Science Libraries
-เครื่องมือทรงพลังสำหรับนักวิทยาศาสตร์ข้อมูล
-- **[Lab 15](./Lab%2015/README.md)**: Introduction to Libraries
-- **[Lab 16: NumPy](./Lab%2016/README.md)**: Array Manipulation
-- **[Lab 17: Pandas](./Lab%2017/README.md)**: DataFrame Basics
+## 📂 Project Showcase
 
-## 🏆 Projects & Web Scraping
+### 1. 📈 Stock Market Scraper (`/Web Scraping Group`)
+*ระบบดึงข้อมูลตลาดหลักทรัพย์ (SET)*
+- **Objective:** ติดตามราคาหุ้นและ P/E Ratio แบบอัตโนมัติ
+- **Tech Highlights:** `BeautifulSoup4` สำหรับ Parsing HTML, `Pandas` สำหรับจัดรูปแบบตาราง,Handling Anti-Scraping basics
 
-| Project | Description | Tech Highlight | Link |
-| :--- | :--- | :--- | :---: |
-| **Colab Exercise** | รวมโจทย์ Python 5 ข้อ (Loop, Function, List) | *Python Logic* | [View](./Colab%20Exercise%201/README.md) |
-| **Scraping Tutorial** | สอนดึงข้อมูลรายชื่อหนังจาก IMDb | *Pandas, BeautifulSoup* | [View](./Web%20Scraping%20Tutorial/README.md) |
-| **SET Scraper (Group)** | **Final Project** ดึงข้อมูลหุ้นจากตลาดหลักทรัพย์ | *Advanced Scraping* | [View](./Web%20Scraping%20Group/README.md) |
+### 2. 🎬 IMDb & Movie Data Analysis (`/Web Scraping Tutorial`)
+*การวิเคราะห์เรตติ้งภาพยนตร์*
+- **Objective:** หาความสัมพันธ์ระหว่างรายได้หนังและคะแนนรีวิว
+- **Tech Highlights:** Correlation Analysis, Data Visualization
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **Environment**: Google Colab / Jupyter Notebook
-- **Libraries**: NumPy, Pandas, Matplotlib, Requests, BeautifulSoup4
+### 3. 🐍 Python Core Labs (`/Lab 1-17`)
+*คลังความรู้พื้นฐาน Python for Data Science*
+- **Coverage:** Data Structures (List/Dict), NumPy Arrays, Pandas DataFrames
+
+## 💡 Key Learnings
+- **Data Cleaning:** 80% ของงาน Data Science คือการทำความสะอาดข้อมูล (Handling Missing Values, Type Conversion)
+- **Vectorization:** การใช้ NumPy แทน Loop เพื่อเพิ่มความเร็วในการคำนวณ 10-100 เท่า
+- **Ethical Scraping:** การเคารพ `robots.txt` และ Rate Limiting เมื่อดึงข้อมูลจากเว็บไซต์
 
 ---
-<div align="center">
-  Made for Data Science Class @CMRU
-</div>
+
+## 🚀 How to Run
+1. **Environment:** แนะนำให้ใช้ **Google Colab** หรือ **Jupyter Notebook**
+2. **Setup:**
+   ```bash
+   pip install pandas numpy beautifulsoup4 requests
+   ```
+3. **Execute:** เปิดไฟล์ `.ipynb` แล้วรันทีละ Cell (Shift + Enter)

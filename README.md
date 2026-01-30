@@ -1,102 +1,90 @@
-# 🎓 CMRU-CodeHub
+# 👨‍💻 Nattapong Panthiya (Engineering Portfolio)
 
-<!-- prettier-ignore -->
-> [!TIP]
-> **"แหล่งเรียนรู้และคลังโค้ดสำหรับการพัฒนาโปรแกรมแบบครบวงจร"**
-> <br>รวบรวมแบบฝึกหัด (Labs), โปรเจกต์ (Workshops), และตัวอย่างโค้ด (Snippets) ครอบคลุมตั้งแต่งาน Hardware ไปจนถึง Software Development
-
-![Languages](https://img.shields.io/badge/Languages-C%20%7C%20Java%20%7C%20Python%20%7C%20Dart%20%7C%20PHP%20%7C%20SQL-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active%20Learning-success?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-
----
-
-## �️ แผนผังการเรียนรู้ (Learning Roadmap)
-
-Repository นี้ถูกจัดโครงสร้างตามทักษะการเรียนรู้ โดยแบ่งออกเป็น 4 หมวดหมู่หลัก:
-
-### 1. 📱 Application Development (การพัฒนาแอปพลิเคชัน)
-สร้างแอปพลิเคชันจริงบนมือถือและเว็บ
-
-| Module | Description | Key Highlights | Link |
-| :--- | :--- | :--- | :---: |
-| **Mobile App** | **Flutter & Dart**<br>การพัฒนาแอปพลิเคชันมือถือแบบ Cross-platform | • Basic Dart Syntax<br>• UI Logics (Menu, Navigator)<br>• Workshops (GPA Calc, Login) | [Explore �](./Mobile/) |
-| **Web Dev** | **Frontend & Backend**<br>การสร้างเว็บไซต์ด้วย HTML/CSS และ PHP | • **E-Commerce System (Final)**<br>• **University CRUD System**<br>• Auth & Session Management | [Explore 🚀](./Web/) |
-
-### 2. 📊 Data & Analytics (ข้อมูลและการวิเคราะห์)
-การจัดการข้อมูลและการนำข้อมูลมาใช้ประโยชน์
-
-| Module | Description | Key Highlights | Link |
-| :--- | :--- | :--- | :---: |
-| **Data Science** | **Python for Data Science**<br>ตั้งแต่พื้นฐานจนถึงการวิเคราะห์ข้อมูล | • **NumPy & Pandas Labs**<br>• **Web Scraping (IMDb, SET)**<br>• Colab Noteooks Examples | [Explore 🚀](./DataScience/) |
-| **SQL** | **Database Management**<br>การออกแบบและจัดการฐานข้อมูล | • Database Design<br>• `.sql` Backup Files<br>• Example Queries | [Explore �](./SQL/) |
-
-### 3. 💻 Programming Foundations (พื้นฐานการเขียนโปรแกรม)
-ปูพื้นฐาน Logic และ Algorithm ที่สำคัญ
-
-| Module | Description | Key Highlights | Link |
-| :--- | :--- | :--- | :---: |
-| **Python** | **Scripting & Logic**<br>ภาษาที่ทรงพลังและเรียนรู้ง่าย | • 8 Assignments (Logic/loop/Function)<br>• Practical Tests Solutions<br>• Mini-Games | [Explore 🚀](./Python/) |
-| **Java** | **OOP Concepts**<br>การเขียนโปรแกรมเชิงวัตถุ | • Class & Object Structure<br>• **Shape Calculation System**<br>• Sorting Algorithms | [Explore 🚀](./Java/) |
-| **C Language** | **System Programming**<br>รากฐานของภาษาคอมพิวเตอร์ | • Memory Management Basics<br>• Pointers & Arrays<br>• Pattern Printing (Pyramid) | [Explore �](./C/) |
-
-### 4. 📡 Hardware & IoT (ฮาร์ดแวร์และไอโอที)
-การเชื่อมต่อคอมพิวเตอร์กับโลกกายภาพ
-
-| Module | Description | Key Highlights | Link |
-| :--- | :--- | :--- | :---: |
-| **IoT** | **Internet of Things**<br>Microcontrollers & Sensors | • **Smart Parking System (Final)**<br>• Smart Farm (Blynk/WiFi)<br>• Arduino & ESP8266 Labs | [Explore 🚀](./IoT/) |
-
-### 5. 🧪 Software Testing & QA (การทดสอบซอฟต์แวร์)
-การประกันคุณภาพและการทดสอบระบบแบบอัตโนมัติ
-
-| Module | Description | Key Highlights | Link |
-| :--- | :--- | :--- | :---: |
-| **Software Testing** | **Automated Testing**<br>การเขียนสคริปต์ทดสอบอัตโนมัติ | • **Robot Framework**<br>• Selenium Webdriver<br>• Facebook Login Test | [Explore 🚀](./SoftwareTesting/) |
-
----
-
-## 🛠️ เครื่องมือและเทคโนโลยี (Tech Stack)
-
+<!-- Banner / Badges -->
 <div align="center">
 
-| Category | Technologies |
-| :--- | :--- |
-| **Languages** | ![C](https://img.shields.io/badge/-C-A8B9CC?style=flat) ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat) ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat) ![Dart](https://img.shields.io/badge/-Dart-0175C2?style=flat) ![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat) |
-| **Frameworks** | ![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat) |
-| **Data** | ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat) ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat) ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat) |
-| **Hardware** | ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat) ![ESP8266](https://img.shields.io/badge/-ESP8266-000000?style=flat) |
-| **Testing** | ![Robot Framework](https://img.shields.io/badge/-Robot%20Framework-000000?style=flat) |
+![Role](https://img.shields.io/badge/Role-Software_Engineer-blue?style=for-the-badge&logo=linkedin)
+![Stack](https://img.shields.io/badge/Stack-Full_Stack_%7C_IoT-00E676?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Open_for_Opportunities-orange?style=for-the-badge)
+
+**"Crafting robust software solutions, from embedded sensors to scalable web applications."**
+
+[LinkedIn](#) • [Email](#) • [Resume](#)
 
 </div>
 
 ---
 
-## 📥 การเริ่มต้นใช้งาน (Getting Started)
+## 🚀 Professional Summary
 
-1.  **Clone Repository**
-    ```bash
-    git clone https://github.com/zismaildev/cmru-project.git
-    ```
-2.  **Navigate to Folder**
-    เลือกโฟลเดอร์ที่สนใจศึกษา เช่น หากต้องการดูโปรเจกต์ Flutter:
-    ```bash
-    cd cmru-project/Mobile
-    ```
-3.  **Read Documentation**
-    แต่ละโฟลเดอร์จะมีไฟล์ `README.md` เฉพาะของตนเอง เพื่ออธิบายวิธีการรันและการติดตั้ง
+สวัสดีครับ Repository นี้คือ **Engineering Portfolio** ที่รวบรวมผลงานการออกแบบและพัฒนาระบบ (System Design & Implementation) เพื่อแสดงทักษะการแก้ปัญหาทางวิศวกรรมซอฟต์แวร์
+โดยครอบคลุมตั้งแต่การจัดการฐานข้อมูล (Database), การพัฒนา Back-end/Front-end, Mobile Application ไปจนถึงระบบ IoT ที่เชื่อมต่อกับฮาร์ดแวร์จริง
+
+ทุกโปรเจกต์ในที่นี้เน้น **Code Quality**, **Scalability**, และ **Documentation** ที่ได้มาตรฐาน
 
 ---
 
-## 👨‍💻 ผู้จัดทำ (Author)
+## 🛠️ Technical Arsenal
 
-**Nattapong Panthiya**  
-*Student / Developer*
-
-repository นี้เป็นส่วนหนึ่งของการเรียนรู้และฝึกปฏิบัติจริง เพื่อพัฒนาทักษะทางด้าน Computer Science และ Software Engineering
-
----
-<!-- Footer -->
 <div align="center">
-  <p>Made with ❤️ and ☕ by Nattapong</p>
+
+| Domain | Technologies |
+| :--- | :--- |
+| **Languages** | ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat) ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat) ![Dart](https://img.shields.io/badge/-Dart-0175C2?style=flat) ![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat) ![C/C++](https://img.shields.io/badge/-C%2FC%2B%2B-00599C?style=flat) |
+| **Frontend** | ![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat) ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat) |
+| **Backend & DB** | ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat) ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat) |
+| **IoT & Embed** | ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat) ![ESP8266](https://img.shields.io/badge/-ESP8266-000000?style=flat) ![Sensors](https://img.shields.io/badge/-Sensors-FF0000?style=flat) |
+| **Tools** | ![Git](https://img.shields.io/badge/-Git-F05032?style=flat) ![VS Code](https://img.shields.io/badge/-VS_Code-007ACC?style=flat) ![Robot Framework](https://img.shields.io/badge/-Robot-000000?style=flat) |
+
+</div>
+
+---
+
+## 🏆 Featured Engineering Works
+
+คัดเลือกผลงานที่มีความซับซ้อนและน่าสนใจ (Key Highlights)
+
+### 1. 🅿️ Smart Parking System (IoT Focus)
+**Domain:** `IoT` • **Stack:** C++ (Arduino), ESP8266, Web Dashboard
+> ระบบลานจอดรถอัจฉริยะที่ตรวจจับสถานะช่องจอดแบบ Real-time และแสดงผลบนหน้าจอ LCD และ Web Dashboard เพื่อลดเวลาในการวนหาที่จอด
+- **Architecture:** เซ็นเซอร์ Ultrasonic เชื่อมต่อกับ NodeMCU (ESP8266) ส่งข้อมูลผ่าน MQTT/HTTP ไปยัง Server
+- **Key Challenge:** การจัดการ Concurrency ของข้อมูลจากหลายเซ็นเซอร์และการลด Latency ของการส่งข้อมูล
+- **[View Source Code ➜](./IoT/final)**
+
+### 2. 🛒 E-Commerce Platform (Full Stack)
+**Domain:** `Web` • **Stack:** PHP, MySQL, Bootstrap
+> เว็บไซต์ขายสินค้าออนไลน์ครบวงจร รองรับระบบสมาชิก, ตะกร้าสินค้า, และการจัดการ Order
+- **Architecture:** MVC (Model-View-Controller) Pattern แยกส่วน Business Logic ออกจาก UI
+- **Key Features:** Session Management, Secure Authentication, Data Normalization (3NF)
+- **[View Source Code ➜](./Web/php/final)**
+
+### 3. 📱 Mobile Utility Suite (Cross-Platform)
+**Domain:** `Mobile` • **Stack:** Flutter, Dart
+> ชุดแอปพลิเคชันมือถือที่เน้น UX/UI และ Performance
+- **Key Projects:** App คำนวณ GPA, ระบบ Login, และ Fruit Shop (Workshop)
+- **Architecture:** State Management ด้วย **Provider Pattern** เพื่อจัดการข้อมูลที่ซับซ้อนระหว่าง Widget
+- **[View Source Code ➜](./Mobile)**
+
+---
+
+## 📂 Code Repository Map
+
+โครงสร้างของ Repository นี้แบ่งตามโดเมนทางเทคนิค:
+
+| Directory | Description | Status |
+| :--- | :--- | :---: |
+| **[📂 /Web](./Web)** | Web Applications (Frontend & Backend), E-Commerce, University Systems | ⭐ Active |
+| **[📂 /Mobile](./Mobile)** | Flutter Applications, Dart Logic, UI/UX Designs | ⭐ Active |
+| **[📂 /IoT](./IoT)** | Internet of Things, Arduino Code, Circuit Diagrams | 🟢 Stable |
+| **[📂 /DataScience](./DataScience)** | Python Analysis, Web Scraping, Pandas/NumPy Labs | 🟢 Stable |
+| **[📂 /SQL](./SQL)** | Database Schemas, Complex Queries, Optimization | 🟢 Stable |
+| **[📂 /SoftwareTesting](./SoftwareTesting)** | Automated Tests, QA Scripts (Robot Framework) | 🟡 Maintenance |
+
+---
+
+<!-- Contact / Footer -->
+<div align="center">
+  <br>
+  <p><i>"Quality is not an act, it is a habit."</i> - Aristotle</p>
+  <p>Designed & Developed by <b>Nattapong Panthiya</b></p>
 </div>

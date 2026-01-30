@@ -1,30 +1,51 @@
-# 🤖 Robot Framework Automations
+# 🤖 Robot Framework Automation
 
-![Tool](https://img.shields.io/badge/Tool-Robot_Framework-black)
-![Library](https://img.shields.io/badge/Lib-SeleniumLibrary-green)
+<div align="center">
+
+![Tool](https://img.shields.io/badge/Tool-Robot_Framework-black?style=for-the-badge&logo=robotframework)
+![Library](https://img.shields.io/badge/Lib-SeleniumLibrary-green?style=for-the-badge)
+
+**"Keyword-Driven Acceptance Testing"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-รวมชุดสอบ Automated Testing ด้วย **Robot Framework** และ **SeleniumLibrary** สำหรับทดสอบ Web Application
+รวมชุด Automated Test Script ที่เขียนด้วย **Robot Framework** ซึ่งเป็น Keyword-Driven Testing Tool ที่อ่านง่ายเหมือนภาษาอังกฤษ ใช้ทดสอบ Web UI (Assignment Login, Facebook Register)
 
-## 📂 Projects
-### 1. Assignment (Login Test)
-- **File**: [`assignment/assignment.robot`](./assignment/assignment.robot)
-- **Target**: `the-internet.herokuapp.com`
-- **Action**: ทดสอบการ Login/Logout และตรวจสอบ Element ต่างๆ บนหน้าเว็บ
+## 🏗️ Test Execution Flow
 
-### 2. Facebook Registration
-- **File**: [`facebook/facebook.robot`](./facebook/facebook.robot)
-- **Target**: `facebook.com`
-- **Action**: กรอกแบบฟอร์มสมัครสมาชิก (Register) โดยดึงข้อมูลจากตัวแปรและจับภาพหหน้าจอผลลัพธ์ (`Capture Page Screenshot`)
+```mermaid
+sequenceDiagram
+    participant Tester
+    participant Robot as Robot Framework
+    participant Driver as ChromeDriver
+    participant Browser as Chrome
+    participant App as Web App
 
-## 🚀 How to Run
-```bash
-# Install Requirements
-pip install robotframework robotframework-seleniumlibrary
+    Tester->>Robot: Run Test Suite
+    Robot->>Driver: Open Browser
+    Driver->>Browser: Launch URL
+    Browser->>App: Interact (Click/Type)
+    App-->>Browser: Update UI
+    Browser-->>Driver: Return State
+    Driver-->>Robot: Verify Result (Assert)
+    Robot-->>Tester: Generate Report.html
+```
 
-# Run Facebook Test
-robot facebook/facebook.robot
+## 📂 Test Suites
+1.  **Assignment (Login)**: ทดสอบ Workflow การล็อกอินที่ `the-internet.herokuapp.com`
+2.  **Facebook Register**: ทดสอบกรอกฟอร์มสมัครสมาชิก (Demo)
 
-# Run Assignment Test
-robot assignment/assignment.robot
+## 💻 Code Example (.robot)
+```robot
+*** Test Cases ***
+Valid Login
+    Open Browser    ${URL}    chrome
+    Input Text      id=username    tomsmith
+    Input Password  id=password    SuperSecretPassword!
+    Click Button    css=button[type='submit']
+    Element Should Contain    id=flash    You logged into a secure area!
+    [Teardown]    Close Browser
 ```

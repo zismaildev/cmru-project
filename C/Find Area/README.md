@@ -1,28 +1,40 @@
-# 📐 Find Area
+# 📐 Area Calculation Logic
 
-![Language](https://img.shields.io/badge/Language-C-blue)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
 
-## 🎯 Objective
-โปรแกรมคำนวณพื้นที่รูปทรงเรขาคณิต ฝึกการใช้ `switch-case` และ Loop เพื่อควบคุม Flow ของโปรแกรม
+![Language](https://img.shields.io/badge/Language-C_Programming-A8B9CC?style=for-the-badge)
+![Concept](https://img.shields.io/badge/Concept-Modular_Programming-green?style=for-the-badge)
 
-## 💻 Code Snippet
-```c
-switch(choice) {
-    case 1: // Circle
-        area = 3.141 * radius * radius;
-        break;
-    case 2: // Triangle
-        area = 0.5 * base * height;
-        break;
-    case 3: // Rectangle
-        area = width * length;
-        break;
-}
+</div>
+
+---
+
+## 🎯 Problem Statement
+โปรแกรมคำนวณพื้นที่ (Area) ของรูปทรงต่างๆ เช่น วงกลม, สี่เหลี่ยม, และสามเหลี่ยม โดยเน้นการใช้ **User Input** และการแยก **Function**
+
+## 🏗️ Algorithm Flow
+
+```mermaid
+graph LR
+    Input[Select Shape] --> Switch{Switch Case}
+    Switch -- 1 --> Circle[Area = πr²]
+    Switch -- 2 --> Rect[Area = w * h]
+    Switch -- 3 --> Tri[Area = 0.5 * b * h]
+    Circle --> Result[/Display Result/]
+    Rect --> Result
+    Tri --> Result
 ```
 
-## 🚀 Input / Output
-รองรับการคำนวณ 3 รูปแบบ:
-1. **Circle**: รับค่า `Radius`
-2. **Triangle**: รับค่า `Base`, `Height`
-3. **Rectangle**: รับค่า `Width`, `Length`
+## 💻 Tech Implementation
+Using `#define` macros for constants and `switch-case` for menu selection.
+
+```c
+#define PI 3.14159
+
+void main() {
+    int choice;
+    printf("1. Circle\n2. Rectangle\nChoose: ");
+    scanf("%d", &choice);
+    // ... logic inside switch
+}
+```

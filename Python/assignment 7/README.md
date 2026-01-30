@@ -1,24 +1,20 @@
-# 📝 Assignment 7: Functions
+# 📚 Python Assignment 7: Strings & Text
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Topic](https://img.shields.io/badge/Topic-Modular%20Code-orange)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-String_Processing-success?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Manipulation-yellow?style=for-the-badge)
+
+</div>
+
+---
 
 ## 🎯 Objective
-เรียนรู้การสร้างฟังก์ชัน (**User-Defined Functions**) เพื่อแบ่งโปรแกรมออกเป็นส่วนย่อยๆ ที่นำกลับมาใช้ซ้ำได้ (Reusability)
+การจัดการข้อมูลข้อความ (String) เช่น การตัดคำ, การค้นหา, การตรวจสอบตัวอักษร, และการจัดรูปแบบการแสดงผล
 
-## 📋 Problem Set
-1. **Calculator**: สร้างฟังก์ชัน `add`, `sub`, `mul` สำหรับเครื่องคิดเลข
-2. **Return Values**: ฟังก์ชันคำนวณพื้นที่สามเหลี่ยมและส่งค่ากลับ
-3. **Parameters**: การส่งค่าแบบ Positional และ Keyword Arguments (`*args`, `**kwargs`)
-4. **Scope**: ความเข้าใจเรื่องตัวแปร Global และ Local
-
-## 💻 Code Snippet
+## 💻 Code Logic
 ```python
-def check_even(number):
-    if number % 2 == 0:
-        return True
-    return False
-
-if check_even(10):
-    print("This is an even number.")
+text = "python programming"
+print(text.upper())  # PYTHON PROGRAMMING
+print(text[::-1])    # gnimmargorp nohtyp
 ```

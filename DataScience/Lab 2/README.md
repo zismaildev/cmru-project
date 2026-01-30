@@ -1,18 +1,26 @@
-# Lab 2: Hello World
+# 🐍 Lab 2: Hello World & Syntax
 
-![Topic](https://img.shields.io/badge/Topic-Basics-blue)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Python_Syntax-3776AB?style=for-the-badge)
+![Level](https://img.shields.io/badge/Level-Beginner-green?style=for-the-badge)
+
+**"Your First Python Program"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-โปรแกรมแรกของการเรียนรู้ภาษา Python ฝึกการสั่งงานคอมพิวเตอร์ให้แสดงผลข้อความออกทางหน้าจอ
+เรียนรู้โครงสร้างพื้นฐานของภาษา Python คำสั่ง `print()` และการเขียน Comment เพื่อสื่อสารกับทีม
 
-## 📝 Content
-- คำสั่ง `print()` พื้นฐาน
-- การแสดงข้อความ (String)
-- การแสดงตัวเลข (Number)
-
-## 💻 Code Snippet
+## 💻 Code Logic
 ```python
-print("Hello World")
-print(50 * 2)
+# This is a comment
+print("Hello, World!")
+print("Welcome to Data Science Class")
 ```
+
+## 💡 Key Learnings
+- **Indentation**: Python ใช้การย่อหน้า (Tab/Space) แทนปีกกา `{}`
+- **Case Sensitivity**: `Print` ไม่เท่ากับ `print`

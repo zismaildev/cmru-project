@@ -1,19 +1,38 @@
-# Lab 14: Dictionaries
+# 📖 Lab 14: Dictionary (Key-Value)
 
-![Topic](https://img.shields.io/badge/Topic-Data%20Structure-purple)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Hash_Map-purple?style=for-the-badge)
+![Format](https://img.shields.io/badge/Structure-JSON_Like-yellow?style=for-the-badge)
+
+**"Mapping Data with Unique Keys"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-การใช้งาน **Dictionary** เก็บข้อมูลแบบคู่ Key-Value ซึ่งเหมาะสำหรับการเก็บข้อมูลที่มีโครงสร้าง (Structured Data)
+เรียนรู้โครงสร้างแบบ Key-Value Pair (คล้าย JSON) ซึ่งทรงพลังมากในการเก็บข้อมูลที่มีความสัมพันธ์กัน เช่น ข้อมูลโปรไฟล์ผู้ใช้
 
-## 📝 Content
-- การสร้าง Dict `{key: value}`
-- การเข้าถึงและเพิ่มข้อมูล
-- `.keys()`, `.values()`, `.items()`
+## 🏗️ Structure Visual
 
-## 💻 Code Snippet
+```mermaid
+graph LR
+    Key1[Key: "name"] --> Value1[Value: "Alice"]
+    Key2[Key: "age"] --> Value2[Value: 25]
+    Key3[Key: "role"] --> Value3[Value: "Admin"]
+```
+
+## 💻 Tech Spec
+- **Access**: `data['key']` หรือ `data.get('key')` (ปลอดภัยกว่า)
+- **Nested**: Dictionary ซ้อน Dictionary ได้
+
 ```python
-user = {"name": "John", "age": 30}
-print(user["name"])
-user["city"] = "New York"
+user = {
+    "id": 101,
+    "meta": {
+        "login_count": 5,
+        "active": True
+    }
+}
 ```

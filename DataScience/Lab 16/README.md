@@ -1,19 +1,34 @@
-# Lab 16: NumPy Arrays
+# 🔢 Lab 16: NumPy Basics
 
-![Topic](https://img.shields.io/badge/Topic-Data%20Science-blue)
-![Library](https://img.shields.io/badge/Library-NumPy-013243)
+<div align="center">
+
+![Library](https://img.shields.io/badge/Library-NumPy-013243?style=for-the-badge&logo=numpy)
+![Topic](https://img.shields.io/badge/Topic-Scientific_Computing-blue?style=for-the-badge)
+
+**"High Performance Numerical Arrays"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-เริ่มต้นใช้งาน **NumPy (Numerical Python)** ไลบรารีหลักสำหรับการคำนวณทางคณิตศาสตร์และจัดการ Array หลายมิติ
+ก้าวเข้าสู่โลกของ Data Science ด้วย **NumPy** (Numerical Python) ไลบรารีสำหรับจัดการ Array หลายมิติที่มีประสิทธิภาพสูงกว่า List ปกติ
 
-## 📝 Content
-- สร้าง Array 1D, 2D
-- Array Operations (+, -, *, /)
-- Statistic Methods (`mean`, `max`, `min`)
+## 🏗️ Array Structure
 
-## 💻 Code Snippet
+```mermaid
+graph TD
+    Scalar[Scalar: 10]
+    Vector[Vector (1D): [1, 2, 3]]
+    Matrix[Matrix (2D): [[1,2], [3,4]]]
+```
+
+## 💻 Tech Highlights
+- **Broadcasting**: การคำนวณทั้ง Array โดยไม่ต้องวน Loop (Vectorization)
+- **ndarray**: Core Object ของ NumPy
+
 ```python
 import numpy as np
-arr = np.array([1, 2, 3, 4, 5])
-print("Mean:", np.mean(arr))
+arr = np.array([1, 2, 3])
+print(arr * 2) # Output: [2, 4, 6]
 ```

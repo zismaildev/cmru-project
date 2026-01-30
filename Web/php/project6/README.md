@@ -1,18 +1,36 @@
-# Project 6: University Management
+# 🏫 University DB System (Dev Phase)
 
-![Tech](https://img.shields.io/badge/Stack-PHP_MySQL-blue)
-![Role](https://img.shields.io/badge/Type-CRUD-green)
+<div align="center">
+
+![Phase](https://img.shields.io/badge/Phase-Development-yellow?style=for-the-badge)
+![Stack](https://img.shields.io/badge/Lang-PHP-777BB4?style=for-the-badge)
+
+**"Backend Logic Implementation for Faculty & Students"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-ระบบจัดการฐานข้อมูลมหาวิทยาลัย (University DB) แบบ **CRUD** (Create, Read, Update, Delete)
+เวอร์ชันพัฒนาระหว่างทาง (Development Build) ของระบบจัดการมหาวิทยาลัย เน้นการทดสอบฟังก์ชัน CRUD (Create, Read, Update, Delete) ของตาราง `student` และ `faculty` ก่อนนำไปประกอบร่างเป็น Final Project
 
-## 📋 Features
-1.  **Student Management**: เพิ่ม/ลบ/แก้ไข/ค้นหา นักศึกษา
-2.  **Teacher Management**: จัดการข้อมูลอาจารย์
-3.  **Faculty Management**: จัดการข้อมูลคณะวิชา
-4.  **Reporting**: หน้ารายงานสรุปข้อมูล
+## 🏗️ ER Diagram (Simplified)
 
-## ⚙️ How to Start
-1. Setup DB `myproject`
-2. Run `mainmenu.php` as entry point
-3. Ensure `connectDB.php` is configured correctly
+```mermaid
+erDiagram
+    FACULTY ||--|{ STUDENT : has
+    FACULTY {
+        int fac_id PK
+        string fac_name
+    }
+    STUDENT {
+        int std_id PK
+        string std_name
+        int fac_id FK
+    }
+```
+
+## 💻 Key Scripts
+- `connectDB.php`: Setup Database Connection
+- `addpen_student.php`: Form สำหรับเพิ่มนักศึกษาใหม่
+- `search_student.php`: ระบบค้นหาข้อมูล

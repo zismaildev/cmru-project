@@ -1,18 +1,24 @@
-# 📝 Colab Exercise 1
+# 📝 Google Colab Exercise 1
 
-![Language](https://img.shields.io/badge/Language-Python-3776AB)
-![Type](https://img.shields.io/badge/Type-Practice-green)
+<div align="center">
+
+![Platform](https://img.shields.io/badge/Platform-Google_Colab-F9AB00?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Assessment-green?style=for-the-badge)
+
+**"Hands-on Python Practice in Cloud"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-รวมโจทย์ฝึกเขียนโปรแกรม Python 5 ข้อ เพื่อทบทวน Logic, Loop, List และ Dictionary
+แบบฝึกหัดทบทวนการใช้งาน Google Colab และคำสั่ง Python พื้นฐาน เน้นการจัดการ Cell, Shortcut Keys, และการติดตั้ง Library เพิ่มเติม (!pip install)
 
-## 📋 Problem Set
-1. **Book Discount**: คำนวณส่วนลดร้านหนังสือ (ซื้อ 2 เล่มลด 10% ถ้าเกิน 300 บาท)
-2. **Digit Extractor**: แยกเลขโดดจากจำนวนเต็มออกมาทีละหลัก (Loop/Modulo)
-3. **Word Counter**: นับคำว่า "Python" ในประโยค
-4. **String Filter**: กรองสมาชิก List (ยาว > 2 และตัวแรก=ตัวท้าย)
-5. **Char Frequency**: นับความถี่ตัวอักษรในประโยคเก็บเป็น Dictionary
+## 📋 Checklist
+- [x] Create Text & Code Cells
+- [x] Basic Math Operations
+- [x] Import Pandas & NumPy
+- [x] Mount Google Drive
 
-## 💻 Tech Stack
-- Google Colab / Jupyter Notebook
-- Python 3 Standard Library
+## 💻 Tips
+> **Shortcut**: กด `Ctrl + Enter` เพื่อรัน Cell, `Shift + Enter` เพื่อรันและไป Cell ถัดไป

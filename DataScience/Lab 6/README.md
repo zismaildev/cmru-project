@@ -1,21 +1,33 @@
-# Lab 6: Data Types
+# 🔢 Lab 6: Advanced Data Types
 
-![Topic](https://img.shields.io/badge/Topic-Type%20System-green)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Data_Structures-blue?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-List_Tuple_Set_Dict-orange?style=for-the-badge)
+
+**"Beyond Primitives: Managing Arrays and Collections"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-ทำความรู้จักชนิดข้อมูลพื้นฐานใน Python และการตรวจสอบชนิดข้อมูล
+เจาะลึกโครงสร้างข้อมูล (Data Structures) ที่ใช้บ่อยใน Python ได้แก่ **List**, **Tuple**, **Set**, และ **Dictionary** ซึ่งเป็นพื้นฐานสำคัญก่อนการจัดการข้อมูลด้วย Pandas
 
-## 📝 Content
-- **int**: จำนวนเต็ม
-- **float**: จำนวนจริง (ทศนิยม)
-- **str**: ข้อความ
-- **bool**: ตรรกะ (True/False)
-- ฟังก์ชัน `type()`
+## 🏗️ Structure Comparison
+| Structure | Syntax | Mutable? | Ordered? | Duplicate? |
+| :--- | :---: | :---: | :---: | :---: |
+| **List** | `[]` | ✅ | ✅ | ✅ |
+| **Tuple** | `()` | ❌ | ✅ | ✅ |
+| **Set** | `{}` | ✅ | ❌ | ❌ |
+| **Dictionary** | `{k:v}` | ✅ | ✅ | 🔑 No |
 
 ## 💻 Code Snippet
 ```python
-x = 10
-y = 3.14
-print(type(x)) # <class 'int'>
+# List (แก้ไขได้)
+fruits = ["apple", "banana"]
+fruits.append("cherry")
+
+# Tuple (แก้ไขไม่ได้ - Read Only)
+coordinates = (13.75, 100.50)
 ```

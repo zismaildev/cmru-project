@@ -1,17 +1,50 @@
-# 🛒 Computer Shop (E-Commerce)
+# 🎓 University Management System (Final Project)
 
-![Tech](https://img.shields.io/badge/Stack-PHP_MySQL_Bootstrap-blue)
-![Role](https://img.shields.io/badge/Role-Fullstack-green)
+<div align="center">
 
-## 🎯 Objective
-ระบบร้านค้าออนไลน์ครบวงจร พัฒนาด้วย PHP และ MySQL รองรับทั้งฝั่งลูกค้า (Order) และผู้ดูแลระบบ (Product Management)
+![Tech](https://img.shields.io/badge/Stack-PHP_+_MySQL-777BB4?style=for-the-badge)
+![Role](https://img.shields.io/badge/Role-Full_Stack_Developer-green?style=for-the-badge)
 
-## ✨ Features
-1.  **User System**: สมัครสมาชิก, ล็อกอิน, หยิบของใส่ตะกร้า (Cart), สั่งซื้อ
-2.  **Admin System**: เพิ่ม/ลบ/แก้ไข สินค้า, ดูรายการสินค้าทั้งหมด
-3.  **Database**: ออกแบบ Schema เพื่อเก็บข้อมูลสินค้าและสมาชิก
+**"Complete CRUD System for Teacher & Student Records"**
 
-## ⚙️ Setup
-1. Import database script (`computer_shop`)
-2. Config `db.php`
-3. Run on Localhost via XAMPP
+</div>
+
+---
+
+## 🎯 Project Overview
+ระบบสารสนเทศมหาวิทยาลัยที่ครอบคลุมการจัดการข้อมูลหลัก 3 ส่วน: **คณะ (Faculty)**, **อาจารย์ (Teacher)**, และ **นักศึกษา (Student)** โดยมีการแบ่งสิทธิ์การเข้าถึง (Admin/User)
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    User([User]) --> Auth{Login System}
+    Auth -- Success --> Dashboard
+    Dashboard --> Fac[Faculty Management]
+    Dashboard --> Teach[Teacher Management]
+    Dashboard --> Stu[Student Management]
+    
+    Fac --> CRUD_F[Add/Edit/Del Faculty]
+    Teach --> CRUD_T[Add/Edit/Del Teacher]
+    Stu --> CRUD_S[Add/Edit/Del Student]
+    
+    CRUD_F --> DB[(MySQL Database)]
+    CRUD_T --> DB
+    CRUD_S --> DB
+```
+
+## 🗂️ Key Features
+- **Search System**: ระบบค้นหาอัจฉริยะที่กรองข้อมูลได้หลายเงื่อนไข
+- **Reporting**: หน้าสรุปรายงานข้อมูล (Report Pages)
+- **Security**: การเข้ารหัสรหัสผ่านและการตรวจสอบ Session
+
+## 💻 Tech Implementation
+- **Relational Database**: การเชื่อมตารางด้วย Foreign Key (Fac_ID)
+- **Bootstrap 5**: ใช้ Framework เพื่อความสวยงามและ Responsive
+
+```php
+// SQL Join Example
+$sql = "SELECT student.*, faculty.fac_name 
+        FROM student 
+        INNER JOIN faculty ON student.fac_id = faculty.fac_id";
+```

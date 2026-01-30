@@ -1,19 +1,36 @@
-# Lab 10: For Loops
+# 🔄 Lab 10: Control Flow (Loops)
 
-![Topic](https://img.shields.io/badge/Topic-Control%20Flow-orange)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<div align="center">
+
+![Topic](https://img.shields.io/badge/Topic-Iteration-green?style=for-the-badge)
+![Keyword](https://img.shields.io/badge/Keyword-for_while-blue?style=for-the-badge)
+
+**"Automating Repetitive Tasks"**
+
+</div>
+
+---
 
 ## 🎯 Objective
-การใช้ `for` loop เพื่อวนซ้ำข้อมูลใน Sequence (เช่น String, List) หรือทำซ้ำตามจำนวนรอบที่กำหนด
+การวนซ้ำ (Iteration) เป็นพลังที่แท้จริงของคอมพิวเตอร์ Lab นี้เน้นการใช้ `for` loop กับ List และ `range()` รวมถึง `while` loop ในบางสถานการณ์
 
-## 📝 Content
-- การใช้ `range(start, stop, step)`
-- การวนลูป String และ List
-- `break` และ `continue`
+## 🏗️ Iteration Diagram
 
-## 💻 Code Snippet
+```mermaid
+graph LR
+    List[Item 1, Item 2, Item 3] --> Loop(For Loop)
+    Loop --> Process[Process Item]
+    Process --> Loop
+```
+
+## 💻 Code Highlights
 ```python
-# Print numbers 0-4
-for i in range(5):
+# Loop through List
+names = ["Alice", "Bob", "Charlie"]
+for name in names:
+    print(f"Hello, {name}")
+
+# Range
+for i in range(5): # 0 to 4
     print(i)
 ```

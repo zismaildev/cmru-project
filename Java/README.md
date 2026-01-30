@@ -1,55 +1,63 @@
-# ☕ Java Programming
-
-<!-- prettier-ignore -->
-> [!IMPORTANT]
-> **"ก้าวสู่โลกของ Object-Oriented Programming (OOP)"**
-> <br>เรียนรู้ปรัชญาการเขียนโปรแกรมเชิงวัตถุ โครงสร้าง Class, Object และการสืบทอดคุณสมบัติ
+# ☕ Java Object-Oriented Programming
 
 <div align="center">
 
-![Java](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Concept](https://img.shields.io/badge/Concept-OOP-red?style=for-the-badge)
+![Type](https://img.shields.io/badge/Concept-Software_Design_Patterns-orange?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Stack-Java_SE_%7C_OOP-ED8B00?style=for-the-badge)
+
+**"Building Scalable Systems with Strong Typing and Objects"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-โฟลเดอร์นี้เน้นการเรียนรู้ภาษา Java โดยแบ่งระดับความยากจาก Basic Logic ไปจนถึงระบบที่มีความซับซ้อนด้วยหลักการ OOP (Encapsulation, Inheritance, Polymorphism)
+## 🎯 Problem Statement
+การเขียนโค้ดแบบ Procedural มักดูแลรักษายากเมื่อระบบใหญ่ขึ้น การใช้ **OOP (Object-Oriented Programming)** ช่วยให้เรามองโค้ดเป็นวัตถุที่มีหน้าที่ชัดเจน (Single Responsibility) และสามารถนำกลับมาใช้ใหม่ได้ (Reusability)
 
-## 📂 โครงสร้างโปรเจกต์ (Project Structure)
+## 🏗️ Class Diagram Design
 
-### 🥇 Level 1: Basics & Logic
-ปูพื้นฐาน Syntax และอัลกอริทึม
-| Project | Description | Link |
-| :--- | :--- | :---: |
-| **Logic & Math** | แบบฝึกหัดตรรกะ ตัวเลขหารลงตัว และสถิติพื้นฐาน | [View](./Logic%20and%20Math/README.md) |
-| **Basic Apps** | เครื่องคิดเลขอย่างง่าย (Console Based) | [View](./Basic%20Apps/README.md) |
-| **Sorting Demo** | สาธิตอัลกอริทึม Bubble Sort | [View](./Sorting%20Demo/README.md) |
+ตัวอย่างการออกแบบระบบรูปทรงเรขาคณิต (Polymorphism)
 
-### 🥈 Level 2: Systems & OOP
-การประยุกต์ใช้ Class และ Object
-| Project | Description | Link |
-| :--- | :--- | :---: |
-| **Grading System** | ระบบตัดเกรดนักเรียนทั้งห้องเรียน (Array Processing) | [View](./Grading%20System/README.md) |
-| **OOP Shapes** | การคำนวณพื้นที่ด้วย Parent/Child Class | [View](./OOP%20Shapes/README.md) |
-| **Borrowing System** | **(Final)** ระบบยืม-คืนของ (Abstract Class Focus) | [View](./Project%20Borrowing%20System/README.md) |
+```mermaid
+classDiagram
+    class Shape {
+        <<Abstract>>
+        +String color
+        +double getArea()*
+        +String toString()
+    }
+    class Circle {
+        -double radius
+        +getArea()
+    }
+    class Rectangle {
+        -double width
+        -double length
+        +getArea()
+    }
+    
+    Shape <|-- Circle : inherits
+    Shape <|-- Rectangle : inherits
+```
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **JDK**: Java Development Kit 11+
-- **IDE**: IntelliJ IDEA / Eclipse / VS Code
+## 📂 Project Showcase
 
-## 🚀 การเริ่มต้นใช้งาน (Getting Started)
-1. **Compile Source Code**
-   ```bash
-   javac Main.java
-   ```
-2. **Run Class**
-   ```bash
-   java Main
-   ```
+### 1. 📚 Borrowing System (Final Project)
+*ระบบยืม-คืนอุปกรณ์สำนักงาน*
+- **Concept:** ใช้ Abstract Class `Item` และสืบทอดเป็น `Book`, `Equipment`
+- **Key Features:** Polymorphism ในการคำนวณค่าปรับที่ต่างกัน
+
+### 2. 🔢 Grading Algorithm (`/Grading System`)
+*ระบบตัดเกรดกลุ่มเรียน*
+- **Concept:** Array Processing และ Statistical Calculation (Mean, SD)
+
+## 💡 Key Learnings
+- **Four Pillars of OOP:** เข้าใจลึกซึ้งใน Encapsulation, Abstraction, Inheritance, และ Polymorphism
+- **Memory Management:** ความแตกต่างของ Stack vs Heap ใน Java
 
 ---
-<div align="center">
-  <p>Part of CMRU Computer Science Curriculum</p>
-</div>
+
+## 🚀 How to Run
+1. **JDK Required:** Java 8+
+2. **Compile:** `javac Main.java`
+3. **Run:** `java Main`

@@ -1,53 +1,68 @@
-# 🗄️ SQL Database Management
-
-<!-- prettier-ignore -->
-> [!TIP]
-> **"หัวใจของระบบสารสนเทศ คือการจัดการข้อมูลที่มีประสิทธิภาพ"**
-> <br>เรียนรู้การออกแบบ Database Schema, ความสัมพันธ์ระหว่างตาราง (ERD), และคำสั่ง SQL (DDL, DML)
+# 🗄️ SQL & Database Management
 
 <div align="center">
 
-![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Backup%20Success-success?style=for-the-badge)
+![Type](https://img.shields.io/badge/Role-Database_Administrator-orange?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Stack-MySQL_%7C_MariaDB-4479A1?style=for-the-badge)
+
+**"Design, Optimize, and Secure Critical Business Data"**
 
 </div>
 
 ---
 
-## 📖 ภาพรวม (Overview)
-Repository นี้เก็บรวบรวมไฟล์ **SQL Scripts (.sql)** ที่ได้จากการเรียนในวิชา Database Management ซึ่งครอบคลุมตั้งแต่การสร้างตาราง (CREATE) การเพิ่มข้อมูล (INSERT) ไปจนถึงการสำรองข้อมูล (Backup) ของระบบร้านค้าจำลอง
+## 🎯 Problem Statement
+ระบบ Software ที่ดีต้องมีฐานข้อมูลที่ออกแบบมาอย่างถูกต้องเพื่อลดความซ้ำซ้อน (Redundancy) และรองรับการขยายตัว (Scalability) โจทย์คือการออกแบบ **ERD** ที่สอดคล้องกับ Business Requirements และการเขียน Query ที่มีประสิทธิภาพ
 
-## 📂 โครงสร้างฐานข้อมูล (Schema Design)
-Database Name: `nattapong51`
+## 🏗️ Entity-Relationship Diagram (ERD)
 
-| Table Name | Description | Key Columns |
-| :--- | :--- | :--- |
-| **supplier420** | ข้อมูลผู้ผลิต/คู่ค้า | `sup_code` (PK), `sup_name`, `address` |
-| **product420** | ข้อมูลสินค้า | `pro_code` (PK), `pro_name`, `price` |
-| **billorder420** | ข้อมูลบิลการสั่งซื้อ | `bill_code` (PK), `bill_date`, `customer_name` |
-| **detailorder420** | รายละเอียดรายการสั่งซื้อ | `bill_code` (FK), `pro_code` (FK), `amount` |
+โครงสร้างฐานข้อมูลร้านค้า (Supply Chain Management)
 
-## 💾 ประวัติการสำรองข้อมูล (Backup History)
+```mermaid
+erDiagram
+    SUPPLIER ||--|{ PRODUCT : supplies
+    PRODUCT ||--o{ ORDER_DETAIL : contains
+    ORDER ||--|{ ORDER_DETAIL : includes
+    CUSTOMER ||--o{ ORDER : places
 
-| วันที่ (Date) | ไฟล์ (Script) | รายละเอียด (Description) |
-| :---: | :--- | :--- |
-| **Latest** | [**2024.1.29.sql**](./2024.1.29.sql) | **(Complete Version)** เวอร์ชันสมบูรณ์ล่าสุด มีครบทุกตารางและข้อมูลทดสอบ |
-| **Init** | [Main Database.sql](./Main%20Database%20.sql) | สคริปต์เริ่มต้นสำหรับสร้างโครงสร้างตารางหลัก |
-| **Log** | [Archive/](./) | ไฟล์สำรองข้อมูลเก่าตามสัปดาห์เรียน (2023.11 - 2024.01) |
+    SUPPLIER {
+        string sup_code PK
+        string sup_name
+        string address
+    }
+    PRODUCT {
+        string pro_code PK
+        string pro_name
+        float price
+        int stock
+    }
+    ORDER {
+        string bill_code PK
+        date bill_date
+        string customer_name
+    }
+```
 
-## 🛠️ เครื่องมือที่ใช้ (Tech Stack)
-- **RDBMS**: MariaDB / MySQL Server
-- **Management Tools**: HeidiSQL, phpMyAdmin, MySQL Workbench
+## 📂 Project Showcase
 
-## 🚀 วิธีการใช้งาน (How to Restore)
-1. **Create Database**: สร้างฐานข้อมูลเปล่าชื่อ `nattapong51` (หรือชื่ออื่นที่ต้องการ)
-2. **Import**: นำเข้าไฟล์ `.sql` ผ่านโปรแกรมจัดการฐานข้อมูล
-3. **Query**: ทดสอบดึงข้อมูล
-   ```sql
-   SELECT * FROM product420;
+### 1. 🏪 Retail Database Schema (`/SQL`)
+*ระบบฐานข้อมูลร้านค้าปลีก*
+- **Features:**
+  - **Normalization:** ออกแบบตามหลัก 3NF
+  - **Backup Strategy:** สคริปต์สำรองข้อมูลรายสัปดาห์ (Full Backup)
+  - **Complex Queries:** ตัวอย่างการใช้ `JOIN`, `GROUP BY`, และ `HAVING` เพื่อออกรายงานยอดขาย
+
+## 💡 Key Learnings
+- **ACID Properties:** ความสำคัญของ Atomicity, Consistency, Isolation, Durability ใน Transaction
+- **Indexing:** การทำ Index เพื่อเพิ่มความเร็วในการ Search
+- **Data Integrity:** การใช้ Foreign Key Constraints เพื่อป้องกันข้อมูลขยะ
+
+---
+
+## 🚀 How to Restore
+1. **Requirements:** MySQL Server / MariaDB
+2. **CLI Import:**
+   ```bash
+   mysql -u root -p nattapong51 < 2024.1.29.sql
    ```
-
----
-<div align="center">
-  <p>CMRU Database Systems Course</p>
-</div>
+3. **GUI Import:** ใช้ Tools เช่น **phpMyAdmin** หรือ **DBeaver** เลือกเมนู *Import* ไฟล์ `.sql` ล่าสุด
